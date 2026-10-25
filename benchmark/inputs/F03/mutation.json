@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-178ebfb047f0848ef8d7dfef",
+      "resource": {
+        "id": "p-178ebfb047f0848ef8d7dfef",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-4d590194cb6e552dc2c4fb9f",
+      "resource": {
+        "code": {
+          "text": "PSA"
+        },
+        "effectiveDateTime": "2026-03-15",
+        "id": "o-4d590194cb6e552dc2c4fb9f",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-178ebfb047f0848ef8d7dfef"
+        },
+        "valueString": "suposto sem referência"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

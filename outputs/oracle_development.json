@@ -1,0 +1,270 @@
+{
+  "cases": [
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F01",
+      "findings": [],
+      "id": "F01_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 0.00013657999988936353
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F01",
+      "findings": [
+        {
+          "field": "numeric_value_changed",
+          "id": "o-18e8e28eb35629221521f530"
+        }
+      ],
+      "id": "F01_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 5.506100023922045e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F01",
+      "findings": [],
+      "id": "F01_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 4.002900095656514e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F02",
+      "findings": [],
+      "id": "F02_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.475099947536364e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F02",
+      "findings": [
+        {
+          "field": "text_result_changed",
+          "id": "o-48afab0d1c910d7ded4b263d"
+        }
+      ],
+      "id": "F02_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 3.2407000617240556e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F02",
+      "findings": [],
+      "id": "F02_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 2.9062000976409763e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F03",
+      "findings": [],
+      "id": "F03_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.089500023634173e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F03",
+      "findings": [
+        {
+          "field": "invented_value",
+          "id": "o-4d590194cb6e552dc2c4fb9f"
+        }
+      ],
+      "id": "F03_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 3.757599915843457e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F03",
+      "findings": [],
+      "id": "F03_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 0.00011106299825769383
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F04",
+      "findings": [],
+      "id": "F04_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 9.042300007422455e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F04",
+      "findings": [
+        {
+          "field": "date_or_precision",
+          "id": "o-a62c6e60206743b6d5a536a9"
+        }
+      ],
+      "id": "F04_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 4.555700070341118e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F04",
+      "findings": [],
+      "id": "F04_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.286900027887896e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F05",
+      "findings": [],
+      "id": "F05_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.1536999813397415e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F05",
+      "findings": [
+        {
+          "field": "unit_changed",
+          "id": "o-b607512005920b56f4487b4a"
+        }
+      ],
+      "id": "F05_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 2.8202000976307318e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F05",
+      "findings": [],
+      "id": "F05_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 2.6588999389787205e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F06",
+      "findings": [],
+      "id": "F06_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.4952001442434266e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F06",
+      "findings": [
+        {
+          "field": "numeric_value_changed",
+          "id": "o-2fd91fb4b83a190865bc4691"
+        },
+        {
+          "field": "numeric_value_changed",
+          "id": "o-8f80cbb7ed79e602a059f92b"
+        }
+      ],
+      "id": "F06_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 3.286900027887896e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F06",
+      "findings": [],
+      "id": "F06_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.291899884061422e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F07",
+      "findings": [],
+      "id": "F07_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 0.00010122899948328268
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F07",
+      "findings": [
+        {
+          "field": "missing_observation",
+          "id": "o-bf58b73407a2f3bea819987b"
+        }
+      ],
+      "id": "F07_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 5.4260000979411416e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F07",
+      "findings": [],
+      "id": "F07_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.6313000236987136e-05
+    },
+    {
+      "class": "correct_conversion",
+      "expected_semantic_fault": false,
+      "family": "F08",
+      "findings": [],
+      "id": "F08_baseline",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.013400055351667e-05
+    },
+    {
+      "class": "semantic_fault",
+      "expected_semantic_fault": true,
+      "family": "F08",
+      "findings": [
+        {
+          "field": "date_or_precision",
+          "id": "o-2c51d95ffacc3521fc84ed92"
+        }
+      ],
+      "id": "F08_mutation",
+      "oracle_flags": true,
+      "oracle_wallclock_seconds": 5.880599928786978e-05
+    },
+    {
+      "class": "semantic_equivalent_control",
+      "expected_semantic_fault": false,
+      "family": "F08",
+      "findings": [],
+      "id": "F08_neutral",
+      "oracle_flags": false,
+      "oracle_wallclock_seconds": 3.121599911537487e-05
+    }
+  ],
+  "failures": [],
+  "independence_limitation": "Gold scenario fixtures AI-assisted and not externally adjudicated",
+  "official_HL7_executed": false,
+  "oracle_semantic_faults_flagged": 8,
+  "scope": "development",
+  "total": 24
+}

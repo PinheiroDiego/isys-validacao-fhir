@@ -1,0 +1,1009 @@
+{
+  "benchmark_id": "ISYS-V4-2026-10-25",
+  "design": "26 purposively constructed source families, 20 convertible and 6 intended refusals; 66 bundles",
+  "families": [
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F01",
+      "overlay_sha256": "1c7385ba095f460a057dbec5ae32e592e65abd4a43a692412b096abb5bfbe1eb",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "decimal com escala e unidade explícita"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F02",
+      "overlay_sha256": "9d3f852833323b8eaf2cacae839e075eadd5a7787ca5e6ef86c7abc677b230f0",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "resultado textual e data mensal"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F03",
+      "overlay_sha256": "3a5c496f6c91188f64fe44bc7a3f4539a3c90ab0621683b04fe732363da4b08b",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "ausência de resultado não é resultado negativo"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F04",
+      "overlay_sha256": "da086709849c2b4b3c9ac92fb65e588a03a5605c89cf9cbe7e6030f980928d66",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "data anual e precisão preservada"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F05",
+      "overlay_sha256": "6a263ce64c0d53f4ce4cd9520ea7b8b19f29f845a497ed84637f242d69ca460d",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "unidade textual sem inferência UCUM"
+    },
+    {
+      "actual_emitted": 2,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F06",
+      "overlay_sha256": "d14e0e372b7dad058f8fb46fd17694e1f35f4760811a91da535c7834c9341c21",
+      "rejection_reasons": [],
+      "source_exam_count": 2,
+      "split": "development",
+      "topic": "resultados de exames distintos"
+    },
+    {
+      "actual_emitted": 2,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F07",
+      "overlay_sha256": "61170355b23a6b9f8a3e008e73b22b4df0fdb19dfe0c4f4eace9e4637014cf10",
+      "rejection_reasons": [],
+      "source_exam_count": 2,
+      "split": "development",
+      "topic": "repetição legítima do mesmo nome de exame"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F08",
+      "overlay_sha256": "4fccc601f10839b60cd6f4d01f14d7dc64df6d4a37acf0baf053aa6f46139db0",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "development",
+      "topic": "exame sem data informada"
+    },
+    {
+      "actual_emitted": 2,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F09",
+      "overlay_sha256": "2708ec1732ca42fc28d3e0cbd7bc3003d9f3479b9180cb4f28182b136ab1274b",
+      "rejection_reasons": [],
+      "source_exam_count": 2,
+      "split": "evaluation",
+      "topic": "relação paciente trocada por paciente existente"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F10",
+      "overlay_sha256": "f440537419d36ebb10b559defeabc854c7b27c443b4c05846da7c24e6cb6ed5d",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "ocorrência extra com nova identidade formal"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F11",
+      "overlay_sha256": "8be032fee846aac623a60a6271033033f8865aa5f46aabc11d03db94c787b227",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "nome do exame alterado mantendo valor"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F12",
+      "overlay_sha256": "3b3c0c18d3cfd08e5220fbef55c624565909fa8be1cae57f58247d192555b107",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "precisão do mês artificialmente aumentada"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F13",
+      "overlay_sha256": "9a83878d1d15dc04ce9e9c3da62f7558c70e61ffa87d36aba65be09ddf30f2c1",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "resultado omitido num registro que o informava"
+    },
+    {
+      "actual_emitted": 2,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F14",
+      "overlay_sha256": "813c88fd0211421dc5ff7fffed6c6f73b3ace7c3dea74d60f7e4cc666592c714",
+      "rejection_reasons": [],
+      "source_exam_count": 2,
+      "split": "evaluation",
+      "topic": "resultados trocados dentro do mesmo paciente"
+    },
+    {
+      "actual_emitted": 2,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F15",
+      "overlay_sha256": "33b34d784972c281e45fa281ee69413f33cacefdc4fb4b360ffd895bc4b87216",
+      "rejection_reasons": [],
+      "source_exam_count": 2,
+      "split": "evaluation",
+      "topic": "pacientes distintos com resultados textuais"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F16",
+      "overlay_sha256": "f30821c6d352d39afd4743512dc840e6b35f63a1a79e137a6f708966ab02eecf",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "valor com precisão decimal e data de dia"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F17",
+      "overlay_sha256": "46cbc4bccff7f9dc6d6bb0becedae9aee2936c02d74d061976b3b5b4848ffe2f",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "controle negativo: status ausente"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F18",
+      "overlay_sha256": "9771b820eefd162cc2d9fcb540eb6829d80bf6b9df41ebb4a39e71122c8a447d",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "controle negativo: fullUrl repetido"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F19",
+      "overlay_sha256": "d88566fe2e7b3a63592a3a0f315b4d51be1bc39ddc3741f07bff714272c2a4a1",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "controle negativo: code ausente"
+    },
+    {
+      "actual_emitted": 1,
+      "actual_rejected": 0,
+      "decision_as_designed": true,
+      "family": "F20",
+      "overlay_sha256": "a257347e3317990c5d65245ca23471850655781f5237a0bc6656f4eb2e9d5f00",
+      "rejection_reasons": [],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "controle negativo: status fora do conjunto de valores"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F21",
+      "overlay_sha256": "6195e8802b212afcad0ffebd09a6e39662adf5c737bb64710c1c83bcddd9520c",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "NO_PATIENT_LINK"
+          ],
+          "synthetic_exam": "F21-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por ausência do vínculo evolucao-paciente"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F22",
+      "overlay_sha256": "3cec2d862e4df683fa32fd18bfa78370fc92d849c690243fb6b42883aecce870",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "MULTIPLE_PATIENT_LINKS"
+          ],
+          "synthetic_exam": "F22-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por múltiplos pacientes possíveis"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F23",
+      "overlay_sha256": "31ee31c52d8efd8fbed1969328fc86dbcabe19b5bd551559a43e5f15e2baf4ce",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "MISSING_EXAM_NAME"
+          ],
+          "synthetic_exam": "F23-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por ausência de identificação do exame"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F24",
+      "overlay_sha256": "4abcc465f5638b736e3120a6b1e32ca4141ed5eafe74c85457a27a7f203bcc61",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "AMBIGUOUS_OR_INVALID_DATE"
+          ],
+          "synthetic_exam": "F24-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por data do calendário impossível"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F25",
+      "overlay_sha256": "a406d12a71d1119aa9216b3346162a357d2886a6e25bde8040a2cf528953eddb",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "UNSUPPORTED_RESULT_DATATYPE"
+          ],
+          "synthetic_exam": "F25-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por datatype não suportado"
+    },
+    {
+      "actual_emitted": 0,
+      "actual_rejected": 1,
+      "decision_as_designed": true,
+      "family": "F26",
+      "overlay_sha256": "df97d0439bb1e3cba36a5b0da65e2c27a4ae6049393a86ee17452c9075e6f476",
+      "rejection_reasons": [
+        {
+          "reasons": [
+            "MULTIPLE_RESULT"
+          ],
+          "synthetic_exam": "F26-x1"
+        }
+      ],
+      "source_exam_count": 1,
+      "split": "evaluation",
+      "topic": "recusa por múltiplos valores de resultado"
+    }
+  ],
+  "fhir_package": "hl7.fhir.r4.core#4.0.1",
+  "fhir_version": "4.0.1",
+  "file_hashes": {
+    "benchmark/inputs/F01/baseline.json": "0e5588df301c350bfd140458e72ea9f867eb8e2abc4fd92441a2fe0df4635507",
+    "benchmark/inputs/F01/mutation.json": "b9396d0e7a4f6dff5e12085984c9bee495352473248d78752322440775c1228d",
+    "benchmark/inputs/F01/neutral.json": "6783813f4272852f0ec0edbfdb0816a2eaf75e2a2f5b7596ba89a6b040a070a3",
+    "benchmark/inputs/F02/baseline.json": "cddc465106336266eefa5213d6867b1ea411ebb859122ac51dd67ad54b6b3e0b",
+    "benchmark/inputs/F02/mutation.json": "3b843d9989d7a7ddcd6747e197fbe7ad642a98041757b8aef5d2e2c8fdd55664",
+    "benchmark/inputs/F02/neutral.json": "b16b41910dd99d74a305cc4f6ed6d7a6f8aed7b01ce5d9e5cf013d8cb4c0f444",
+    "benchmark/inputs/F03/baseline.json": "7e57401d96f8ef923712d595f3a4491ddeb3b41e69b253188a68691b8b2ed103",
+    "benchmark/inputs/F03/mutation.json": "dead21d7dabae0e2a2d0a7817ab6a378947254ea8f6fb0e67d3796b0b493686d",
+    "benchmark/inputs/F03/neutral.json": "1f8dba909b8eb4bd71188615a1802da220d879123517817fe9c55889900eee6f",
+    "benchmark/inputs/F04/baseline.json": "ced5c4e2cb5f020e1840ef1cfef6b7d0f4a23d29a0022d40ed46ffeaca437583",
+    "benchmark/inputs/F04/mutation.json": "814f6dc30d20327187dbf26383301628c1b40bac5145cac8841f29297f3652b0",
+    "benchmark/inputs/F04/neutral.json": "f6633e6b4b4cf0de59a27a04865fc88c7aa2e67d1f6ec19948280c3b0802a59c",
+    "benchmark/inputs/F05/baseline.json": "e3611c16dbbb316652a3f4a9839ccffeedb6e93e2b676a2ca520db46edf6b2fe",
+    "benchmark/inputs/F05/mutation.json": "87ef1d7955c81939efb489056a1859e13ba021a827e463b8a0f83343db6b2ac1",
+    "benchmark/inputs/F05/neutral.json": "245073d73bb48c387836ed89c577c504531cbbd92bf1455791f04139356f98d9",
+    "benchmark/inputs/F06/baseline.json": "b7c1587a3275eebe7a91ac9b21e8de2717e2daa495d5413fa8896c20376d96b4",
+    "benchmark/inputs/F06/mutation.json": "bc54e4147e6d7c257e7660fdff5ef5e4f78e88f881d86dfc52cd0a1d6f40bf42",
+    "benchmark/inputs/F06/neutral.json": "0beb44f7cee58a6e7c6a45549e2099e838b5344979777964a145609bfaef41b8",
+    "benchmark/inputs/F07/baseline.json": "14a7b858b9689983dfa8470fde0b866846c5ae271273a930b253337cb18ffabc",
+    "benchmark/inputs/F07/mutation.json": "3a901364bc0355f19847c7a4175fc396ba666bde11b0eb200aa680d8791f9904",
+    "benchmark/inputs/F07/neutral.json": "f4bd93b0115d76e193a039a3e56b334735cdbcf6d13a293fdba57629ab9ea0ee",
+    "benchmark/inputs/F08/baseline.json": "16163fc1931d93d3c93a246896208cea128f2256332fcde8d8ef9b22c0770a07",
+    "benchmark/inputs/F08/mutation.json": "6f0ce2db86d0ec94416bf0d52e9b1c37a23a8ac81293504d11f6d393a21d333d",
+    "benchmark/inputs/F08/neutral.json": "f590761a0c3a339364244d49b99c65ab6028333a02820c0cd51823699a195b13",
+    "benchmark/inputs/F09/baseline.json": "4819d2e25611bdb0c23fd50a6ae395d98a7c61fc0abe9c3bb6d860641632e3c7",
+    "benchmark/inputs/F09/mutation.json": "82f8b6eb24cedf3797c8af6f3652e71ba5d9dd7c61f8682a5ac0cbd90fe81e86",
+    "benchmark/inputs/F09/neutral.json": "b58e3595a025d88f57b9ada4ba683ea4d90488f2666a56c25c0ee57fe3b46918",
+    "benchmark/inputs/F10/baseline.json": "a318d3a642b6f9961859eaac7f89c9327b2b454ee21c9c2af6f38640407fc0c2",
+    "benchmark/inputs/F10/mutation.json": "5e0139e16453b16f84c16e554b581eb5e647ff6fd4dde0b5d23881c67a7a215f",
+    "benchmark/inputs/F10/neutral.json": "090ef180e531f18f933091afaef56af54b7f663d66126cf691d3f9a142484bf7",
+    "benchmark/inputs/F11/baseline.json": "5ad844bef2a7e422f696d0b9ef00a1630bbdf36cd7917b02c7fce33625c65054",
+    "benchmark/inputs/F11/mutation.json": "d5cb26e1c3682b05e819fcd67fcfcfc1be9045e72f4c8362724b52eb09883390",
+    "benchmark/inputs/F11/neutral.json": "e15c9b204131b79e2a4ed4228051601965bbe2018cf3f1235052ade02fe10d15",
+    "benchmark/inputs/F12/baseline.json": "a7ebb0c04ccdcd333ede6006a4b0847a7e02080b5a9ad1c944b2b04598adb6ab",
+    "benchmark/inputs/F12/mutation.json": "531a216fc6c27dc64d1033da5f16f3cdff448c6dbb0c7af6a80451121ed217e0",
+    "benchmark/inputs/F12/neutral.json": "3166fd6fd486098d9148c37dd18d68dac3ffbc5a46cabaf60986e3a08c9895ed",
+    "benchmark/inputs/F13/baseline.json": "32591dea48d3a0640589944bd355f3156544c7464b34490bef7e2f3d46e4b967",
+    "benchmark/inputs/F13/mutation.json": "84d7f6e119909366e84c8f118c0f53c25a62a446c01a8cfe56832eb5cf41c421",
+    "benchmark/inputs/F13/neutral.json": "988e3b33593070fb584cb51790363a3104568d6b46e48221347ab7b3db30f4d6",
+    "benchmark/inputs/F14/baseline.json": "78c0eba2d73812bad0b028de6e9c5d7ae3913c80f0a8a8dcd44b7594e78ffe8b",
+    "benchmark/inputs/F14/mutation.json": "7b2805cf75e104694c28e64550bd4eecca8e878cf20b5b5b55c8d12615129915",
+    "benchmark/inputs/F14/neutral.json": "b56e25fc12944cbba4ae05bbe013d356fef5c07d46f0c368be4f96fee255d51e",
+    "benchmark/inputs/F15/baseline.json": "41b0826e945790138af6eeb7e84cad77a6fb884116fb9a094ec1342cfc0798e5",
+    "benchmark/inputs/F15/mutation.json": "991ea1adc59cfaa934e7f059f72d07e30ccd2e6171d12849cf2c1a0350557c1f",
+    "benchmark/inputs/F15/neutral.json": "2579b75dae778947369c553ba747460ab393092c5de5b8b409f37d0c9de05fd3",
+    "benchmark/inputs/F16/baseline.json": "d9df060a98dbf87243e706ae87b66bffe989e137ad99fe45175642059fde9333",
+    "benchmark/inputs/F16/mutation.json": "5677f1b37496970b59e697dcd81edcddebd51486948d8dbefa54ab55f3281b65",
+    "benchmark/inputs/F16/neutral.json": "674ab7610cbfeb1fae09c9633acf510c206a21dad471000013b827ac2b6f4e14",
+    "benchmark/inputs/F17/baseline.json": "b815b74ced60e489df45e96670cdd10542acdac8cd1575ac721ecfa04731769a",
+    "benchmark/inputs/F17/mutation.json": "ab3a05a3bc34e7f6c00f8bdf6acacbace15b093869a5ea3175074819293e4b2a",
+    "benchmark/inputs/F17/neutral.json": "0324263bccd37f714c46c43d4ca67a8b7be0bcfde66b90eb6522d7ed521a3e58",
+    "benchmark/inputs/F18/baseline.json": "a4aa869140f2b531a1c42871b1063f5fa71ffcf5eae99e2390d4dd88f25b979c",
+    "benchmark/inputs/F18/mutation.json": "5004dbcf3b975be5c6692c982747364174f7c856038eb94d5fd536d7e937ed34",
+    "benchmark/inputs/F18/neutral.json": "767cd0bbec4945c9bbe8f1ac84609fefc0ef75aff435d319e600705f02c11552",
+    "benchmark/inputs/F19/baseline.json": "9e5d5cd4aa54fa7c5cb512c9e0f8c979285ee90a39b489929218acd297f35eef",
+    "benchmark/inputs/F19/mutation.json": "8dc31e7f5c93fb4d7a15dec1360546193788bd93e81686e0123eb1be312fce07",
+    "benchmark/inputs/F19/neutral.json": "72a0177a6fb66f1d8d2823f56f1daee6098225e92bff2741ffd00fead7079b0b",
+    "benchmark/inputs/F20/baseline.json": "d8a21f42fd36d55105025673392561f0c496158a98eda19ef959f806cf65c4fd",
+    "benchmark/inputs/F20/mutation.json": "4ab57f49d1a3c4de3c57e41616507fe7a54982245bec94c6fd6c6bbda5be944c",
+    "benchmark/inputs/F20/neutral.json": "5a3ebee22fa279198c148490e2a780af1c0362ff0fe3a1530e678b1ad8b5622c",
+    "benchmark/inputs/F21/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/F22/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/F23/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/F24/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/F25/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/F26/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45"
+  },
+  "gold_sha256": "dec62b7e8e479270d447229946e8bbfd785e269a705be69b204b05766715ba94",
+  "overlay_hashes": {
+    "benchmark/fixtures/overlays/F01.owx": "1c7385ba095f460a057dbec5ae32e592e65abd4a43a692412b096abb5bfbe1eb",
+    "benchmark/fixtures/overlays/F02.owx": "9d3f852833323b8eaf2cacae839e075eadd5a7787ca5e6ef86c7abc677b230f0",
+    "benchmark/fixtures/overlays/F03.owx": "3a5c496f6c91188f64fe44bc7a3f4539a3c90ab0621683b04fe732363da4b08b",
+    "benchmark/fixtures/overlays/F04.owx": "da086709849c2b4b3c9ac92fb65e588a03a5605c89cf9cbe7e6030f980928d66",
+    "benchmark/fixtures/overlays/F05.owx": "6a263ce64c0d53f4ce4cd9520ea7b8b19f29f845a497ed84637f242d69ca460d",
+    "benchmark/fixtures/overlays/F06.owx": "d14e0e372b7dad058f8fb46fd17694e1f35f4760811a91da535c7834c9341c21",
+    "benchmark/fixtures/overlays/F07.owx": "61170355b23a6b9f8a3e008e73b22b4df0fdb19dfe0c4f4eace9e4637014cf10",
+    "benchmark/fixtures/overlays/F08.owx": "4fccc601f10839b60cd6f4d01f14d7dc64df6d4a37acf0baf053aa6f46139db0",
+    "benchmark/fixtures/overlays/F09.owx": "2708ec1732ca42fc28d3e0cbd7bc3003d9f3479b9180cb4f28182b136ab1274b",
+    "benchmark/fixtures/overlays/F10.owx": "f440537419d36ebb10b559defeabc854c7b27c443b4c05846da7c24e6cb6ed5d",
+    "benchmark/fixtures/overlays/F11.owx": "8be032fee846aac623a60a6271033033f8865aa5f46aabc11d03db94c787b227",
+    "benchmark/fixtures/overlays/F12.owx": "3b3c0c18d3cfd08e5220fbef55c624565909fa8be1cae57f58247d192555b107",
+    "benchmark/fixtures/overlays/F13.owx": "9a83878d1d15dc04ce9e9c3da62f7558c70e61ffa87d36aba65be09ddf30f2c1",
+    "benchmark/fixtures/overlays/F14.owx": "813c88fd0211421dc5ff7fffed6c6f73b3ace7c3dea74d60f7e4cc666592c714",
+    "benchmark/fixtures/overlays/F15.owx": "33b34d784972c281e45fa281ee69413f33cacefdc4fb4b360ffd895bc4b87216",
+    "benchmark/fixtures/overlays/F16.owx": "f30821c6d352d39afd4743512dc840e6b35f63a1a79e137a6f708966ab02eecf",
+    "benchmark/fixtures/overlays/F17.owx": "46cbc4bccff7f9dc6d6bb0becedae9aee2936c02d74d061976b3b5b4848ffe2f",
+    "benchmark/fixtures/overlays/F18.owx": "9771b820eefd162cc2d9fcb540eb6829d80bf6b9df41ebb4a39e71122c8a447d",
+    "benchmark/fixtures/overlays/F19.owx": "d88566fe2e7b3a63592a3a0f315b4d51be1bc39ddc3741f07bff714272c2a4a1",
+    "benchmark/fixtures/overlays/F20.owx": "a257347e3317990c5d65245ca23471850655781f5237a0bc6656f4eb2e9d5f00",
+    "benchmark/fixtures/overlays/F21.owx": "6195e8802b212afcad0ffebd09a6e39662adf5c737bb64710c1c83bcddd9520c",
+    "benchmark/fixtures/overlays/F22.owx": "3cec2d862e4df683fa32fd18bfa78370fc92d849c690243fb6b42883aecce870",
+    "benchmark/fixtures/overlays/F23.owx": "31ee31c52d8efd8fbed1969328fc86dbcabe19b5bd551559a43e5f15e2baf4ce",
+    "benchmark/fixtures/overlays/F24.owx": "4abcc465f5638b736e3120a6b1e32ca4141ed5eafe74c85457a27a7f203bcc61",
+    "benchmark/fixtures/overlays/F25.owx": "a406d12a71d1119aa9216b3346162a357d2886a6e25bde8040a2cf528953eddb",
+    "benchmark/fixtures/overlays/F26.owx": "df97d0439bb1e3cba36a5b0da65e2c27a4ae6049393a86ee17452c9075e6f476"
+  },
+  "profile": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "seed": 20261025,
+  "source_original_sha256_after": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "source_original_sha256_before": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "uncertainty": "Not scientifically independently adjudicated. GitHub official results for V4 not run.",
+  "validator_cli_version": "7.0.3",
+  "variants": [
+    {
+      "expected_class": "correct_conversion",
+      "family": "F01",
+      "id": "F01_baseline",
+      "path": "benchmark/inputs/F01/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F01",
+      "id": "F01_mutation",
+      "operation": "change_numeric_value",
+      "path": "benchmark/inputs/F01/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F01",
+      "id": "F01_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F01/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F02",
+      "id": "F02_baseline",
+      "path": "benchmark/inputs/F02/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F02",
+      "id": "F02_mutation",
+      "operation": "change_text_result",
+      "path": "benchmark/inputs/F02/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F02",
+      "id": "F02_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F02/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F03",
+      "id": "F03_baseline",
+      "path": "benchmark/inputs/F03/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F03",
+      "id": "F03_mutation",
+      "operation": "invent_result",
+      "path": "benchmark/inputs/F03/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F03",
+      "id": "F03_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F03/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F04",
+      "id": "F04_baseline",
+      "path": "benchmark/inputs/F04/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F04",
+      "id": "F04_mutation",
+      "operation": "change_exam_date",
+      "path": "benchmark/inputs/F04/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F04",
+      "id": "F04_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F04/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F05",
+      "id": "F05_baseline",
+      "path": "benchmark/inputs/F05/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F05",
+      "id": "F05_mutation",
+      "operation": "change_unit",
+      "path": "benchmark/inputs/F05/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F05",
+      "id": "F05_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F05/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F06",
+      "id": "F06_baseline",
+      "path": "benchmark/inputs/F06/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F06",
+      "id": "F06_mutation",
+      "operation": "swap_values",
+      "path": "benchmark/inputs/F06/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F06",
+      "id": "F06_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F06/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F07",
+      "id": "F07_baseline",
+      "path": "benchmark/inputs/F07/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F07",
+      "id": "F07_mutation",
+      "operation": "drop_observation",
+      "path": "benchmark/inputs/F07/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F07",
+      "id": "F07_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F07/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F08",
+      "id": "F08_baseline",
+      "path": "benchmark/inputs/F08/baseline.json",
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F08",
+      "id": "F08_mutation",
+      "operation": "invent_exam_date",
+      "path": "benchmark/inputs/F08/mutation.json",
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F08",
+      "id": "F08_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F08/neutral.json",
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F09",
+      "id": "F09_baseline",
+      "path": "benchmark/inputs/F09/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F09",
+      "id": "F09_mutation",
+      "operation": "reassign_patient",
+      "path": "benchmark/inputs/F09/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F09",
+      "id": "F09_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F09/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F10",
+      "id": "F10_baseline",
+      "path": "benchmark/inputs/F10/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F10",
+      "id": "F10_mutation",
+      "operation": "duplicate_new_identity",
+      "path": "benchmark/inputs/F10/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F10",
+      "id": "F10_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F10/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F11",
+      "id": "F11_baseline",
+      "path": "benchmark/inputs/F11/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F11",
+      "id": "F11_mutation",
+      "operation": "change_exam_name",
+      "path": "benchmark/inputs/F11/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F11",
+      "id": "F11_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F11/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F12",
+      "id": "F12_baseline",
+      "path": "benchmark/inputs/F12/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F12",
+      "id": "F12_mutation",
+      "operation": "increase_date_precision",
+      "path": "benchmark/inputs/F12/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F12",
+      "id": "F12_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F12/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F13",
+      "id": "F13_baseline",
+      "path": "benchmark/inputs/F13/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F13",
+      "id": "F13_mutation",
+      "operation": "drop_result",
+      "path": "benchmark/inputs/F13/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F13",
+      "id": "F13_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F13/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F14",
+      "id": "F14_baseline",
+      "path": "benchmark/inputs/F14/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F14",
+      "id": "F14_mutation",
+      "operation": "swap_values",
+      "path": "benchmark/inputs/F14/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F14",
+      "id": "F14_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F14/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F15",
+      "id": "F15_baseline",
+      "path": "benchmark/inputs/F15/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F15",
+      "id": "F15_mutation",
+      "operation": "reassign_patient",
+      "path": "benchmark/inputs/F15/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F15",
+      "id": "F15_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F15/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F16",
+      "id": "F16_baseline",
+      "path": "benchmark/inputs/F16/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "F16",
+      "id": "F16_mutation",
+      "operation": "change_numeric_value",
+      "path": "benchmark/inputs/F16/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F16",
+      "id": "F16_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F16/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F17",
+      "id": "F17_baseline",
+      "path": "benchmark/inputs/F17/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "structural_fault",
+      "family": "F17",
+      "id": "F17_mutation",
+      "operation": "remove_status",
+      "path": "benchmark/inputs/F17/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F17",
+      "id": "F17_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F17/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F18",
+      "id": "F18_baseline",
+      "path": "benchmark/inputs/F18/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "structural_fault",
+      "family": "F18",
+      "id": "F18_mutation",
+      "operation": "duplicate_same_fullurl",
+      "path": "benchmark/inputs/F18/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F18",
+      "id": "F18_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F18/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F19",
+      "id": "F19_baseline",
+      "path": "benchmark/inputs/F19/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "structural_fault",
+      "family": "F19",
+      "id": "F19_mutation",
+      "operation": "remove_code",
+      "path": "benchmark/inputs/F19/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F19",
+      "id": "F19_neutral",
+      "operation": "reorder_entries",
+      "path": "benchmark/inputs/F19/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "correct_conversion",
+      "family": "F20",
+      "id": "F20_baseline",
+      "path": "benchmark/inputs/F20/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "structural_fault",
+      "family": "F20",
+      "id": "F20_mutation",
+      "operation": "invalid_status",
+      "path": "benchmark/inputs/F20/mutation.json",
+      "split": "evaluation",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "F20",
+      "id": "F20_neutral",
+      "operation": "metadata_only",
+      "path": "benchmark/inputs/F20/neutral.json",
+      "split": "evaluation",
+      "variant": "neutral"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F21",
+      "id": "F21_baseline",
+      "path": "benchmark/inputs/F21/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F22",
+      "id": "F22_baseline",
+      "path": "benchmark/inputs/F22/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F23",
+      "id": "F23_baseline",
+      "path": "benchmark/inputs/F23/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F24",
+      "id": "F24_baseline",
+      "path": "benchmark/inputs/F24/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F25",
+      "id": "F25_baseline",
+      "path": "benchmark/inputs/F25/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    },
+    {
+      "expected_class": "expected_refusal",
+      "family": "F26",
+      "id": "F26_baseline",
+      "path": "benchmark/inputs/F26/baseline.json",
+      "split": "evaluation",
+      "variant": "baseline"
+    }
+  ]
+}

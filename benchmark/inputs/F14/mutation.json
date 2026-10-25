@@ -1,0 +1,49 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-9347a97979d16c710e7954b7",
+      "resource": {
+        "id": "p-9347a97979d16c710e7954b7",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-845b60d0856de706d637eed2",
+      "resource": {
+        "code": {
+          "text": "TSH"
+        },
+        "effectiveDateTime": "2026-06-01",
+        "id": "o-845b60d0856de706d637eed2",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-9347a97979d16c710e7954b7"
+        },
+        "valueQuantity": {
+          "value": 4.5
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-e348829492c69b9cb5a9dab3",
+      "resource": {
+        "code": {
+          "text": "CEA"
+        },
+        "effectiveDateTime": "2026-06-01",
+        "id": "o-e348829492c69b9cb5a9dab3",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-9347a97979d16c710e7954b7"
+        },
+        "valueQuantity": {
+          "value": 0.7
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

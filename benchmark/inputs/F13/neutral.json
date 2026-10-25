@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-6b8a1d95d1db4300803ec2ed",
+      "resource": {
+        "code": {
+          "text": "Hemoglobina"
+        },
+        "effectiveDateTime": "2026-01-21",
+        "id": "o-6b8a1d95d1db4300803ec2ed",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-3f489b50c8bf9ffc3931a2b8"
+        },
+        "valueQuantity": {
+          "unit": "g/dL",
+          "value": 12
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-3f489b50c8bf9ffc3931a2b8",
+      "resource": {
+        "id": "p-3f489b50c8bf9ffc3931a2b8",
+        "resourceType": "Patient"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

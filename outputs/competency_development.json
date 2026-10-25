@@ -1,0 +1,1200 @@
+{
+  "scope": "development",
+  "results": [
+    {
+      "family": "F01",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F01",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F01-x1', ('numeric', '25.2'))"
+          ],
+          "destination_only": [
+            "('F01-x1', ('numeric', '26.45'))"
+          ]
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F01-x1', ('numeric', '25.2'), 'ng/mL')"
+          ],
+          "destination_only": [
+            "('F01-x1', ('numeric', '26.45'), 'ng/mL')"
+          ]
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q02",
+          "Q04"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F01",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F02",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F02",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F02-x1', ('text', 'sem achados'))"
+          ],
+          "destination_only": [
+            "('F02-x1', ('text', 'achados inespecíficos'))"
+          ]
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F02-x1', ('text', 'sem achados'), None)"
+          ],
+          "destination_only": [
+            "('F02-x1', ('text', 'achados inespecíficos'), None)"
+          ]
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q02",
+          "Q04"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F02",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F03",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F03",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": false,
+          "source_answers": 0,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": [
+            "('F03-x1', ('text', 'suposto sem referência'))"
+          ]
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 0,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": [
+            "('F03-x1', ('text', 'suposto sem referência'), None)"
+          ]
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q02",
+          "Q04"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F03",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F04",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F04",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F04-x1', '2026')"
+          ],
+          "destination_only": [
+            "('F04-x1', '2025')"
+          ]
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F04-x1', 'INDETERMINATE')"
+          ],
+          "destination_only": [
+            "('F04-x1', 'OUT')"
+          ]
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q03",
+          "Q05"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F04",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F05",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F05",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F05-x1', ('numeric', '11.4'), 'g/dL')"
+          ],
+          "destination_only": [
+            "('F05-x1', ('numeric', '11.4'), 'mmol/L')"
+          ]
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q04"
+        ],
+        "count": 1
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F05",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F06",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F06",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [
+            "('F06-x1', ('numeric', '2.1'))",
+            "('F06-x2', ('numeric', '6.8'))"
+          ],
+          "destination_only": [
+            "('F06-x1', ('numeric', '6.8'))",
+            "('F06-x2', ('numeric', '2.1'))"
+          ]
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [
+            "('F06-x1', ('numeric', '2.1'), None)",
+            "('F06-x2', ('numeric', '6.8'), None)"
+          ],
+          "destination_only": [
+            "('F06-x1', ('numeric', '6.8'), None)",
+            "('F06-x2', ('numeric', '2.1'), None)"
+          ]
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q02",
+          "Q04"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F06",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F07",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F07",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 1,
+          "source_only": [
+            "('F07-p1', 'F07-x2', 'CEA')"
+          ],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 1,
+          "source_only": [
+            "('F07-x2', ('numeric', '2.4'))"
+          ],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 1,
+          "source_only": [
+            "('F07-x2', '2026-03-01')"
+          ],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 1,
+          "source_only": [
+            "('F07-x2', ('numeric', '2.4'), None)"
+          ],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": false,
+          "source_answers": 2,
+          "destination_answers": 1,
+          "source_only": [
+            "('F07-x2', 'IN')"
+          ],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04",
+          "Q05"
+        ],
+        "count": 5
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F07",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 2,
+          "destination_answers": 2,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    },
+    {
+      "family": "F08",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "baseline"
+    },
+    {
+      "family": "F08",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": false,
+          "source_answers": 0,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": [
+            "('F08-x1', '2026-01-15')"
+          ]
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": false,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [
+            "('F08-x1', 'UNKNOWN_DATE')"
+          ],
+          "destination_only": [
+            "('F08-x1', 'OUT')"
+          ]
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [
+          "Q03",
+          "Q05"
+        ],
+        "count": 2
+      },
+      "variant": "mutation"
+    },
+    {
+      "family": "F08",
+      "status": "COMPARED",
+      "questions": {
+        "Q01": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q02": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q03": {
+          "equivalent": true,
+          "source_answers": 0,
+          "destination_answers": 0,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q04": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        },
+        "Q05": {
+          "equivalent": true,
+          "source_answers": 1,
+          "destination_answers": 1,
+          "source_only": [],
+          "destination_only": []
+        }
+      },
+      "Q06": {
+        "mismatched_queries": [],
+        "count": 0
+      },
+      "variant": "neutral"
+    }
+  ],
+  "source_queries": "explicit OWL/XML synthetic assertions",
+  "target_queries": "FHIR JSON resources, no converter trace",
+  "fully_equivalent_on_accepted": 16,
+  "non_equivalent_on_accepted": 8,
+  "refused": 0
+}

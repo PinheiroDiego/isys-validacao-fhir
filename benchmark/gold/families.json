@@ -1,0 +1,896 @@
+{
+  "author": "AI-assisted synthetic design; external subject-matter review pending",
+  "design": "purposefully selected scenarios; not random independent samples",
+  "families": [
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-03-12",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "CEA",
+          "unit": "ng/mL",
+          "value": "25.20"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F01",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "decimal com escala e unidade explícita",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_numeric_value"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "string",
+          "date": "2026-03",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Ultrassom",
+          "value": "sem achados"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F02",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "resultado textual e data mensal",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_text_result"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "date": "2026-03-15",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "PSA"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F03",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "ausência de resultado não é resultado negativo",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "invent_result"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Hemograma",
+          "value": "8"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F04",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "data anual e precisão preservada",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_exam_date"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-02-28",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Hemoglobina",
+          "unit": "g/dL",
+          "value": "11.40"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F05",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "unidade textual sem inferência UCUM",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_unit"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-04-05",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "PSA",
+          "value": "2.1"
+        },
+        {
+          "datatype": "decimal",
+          "date": "2026-04-05",
+          "evolution": "e1",
+          "id": "x2",
+          "name": "TSH",
+          "value": "6.8"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F06",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "resultados de exames distintos",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "swap_values"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-02-01",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "CEA",
+          "value": "1.2"
+        },
+        {
+          "datatype": "decimal",
+          "date": "2026-03-01",
+          "evolution": "e1",
+          "id": "x2",
+          "name": "CEA",
+          "value": "2.4"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F07",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "repetição legítima do mesmo nome de exame",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "drop_observation"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Ferritina",
+          "value": "128"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F08",
+      "patients": [
+        "p1"
+      ],
+      "split": "development",
+      "topic": "exame sem data informada",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "invent_exam_date"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        },
+        {
+          "id": "e2",
+          "patients": [
+            "p2"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-19",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Glicemia",
+          "value": "92"
+        },
+        {
+          "datatype": "integer",
+          "date": "2026-03-19",
+          "evolution": "e2",
+          "id": "x2",
+          "name": "Ureia",
+          "value": "25"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F09",
+      "patients": [
+        "p1",
+        "p2"
+      ],
+      "split": "evaluation",
+      "topic": "relação paciente trocada por paciente existente",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "reassign_patient"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-03-20",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Calcitonina",
+          "value": "3.4"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F10",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "ocorrência extra com nova identidade formal",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "duplicate_new_identity"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "string",
+          "date": "2026-05",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Mamografia",
+          "value": "sem alterações"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F11",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "nome do exame alterado mantendo valor",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_exam_name"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-02",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Vitamina D",
+          "unit": "ng/mL",
+          "value": "28.0"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F12",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "precisão do mês artificialmente aumentada",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "increase_date_precision"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-01-21",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Hemoglobina",
+          "unit": "g/dL",
+          "value": "12"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F13",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "resultado omitido num registro que o informava",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "drop_result"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-06-01",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "CEA",
+          "value": "4.5"
+        },
+        {
+          "datatype": "decimal",
+          "date": "2026-06-01",
+          "evolution": "e1",
+          "id": "x2",
+          "name": "TSH",
+          "value": "0.7"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F14",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "resultados trocados dentro do mesmo paciente",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "swap_values"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        },
+        {
+          "id": "e2",
+          "patients": [
+            "p2"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "string",
+          "date": "2026-01-09",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Biópsia",
+          "value": "negativo"
+        },
+        {
+          "datatype": "string",
+          "date": "2026-01-10",
+          "evolution": "e2",
+          "id": "x2",
+          "name": "Biópsia",
+          "value": "positivo"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F15",
+      "patients": [
+        "p1",
+        "p2"
+      ],
+      "split": "evaluation",
+      "topic": "pacientes distintos com resultados textuais",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "reassign_patient"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "decimal",
+          "date": "2026-03-11",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Creatinina",
+          "unit": "mg/dL",
+          "value": "0.85"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F16",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "valor com precisão decimal e data de dia",
+      "variant_mutation": {
+        "kind": "semantic",
+        "operation": "change_numeric_value"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-18",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "TSH",
+          "value": "3"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F17",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "controle negativo: status ausente",
+      "variant_mutation": {
+        "kind": "structural",
+        "operation": "remove_status"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-19",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Ferritina",
+          "value": "27"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F18",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "controle negativo: fullUrl repetido",
+      "variant_mutation": {
+        "kind": "structural",
+        "operation": "duplicate_same_fullurl"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "string",
+          "date": "2026-03-20",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Ultrassom",
+          "value": "normal"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F19",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "controle negativo: code ausente",
+      "variant_mutation": {
+        "kind": "structural",
+        "operation": "remove_code"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-21",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "CEA",
+          "value": "8"
+        }
+      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
+      "id": "F20",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "controle negativo: status fora do conjunto de valores",
+      "variant_mutation": {
+        "kind": "structural",
+        "operation": "invalid_status"
+      }
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": []
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-10",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "TSH",
+          "value": "4"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "NO_PATIENT_LINK"
+      ],
+      "id": "F21",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por ausência do vínculo evolucao-paciente",
+      "variant_mutation": null
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1",
+            "p2"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-10",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "CEA",
+          "value": "3"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "MULTIPLE_PATIENT_LINKS"
+      ],
+      "id": "F22",
+      "patients": [
+        "p1",
+        "p2"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por múltiplos pacientes possíveis",
+      "variant_mutation": null
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-10",
+          "evolution": "e1",
+          "id": "x1",
+          "name": null,
+          "value": "5"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "MISSING_EXAM_NAME"
+      ],
+      "id": "F23",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por ausência de identificação do exame",
+      "variant_mutation": null
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-02-30",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "PSA",
+          "value": "3"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "AMBIGUOUS_OR_INVALID_DATE"
+      ],
+      "id": "F24",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por data do calendário impossível",
+      "variant_mutation": null
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "boolean",
+          "date": "2026-03-10",
+          "evolution": "e1",
+          "id": "x1",
+          "name": "Hemoglobina",
+          "value": "true"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "UNSUPPORTED_RESULT_DATATYPE"
+      ],
+      "id": "F25",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por datatype não suportado",
+      "variant_mutation": null
+    },
+    {
+      "evolutions": [
+        {
+          "id": "e1",
+          "patients": [
+            "p1"
+          ]
+        }
+      ],
+      "exams": [
+        {
+          "datatype": "integer",
+          "date": "2026-03-10",
+          "evolution": "e1",
+          "extra_results": [
+            {
+              "datatype": "integer",
+              "value": "5"
+            }
+          ],
+          "id": "x1",
+          "name": "CEA",
+          "value": "4"
+        }
+      ],
+      "expected_decision": "reject",
+      "expected_rejection_reasons": [
+        "MULTIPLE_RESULT"
+      ],
+      "id": "F26",
+      "patients": [
+        "p1"
+      ],
+      "split": "evaluation",
+      "topic": "recusa por múltiplos valores de resultado",
+      "variant_mutation": null
+    }
+  ],
+  "holdout_policy": "F09-F26 not used to revise converter after freeze; no holdout score until independent review",
+  "spec": "ISYS-V4-GOLD-1"
+}

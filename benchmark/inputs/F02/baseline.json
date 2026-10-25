@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-106a12a40efd924e7c761a14",
+      "resource": {
+        "id": "p-106a12a40efd924e7c761a14",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-48afab0d1c910d7ded4b263d",
+      "resource": {
+        "code": {
+          "text": "Ultrassom"
+        },
+        "effectiveDateTime": "2026-03",
+        "id": "o-48afab0d1c910d7ded4b263d",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-106a12a40efd924e7c761a14"
+        },
+        "valueString": "sem achados"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

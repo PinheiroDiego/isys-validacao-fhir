@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-085c89cbd54b7b513bdcaf0c",
+      "resource": {
+        "id": "p-085c89cbd54b7b513bdcaf0c",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-b607512005920b56f4487b4a",
+      "resource": {
+        "code": {
+          "text": "Hemoglobina"
+        },
+        "effectiveDateTime": "2026-02-28",
+        "id": "o-b607512005920b56f4487b4a",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-085c89cbd54b7b513bdcaf0c"
+        },
+        "valueQuantity": {
+          "unit": "mmol/L",
+          "value": 11.40
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

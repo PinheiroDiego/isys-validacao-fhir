@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-18e8e28eb35629221521f530",
+      "resource": {
+        "code": {
+          "text": "CEA"
+        },
+        "effectiveDateTime": "2026-03-12",
+        "id": "o-18e8e28eb35629221521f530",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-fe4f74bdea8440aa6f66743f"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 25.20
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-fe4f74bdea8440aa6f66743f",
+      "resource": {
+        "id": "p-fe4f74bdea8440aa6f66743f",
+        "resourceType": "Patient"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

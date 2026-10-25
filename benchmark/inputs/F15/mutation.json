@@ -1,0 +1,52 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-11f4e0f6d5bcb1e58f432b10",
+      "resource": {
+        "id": "p-11f4e0f6d5bcb1e58f432b10",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-b748c8fb2f0d663e21021ef5",
+      "resource": {
+        "id": "p-b748c8fb2f0d663e21021ef5",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-dd9a44253c2c3e2d1d9de445",
+      "resource": {
+        "code": {
+          "text": "Biópsia"
+        },
+        "effectiveDateTime": "2026-01-09",
+        "id": "o-dd9a44253c2c3e2d1d9de445",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-b748c8fb2f0d663e21021ef5"
+        },
+        "valueString": "negativo"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-f1a36900c2ca67f6abe85fd2",
+      "resource": {
+        "code": {
+          "text": "Biópsia"
+        },
+        "effectiveDateTime": "2026-01-10",
+        "id": "o-f1a36900c2ca67f6abe85fd2",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-b748c8fb2f0d663e21021ef5"
+        },
+        "valueString": "positivo"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

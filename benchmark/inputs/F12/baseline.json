@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-9ea02e0dd1beead5afa014f7",
+      "resource": {
+        "id": "p-9ea02e0dd1beead5afa014f7",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-dc49516a7d3e422b158304dd",
+      "resource": {
+        "code": {
+          "text": "Vitamina D"
+        },
+        "effectiveDateTime": "2026-02",
+        "id": "o-dc49516a7d3e422b158304dd",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-9ea02e0dd1beead5afa014f7"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 28.0
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

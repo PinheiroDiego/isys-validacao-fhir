@@ -1,0 +1,44 @@
+name: iSys - Benchmark V4 HL7 oficial
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'development (8 families), evaluation (18 families), or all (26 families)'
+        required: true
+        default: evaluation
+        type: choice
+        options:
+          - evaluation
+          - development
+          - all
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify baseline and V4 file integrity
+        run: python3 src/verify_freeze.py
+      - name: Run unit tests on development cases
+        run: python3 -m unittest discover -s tests -v
+      - name: Official FHIR R4 validation V4 (each Bundle)
+        run: bash scripts_validate.sh "${{ inputs.scope }}"
+      - name: Save raw logs, outcomes, and metrics even on failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isys-benchmark-v4-${{ inputs.scope }}
+          path: |
+            baseline_v3/frozen_manifest.json
+            benchmark/manifest_v4.json
+            outputs/official_v4
+          if-no-files-found: warn

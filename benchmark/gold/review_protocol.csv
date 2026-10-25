@@ -1,0 +1,27 @@
+﻿familia;particao;situacao;exames;mutacao;julgamento_A_corretude;julgamento_semantico_mutacao;evidencia/axioma FHIR;parecer_revisor;adjudicacao
+F01;development;decimal com escala e unidade explícita;1;change_numeric_value;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F02;development;resultado textual e data mensal;1;change_text_result;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F03;development;ausência de resultado não é resultado negativo;1;invent_result;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F04;development;data anual e precisão preservada;1;change_exam_date;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F05;development;unidade textual sem inferência UCUM;1;change_unit;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F06;development;resultados de exames distintos;2;swap_values;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F07;development;repetição legítima do mesmo nome de exame;2;drop_observation;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F08;development;exame sem data informada;1;invent_exam_date;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F09;evaluation;relação paciente trocada por paciente existente;2;reassign_patient;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F10;evaluation;ocorrência extra com nova identidade formal;1;duplicate_new_identity;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F11;evaluation;nome do exame alterado mantendo valor;1;change_exam_name;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F12;evaluation;precisão do mês artificialmente aumentada;1;increase_date_precision;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F13;evaluation;resultado omitido num registro que o informava;1;drop_result;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F14;evaluation;resultados trocados dentro do mesmo paciente;2;swap_values;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F15;evaluation;pacientes distintos com resultados textuais;2;reassign_patient;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F16;evaluation;valor com precisão decimal e data de dia;1;change_numeric_value;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F17;evaluation;controle negativo: status ausente;1;remove_status;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F18;evaluation;controle negativo: fullUrl repetido;1;duplicate_same_fullurl;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F19;evaluation;controle negativo: code ausente;1;remove_code;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F20;evaluation;controle negativo: status fora do conjunto de valores;1;invalid_status;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F21;evaluation;recusa por ausência do vínculo evolucao-paciente;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F22;evaluation;recusa por múltiplos pacientes possíveis;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F23;evaluation;recusa por ausência de identificação do exame;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F24;evaluation;recusa por data do calendário impossível;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F25;evaluation;recusa por datatype não suportado;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE
+F26;evaluation;recusa por múltiplos valores de resultado;1;;PENDENTE;PENDENTE;PENDENTE;PENDENTE;PENDENTE

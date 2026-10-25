@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-7dc8c198c3cc5f82d994d73e",
+      "resource": {
+        "code": {
+          "text": "TSH"
+        },
+        "effectiveDateTime": "2026-03-18",
+        "id": "o-7dc8c198c3cc5f82d994d73e",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-1745f56cbc72d5bb5b734fdd"
+        },
+        "valueQuantity": {
+          "value": 3
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-1745f56cbc72d5bb5b734fdd",
+      "resource": {
+        "id": "p-1745f56cbc72d5bb5b734fdd",
+        "resourceType": "Patient"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

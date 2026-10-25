@@ -1,0 +1,21 @@
+test_all_fhir_bundles_reference_resolve_for_normal_baselines (test_v4.BenchmarkV4Tests.test_all_fhir_bundles_reference_resolve_for_normal_baselines) ... ok
+test_all_source_refusals_are_recorded_with_reasons (test_v4.BenchmarkV4Tests.test_all_source_refusals_are_recorded_with_reasons) ... ok
+test_baseline_archives_and_immutable_hashes (test_v4.BenchmarkV4Tests.test_baseline_archives_and_immutable_hashes) ... ok
+test_controls_are_nontrivial_and_equivalent (test_v4.BenchmarkV4Tests.test_controls_are_nontrivial_and_equivalent) ... ok
+test_counts_and_splits (test_v4.BenchmarkV4Tests.test_counts_and_splits) ... ok
+test_development_gold_matching (test_v4.BenchmarkV4Tests.test_development_gold_matching) ... ok
+test_development_mutated_competency_queries_detect_change (test_v4.BenchmarkV4Tests.test_development_mutated_competency_queries_detect_change) ... ok
+test_development_q01_to_q05_equivalence_and_controls (test_v4.BenchmarkV4Tests.test_development_q01_to_q05_equivalence_and_controls) ... ok
+test_gold_is_not_implemented_in_converter (test_v4.BenchmarkV4Tests.test_gold_is_not_implemented_in_converter) ... ok
+test_no_real_original_individuals_in_overlays (test_v4.BenchmarkV4Tests.test_no_real_original_individuals_in_overlays) ... ok
+test_no_v4_official_results_are_fabricated (test_v4.BenchmarkV4Tests.test_no_v4_official_results_are_fabricated) ... ok
+test_official_outcome_parser (test_v4.BenchmarkV4Tests.test_official_outcome_parser) ... ok
+test_original_zip_unchanged (test_v4.BenchmarkV4Tests.test_original_zip_unchanged) ... ok
+test_overlay_reproducible (test_v4.BenchmarkV4Tests.test_overlay_reproducible) ... ok
+test_semantic_mutations_have_differences_in_development (test_v4.BenchmarkV4Tests.test_semantic_mutations_have_differences_in_development) ... ok
+test_structural_negative_cases_are_fixtures_not_official_results (test_v4.BenchmarkV4Tests.test_structural_negative_cases_are_fixtures_not_official_results) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.014s
+
+OK

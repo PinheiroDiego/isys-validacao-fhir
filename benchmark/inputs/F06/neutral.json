@@ -1,0 +1,57 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-738341e06c661515ebb2c4c5",
+      "resource": {
+        "id": "p-738341e06c661515ebb2c4c5",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-2fd91fb4b83a190865bc4691",
+      "resource": {
+        "code": {
+          "text": "PSA"
+        },
+        "effectiveDateTime": "2026-04-05",
+        "id": "o-2fd91fb4b83a190865bc4691",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-738341e06c661515ebb2c4c5"
+        },
+        "valueQuantity": {
+          "value": 2.1
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-8f80cbb7ed79e602a059f92b",
+      "resource": {
+        "code": {
+          "text": "TSH"
+        },
+        "effectiveDateTime": "2026-04-05",
+        "id": "o-8f80cbb7ed79e602a059f92b",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-738341e06c661515ebb2c4c5"
+        },
+        "valueQuantity": {
+          "value": 6.8
+        }
+      }
+    }
+  ],
+  "meta": {
+    "tag": [
+      {
+        "code": "control",
+        "system": "https://example.org/isys/benchmark/metadata"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

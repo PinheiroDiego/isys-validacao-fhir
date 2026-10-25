@@ -1,0 +1,39 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-08bdfa5a4ff6ec5fc8825cd2",
+      "resource": {
+        "id": "p-08bdfa5a4ff6ec5fc8825cd2",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-a62c6e60206743b6d5a536a9",
+      "resource": {
+        "code": {
+          "text": "Hemograma"
+        },
+        "effectiveDateTime": "2026",
+        "id": "o-a62c6e60206743b6d5a536a9",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-08bdfa5a4ff6ec5fc8825cd2"
+        },
+        "valueQuantity": {
+          "value": 8
+        }
+      }
+    }
+  ],
+  "meta": {
+    "tag": [
+      {
+        "code": "control",
+        "system": "https://example.org/isys/benchmark/metadata"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

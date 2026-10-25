@@ -1,0 +1,38 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-aef97987a0c99eff77b41b7b",
+      "resource": {
+        "id": "p-aef97987a0c99eff77b41b7b",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-2c51d95ffacc3521fc84ed92",
+      "resource": {
+        "code": {
+          "text": "Ferritina"
+        },
+        "id": "o-2c51d95ffacc3521fc84ed92",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-aef97987a0c99eff77b41b7b"
+        },
+        "valueQuantity": {
+          "value": 128
+        }
+      }
+    }
+  ],
+  "meta": {
+    "tag": [
+      {
+        "code": "control",
+        "system": "https://example.org/isys/benchmark/metadata"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

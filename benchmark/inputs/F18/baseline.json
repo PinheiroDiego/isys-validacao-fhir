@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-c849e4e3bb9403b2b8ee71ee",
+      "resource": {
+        "id": "p-c849e4e3bb9403b2b8ee71ee",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-9b86c8878132b12a51db11be",
+      "resource": {
+        "code": {
+          "text": "Ferritina"
+        },
+        "effectiveDateTime": "2026-03-19",
+        "id": "o-9b86c8878132b12a51db11be",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c849e4e3bb9403b2b8ee71ee"
+        },
+        "valueQuantity": {
+          "value": 27
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}
