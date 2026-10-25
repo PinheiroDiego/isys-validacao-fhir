@@ -14,7 +14,10 @@ import sys,zipfile,hashlib
 p=sys.argv[1]
 assert zipfile.is_zipfile(p), 'Arquivo não é JAR válido'
 print('Arquivo:',p)
-print('SHA-256:',hashlib.sha256(open(p,'rb').read()).hexdigest())
+fingerprint=hashlib.sha256(open(p,'rb').read()).hexdigest()
+expected='57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b'
+print('SHA-256:',fingerprint)
+assert fingerprint==expected, 'Hash do JAR HL7 7.0.3 diferente do artefato da primeira execução oficial; abortando para fixar o binário'
 with zipfile.ZipFile(p) as z:
  if 'META-INF/MANIFEST.MF' in z.namelist():
   manifest=z.read('META-INF/MANIFEST.MF').decode('utf-8',errors='replace')

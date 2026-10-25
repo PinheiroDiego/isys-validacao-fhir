@@ -1,0 +1,128 @@
+{
+  "automatic_detection_rate_in_prior_metrics": 1.0,
+  "baseline": {
+    "bundle_errors": 17,
+    "bundle_warnings": 13,
+    "individual_passed": 7,
+    "individual_total": 7
+  },
+  "completed": 16,
+  "detection_interpretation": "Not estimable against failing baseline. Six mutation outcomes identical to baseline. One extra status error is specific; duplicate mutation only adds same missing-fullUrl errors at extra entry.",
+  "ethical_scope": "Synthetic overlay only. No real clinical outcomes.",
+  "jar_sha256": "57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b",
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+  "mutations": [
+    {
+      "baseline_errors": 17,
+      "id": "mutation_change_numeric_value",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_swap_result_between_occurrences",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_change_exam_date",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_reassign_existing_patient",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_drop_result",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_add_unjustified_value",
+      "new_error_details": [],
+      "new_errors_relative_to_invalid_baseline": 0,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 17
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_duplicate_observation_entry",
+      "new_error_details": [
+        {
+          "code": "required",
+          "details": "Bundle entry missing fullUrl",
+          "expression": [
+            "Bundle.entry[7]"
+          ],
+          "severity": "error"
+        },
+        {
+          "code": "required",
+          "details": "Relative Reference appears inside Bundle whose entry is missing a fullUrl",
+          "expression": [
+            "Bundle.entry[7].resource/*Observation/o-e1bf4c369eaf2ec728dc5875*/.subject"
+          ],
+          "severity": "error"
+        },
+        {
+          "code": "invalid",
+          "details": "Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry",
+          "expression": [
+            "Bundle.entry[7]"
+          ],
+          "severity": "error"
+        }
+      ],
+      "new_errors_relative_to_invalid_baseline": 3,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 20
+    },
+    {
+      "baseline_errors": 17,
+      "id": "mutation_remove_required_status",
+      "new_error_details": [
+        {
+          "code": "structure",
+          "details": "Observation.status: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Observation|4.0.1)",
+          "expression": [
+            "Bundle.entry[6].resource/*Observation/o-e1bf4c369eaf2ec728dc5875*/"
+          ],
+          "severity": "error"
+        }
+      ],
+      "new_errors_relative_to_invalid_baseline": 1,
+      "removed_errors": 0,
+      "structurally_unconfounded": false,
+      "total_mutation_errors": 18
+    }
+  ],
+  "official_run_status": "COMPLETED",
+  "planned": 16,
+  "reassessed_differential_detection_rate": null,
+  "source_zip": "isys-hl7-fhir-r4-validation.zip",
+  "source_zip_sha256": "ac95823bb028ad12b2f817954a89d40802c9fde46451fc97d73ffe863c8175ad",
+  "validator_reported": "FHIR Validation tool Version 7.0.3 (Git# 28e9fac6d79d). Built 2026-10-21T16:46:58.228Z (4 days old)"
+}

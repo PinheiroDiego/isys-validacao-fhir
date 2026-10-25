@@ -1,18 +1,21 @@
 {
   "entry": [
     {
+      "fullUrl": "https://example.org/fhir/Patient/p-60dc1096b6b6c187342b0e28",
       "resource": {
         "id": "p-60dc1096b6b6c187342b0e28",
         "resourceType": "Patient"
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Patient/p-c69d218d50d24c78d00bdeea",
       "resource": {
         "id": "p-c69d218d50d24c78d00bdeea",
         "resourceType": "Patient"
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Observation/o-62757162e4d4a3b7f7bcf608",
       "resource": {
         "code": {
           "text": "CEA"
@@ -30,6 +33,7 @@
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Observation/o-7d17584dc72151f25e7bb2c6",
       "resource": {
         "code": {
           "text": "Hemograma"
@@ -47,6 +51,7 @@
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Observation/o-ca60e47bf8c81fb90b877233",
       "resource": {
         "code": {
           "text": "PSA"
@@ -60,6 +65,7 @@
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Observation/o-d672677930ef591acd66e76b",
       "resource": {
         "code": {
           "text": "Ultrassom"
@@ -75,6 +81,7 @@
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Observation/o-e1bf4c369eaf2ec728dc5875",
       "resource": {
         "code": {
           "text": "CEA"

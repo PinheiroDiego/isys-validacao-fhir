@@ -113,38 +113,77 @@ def main():
  return 0 if run['status']=='COMPLETED' else 4
 
 
+def differential_summary(m, run):
+    """Controlled mutation detection is interpretable only if the reference Bundle passes."""
+    byid={r['id']:r for r in run['results'] if r.get('status')=='VALIDATED'}
+    baseline=byid.get('base_bundle')
+    good=baseline is not None and baseline['errors']==0
+    summary={'baseline_bundle_valid':good if baseline else None,
+             'baseline_bundle_errors':baseline['errors'] if baseline else None,
+             'comparisons_interpretable':good, 'mutations':[]}
+    def sig(i):
+        return (i.get('severity'),i.get('code'),i.get('details_text'),
+                tuple(i.get('expression') or ()))
+    errs_base=Counter(sig(i) for i in (baseline or {}).get('issues',[])
+                     if i.get('severity') in ('error','fatal'))
+    for mut in m['mutations']:
+        r=byid.get('mutation_'+mut['id'])
+        if not r:
+            summary['mutations'].append({'id':mut['id'],'kind':mut['kind'],
+                                        'completed':False,'official_detected':None})
+            continue
+        errs=Counter(sig(i) for i in r['issues']
+                     if i.get('severity') in ('error','fatal'))
+        delta=list((errs-errs_base).elements())
+        summary['mutations'].append({'id':mut['id'],'kind':mut['kind'],
+          'completed':True,'total_errors':r['errors'],
+          'additional_errors_vs_baseline':len(delta),
+          'additional_error_details':[{'code':v[1], 'details':v[2], 'expression':list(v[3])} for v in delta],
+          'official_detected':(r['errors']>0) if good else None,
+          'oracle_detected_previous_engineering_test':mut.get('semantic_detected')})
+    return summary
+
+
 def metrics(m,run):
-    completed=[r for r in run['results'] if r['status']=='VALIDATED']
+    completed=[r for r in run['results'] if r.get('status')=='VALIDATED']
     baseline=[r for r in completed if r['cohort']=='baseline']
-    obs=[r for r in baseline if r['resourceType']=='Observation']
-    passed=[r for r in obs if r['conforms_base_profile']]
-    mutations=[r for r in completed if r['cohort']=='mutation']
-    mutation_count=len(m['mutations'])
-    # Return none for rates with denominator of 0 validated tests: evidence not present.
+    observations=[r for r in baseline if r['resourceType']=='Observation']
+    conforming_obs=[r for r in observations if r['conforms_base_profile']]
+    bundle=next((r for r in baseline if r['id']=='base_bundle'),None)
+    bundle_clean=(bundle['errors']==0) if bundle else None
+    differential=differential_summary(m,run)
+    mutants=differential['mutations']
+    mut_complete=len(mutants)==len(m['mutations']) and all(r['completed'] for r in mutants)
+    detected=[r for r in mutants if r.get('official_detected') is True]
+    kinds={k:[r for r in mutants if r['kind']==k] for k in ('SEMANTIC','FHIR_NEGATIVE_CONTROL')}
     return {
       'official_validation_status':run['status'],
       'planned_validation_requests':len(m['requests']),
       'official_validation_requests_attempted':run['attempted_requests'],
       'official_validation_requests_completed':len(completed),
       'official_validation_request_coverage':len(completed)/len(m['requests']),
-      'official_baseline_resource_coverage':len([r for r in baseline if r['resourceType']!='Bundle'])/7,
-      'official_observation_validation_coverage':len(obs)/m['mapped_observations'],
-      'official_observation_profile_pass_rate':len(passed)/len(obs) if obs else None,
+      'baseline_bundle_conforms_base_profile':bundle_clean,
+      'official_baseline_resource_coverage':sum(r['resourceType']!='Bundle' for r in baseline)/7,
+      'official_observation_profile_pass_rate':len(conforming_obs)/len(observations) if observations else None,
       'source_occurrences_total':m['source_observation_occurrences'],
       'converted_observations':m['mapped_observations'],
       'source_to_fhir_mapping_coverage':m['mapped_observations']/m['source_observation_occurrences'],
       'source_refusals':m['refused_observations'],
       'refusal_rate':m['refused_observations']/m['source_observation_occurrences'],
-      'end_to_end_source_conformant_coverage':len(passed)/m['source_observation_occurrences'] if len(obs)==m['mapped_observations'] else None,
-      'official_mutation_requests_completed':len(mutations),
-      'official_mutation_detection_rate':sum(not r['conforms_base_profile'] for r in mutations)/len(mutations) if len(mutations)==mutation_count else None,
+      'end_to_end_source_conformant_coverage':(len(conforming_obs)/m['source_observation_occurrences']
+        if bundle_clean and len(observations)==m['mapped_observations'] else None),
+      'official_mutation_requests_completed':sum(r['completed'] for r in mutants),
+      'official_mutation_detection_rate':(len(detected)/len(mutants) if bundle_clean and mut_complete else None),
+      'official_semantic_mutation_detection_rate':(sum(r.get('official_detected') is True for r in kinds['SEMANTIC'])/len(kinds['SEMANTIC'])
+        if bundle_clean and mut_complete and kinds['SEMANTIC'] else None),
+      'official_negative_control_detected':(kinds['FHIR_NEGATIVE_CONTROL'][0].get('official_detected')
+        if bundle_clean and mut_complete and len(kinds['FHIR_NEGATIVE_CONTROL'])==1 else None),
       'official_error_issue_count':sum(r['errors'] for r in completed),
       'official_warning_issue_count':sum(r['warnings'] for r in completed),
       'condition_A':'EXECUTED_SYNTHETIC_CONVERSION',
-      'condition_B':'OFFICIAL_VALIDATION_COMPLETE' if len(completed)==len(m['requests']) else 'NOT_YET_EVALUABLE',
-      'condition_C':'SEMANTIC_ENGINEERING_TESTS_COMPLETED; COMBINED_C_NOT_YET_EVALUABLE' if len(completed)!=len(m['requests']) else 'COMBINE_WITH_SEMANTIC_ORACLE',
+      'condition_B':('OFFICIAL_BASELINE_CONFORMANT' if bundle_clean else 'BASELINE_INVALID' if bundle is not None else 'NOT_YET_EVALUABLE'),
+      'condition_C':'ENGINEERING_ORACLE_AVAILABLE; SCIENTIFIC_BENCHMARK_NOT_EXECUTED',
       'scientific_inference_allowed':False,
-      'note':'Rates based on 11 artificial occurrences. CLI coverage and conformance remain null when not run; offline terminology restrictions apply.'
-    }
+      'note':'Differential mutation detection is NULL until clean baseline and every mutation evaluated; rates describe synthetic pilot, no clinical/semantic inference from profile pass.'}
 
 if __name__=='__main__':sys.exit(main())

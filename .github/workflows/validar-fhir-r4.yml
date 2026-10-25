@@ -5,6 +5,8 @@ on:
     paths:
       - 'inputs/**'
       - 'scripts/run_official.py'
+      - 'scripts/preflight.py'
+      - 'outputs/engineering/manifest_inputs.json'
       - 'scripts/bootstrap_validator.sh'
       - '.github/workflows/validar-fhir-r4.yml'
 jobs:
@@ -21,6 +23,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Verificar entradas e hashes
+        run: python3 scripts/preflight.py
+      - name: Testes unitários do pacote
+        run: python3 -m unittest discover -s tests -v
       - name: Baixar e executar validador 7.0.3 (FHIR 4.0.1)
         run: bash scripts/bootstrap_validator.sh
       - name: Publicar logs e OperationOutcomes mesmo com falha

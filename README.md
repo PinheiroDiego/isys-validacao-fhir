@@ -1,24 +1,26 @@
-# iSys — Validação HL7 FHIR oficial (piloto sintético)
+# iSys — Revalidação oficial HL7 FHIR V3 (Bundle corrigido)
 
-Este repositório foi preparado para executar o validador **oficial** HL7 FHIR CLI **7.0.3** contra perfis-base FHIR **R4 4.0.1** (`Patient`, `Observation`, `Bundle`). Os dados aqui são **sintéticos**. O esquema e indivíduos da ontologia original NÃO estão incluídos.
+**O ZIP original da ontologia não está incluído, e nenhum dado clínico real foi usado.**
 
-## Para executar SEM instalar nada localmente
+Este pacote corrige a falha encontrada na primeira execução oficial: as 7 entradas do Bundle de referência agora usam `Bundle.entry.fullUrl` absoluta consistente (`https://example.org/fhir/<tipo>/<id>`); `Observation.subject.reference` permanece relativa e resolúvel. Todos os Bundles mutados receberam a mesma correção de empacotamento; nenhuma mutação ou valor clínico sintético foi alterado.
 
-1. Crie um repositório **privado** no GitHub (com um README inicial, para ter a branch `main`).
-2. Baixe e descompacte `isys-github-actions-pronto.zip`.
-3. No repositório, escolha **Add file > Upload files**; arraste o **conteúdo** da pasta `isys-github-actions-pronto`, mantendo a estrutura. Faça commit na `main`. Se o GitHub não incluir a pasta `.github` nesse upload, crie o arquivo `.github/workflows/validar-fhir-r4.yml` na interface, copiando o arquivo fornecido no pacote.
-4. Abra **Actions > iSys - Validacao FHIR R4 fixa > Run workflow > main > Run workflow**.
-5. Abra a execução concluída, seção **Artifacts**, e baixe `isys-hl7-fhir-r4-validation`.
-6. Na pasta descompactada de resultados, consulte `outputs/official/coverage-metrics.json`, `outputs/official/execution-summary.json`, e `outputs/official/*.outcome.json`.
+**Importante:** os resultados V3 ainda NÃO foram produzidos pelo validador oficial. O que já foi executado em V2 está documentado em `docs/parecer-v2.md`.
 
-O workflow obtém automaticamente o JAR e as definições FHIR R4 pela rede do GitHub Actions. Se houver erro de download, o erro será preservado no log; não equivale a falha de conformidade.
+## Execute no mesmo repositório privado do GitHub
 
-## Interpretação
+1. Descompacte este pacote e envie seu conteúdo ao repositório `isys-validacao-fhir` existente, sobrescrevendo arquivos de mesmos caminhos na branch `main` (não envie o ZIP fechado). A pasta oculta `.github/workflows` deve ser mantida.
+2. Em **Actions**, execute `iSys - Validacao FHIR R4 fixa` via **Run workflow**, ou acompanhe a execução automática gerada pelo push.
+3. Em **Artifacts**, baixe o novo `isys-hl7-fhir-r4-validation` e anexe-o ao ChatGPT.
+4. Não misture os novos resultados com o ZIP antigo. Compare hashes e `execution-summary.json`.
 
-- **16 requisições**: 1 Bundle base + 7 recursos individuais + 8 Bundles mutados.
-- **11 ocorrências de origem**; 5 convertidas, 6 recusadas; cobertura de conversão 5/11.
-- `official_validation_requests_completed=16` somente quando os 16 `OperationOutcome` forem obtidos.
-- `official_observation_profile_pass_rate` informa conformidade dos `Observation` validados contra **perfis-base**, não contra BR Core/RNDS ou perfil especializado.
-- `-tx n/a` desativa um servidor terminológico externo, limitando os testes de terminologias.
+## O que será registrado
 
-Evite divulgar arquivos com dados pessoais ou a ontologia original; este repositório contém somente dados artificiais.
+- 16 operações: 1 Bundle válido esperado + 7 recursos individuais + 8 Bundles mutados.
+- `OperationOutcome` e logs para cada entrada, hashes, versão do Java/validador, tempos e contagem de mensagens.
+- `differential-mutation-analysis.json`: compara cada mutação com o baseline; se o Bundle base falhar, as taxas de detecção permanecem **null**, nunca 100% indevido.
+- `coverage-metrics.json`: cobertura do conversor e conformidade fim a fim, separadas.
+- `scripts/preflight.py`: verificação de integridade e referências antes da validação.
+
+FHIR fixado: R4 4.0.1; HL7 Validator CLI 7.0.3; `-tx n/a`. Não pressupor conformidade de terminologias ou perfis de implementação de terceiros.
+
+O JAR da primeira execução oficial é agora fixado também pelo SHA-256 `57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b`; o workflow aborta se receber outro binário, para impedir deriva silenciosa. Dependências complementares de terminologia devem ser registradas pelos logs e não são tratadas como totalmente congeladas.
