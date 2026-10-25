@@ -1,28 +1,32 @@
-# Diagnóstico de CI – iSys V6.1 / execução #4
+# iSys V6.1 — correção da execução #6 (seleção de testes)
 
-A execução #4 enviou apenas `benchmark/manifest_v6.json`, `review/attestation.json` e `review/decisions.csv`, sem resultados oficiais. O código 1 não identifica a etapa exata. A falha anterior da trava CSV (código 3) foi corrigida.
+**Diagnóstico confirmado:** a ratificação externa passou, mas `python3 -m unittest discover -s tests -v` executava também `test_v4.py` e `test_v5.py` contra o gold corrente da V6.1. O resultado foram seis falhas e quatro erros (56 testes no total), encerrando o workflow antes do validador HL7.
 
-## Alteração
+## O que muda
 
-Substitua **somente** `.github/workflows/isys-v6-hl7.yml` pelo arquivo homônimo deste pacote. Este patch não altera nenhum caso, entrada FHIR, ontologia, gold, parecer, script de validação nem regra de liberação.
+Somente `.github/workflows/isys-v6-hl7.yml` é alterado. A etapa de regressão exige a presença dos quatro módulos próprios da V6/V6.1 e executa:
 
-As etapas mantêm o comportamento de falhar em caso de erro (`set -euo pipefail`), mas registram a saída em `outputs/ci_diagnostics`. O `upload-artifact` em `always()` inclui esses arquivos mesmo com falha.
+```bash
+python3 -m unittest discover -s tests -p 'test_v6*.py' -v
+```
 
-## Como executar
+Isso inclui `test_v6.py`, `test_v61_adjudicated.py`, `test_v61_checkout_eol.py` e `test_v61_ratified.py`. Não executa os testes históricos da V4/V5 contra os arquivos correntes. Os arquivos históricos seguem congelados e seus hashes continuam verificados na etapa `python3 src/verify_v6.py`, que não foi modificada.
 
-Faça commit do workflow e inicie uma **nova execução** da ação "iSys V6.1 - HL7 Adjudicated Benchmark", com `scope=confirmatory`. Não use `Re-run jobs` de uma execução antiga.
+## Verificações realizadas
 
-Baixe `isys-v6.1-confirmatory-hl7` e envie-o novamente; agora o ZIP deve incluir `outputs/ci_diagnostics/01-verify-v6.log` até o último passo executado, identificando o bloqueio exato. Se o validador rodar, também haverá `outputs/official_v6/confirmatory` e `outputs/metrics_v6/confirmatory`.
+- `verify_v6.py`: PASS, 98 arquivos FHIR e 36 overlays conferidos.
+- `review_gate.py`: RATIFIED_WITH_RESSALVAS, 26 famílias confirmatórias.
+- Suíte selecionada V6/V6.1, inclusive na presença dos testes legados V4/V5: **28/28 aprovados**.
+- Nenhuma alteração em casos FHIR, gold, oráculo, ontologia, ratificação ou histórico.
+- **Validação oficial HL7 V6.1: ainda não executada**. O workflow foi interrompido na etapa de testes antes de baixar o JAR.
 
-## Segurança
+## Como aplicar
 
-- A execução confirmatória exige o parecer, sem atalhos.
-- `sha256sum -c -` do validador permanece obrigatório, com o mesmo SHA-256 fixado.
-- O `unittest` permanece obrigatório; erros continuam interrompendo o fluxo.
-- A versão dos dados não foi alterada.
-- A instrumentação não serve como resultado científico; registrar no artigo somente a execução oficial bem-sucedida e seus artefatos.
+1. Extraia este ZIP na raiz do repositório privado `PinheiroDiego/isys-validacao-fhir`, substituindo `.github/workflows/isys-v6-hl7.yml`.
+2. Commit na branch `main`.
+3. Inicie um **novo** `Actions → iSys V6.1 - HL7 Adjudicated Benchmark → Run workflow`, com `scope: confirmatory`.
+4. Anexe o artefato `isys-v6.1-confirmatory-hl7` (mesmo se falhar); os logs devem permanecer em `outputs/ci_diagnostics/`.
 
-## Integridade deste patch
+Não use apenas `Re-run jobs` de um commit anterior; essa opção não adota a correção ainda não publicada na branch.
 
-Workflow original SHA-256: `42ca20c9ab8bec9f8953b86d3355acfff6c63bf4ad27e438ac651642ab141c44`
-Workflow instrumentado SHA-256: `9ce186b0b46584a307ed252e852bf8fc7d0fd733f1c2f4d986b8422ae04a1ff9`
+**Limite científico:** correção operacional de pipeline, sem nova avaliação cega e sem mudança nos dados do benchmark.

@@ -42,12 +42,25 @@ jobs:
           set -euo pipefail
           mkdir -p outputs/ci_diagnostics
           python3 src/review_gate.py 2>&1 | tee outputs/ci_diagnostics/02-review-gate.log
-      - name: Run local regression suite (never scores holdout)
+      - name: Run V6/V6.1 regression suite only (never scores holdout)
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p outputs/ci_diagnostics
-          python3 -m unittest discover -s tests -v 2>&1 | tee outputs/ci_diagnostics/03-regression-tests.log
+          # Legacy V4/V5 tests depend on their own frozen gold and must not run
+          # against V6.1 working directories. Historical artifacts are separately
+          # verified by src/verify_v6.py above.
+          for required in \
+            tests/test_v6.py \
+            tests/test_v61_adjudicated.py \
+            tests/test_v61_checkout_eol.py \
+            tests/test_v61_ratified.py; do
+            if [[ ! -f "$required" ]]; then
+              echo "Required V6/V6.1 test module is missing: $required" >&2
+              exit 1
+            fi
+          done
+          python3 -m unittest discover -s tests -p 'test_v6*.py' -v 2>&1 | tee outputs/ci_diagnostics/03-regression-tests.log
       - name: Acquire fixed HL7 validator CLI 7.0.3
         shell: bash
         run: |

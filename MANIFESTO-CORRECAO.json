@@ -1,0 +1,9 @@
+{
+  "original_workflow_sha256": "9ce186b0b46584a307ed252e852bf8fc7d0fd733f1c2f4d986b8422ae04a1ff9",
+  "corrected_workflow_sha256": "1ff69e733a4a94758894be004cfe54448b64550b006d01bef07c069c845b930c",
+  "scientific_files_modified": 0,
+  "scope": "workflow only",
+  "locally_executed_tests": 28,
+  "locally_successful_tests": 28,
+  "hl7_official_executed": false
+}
