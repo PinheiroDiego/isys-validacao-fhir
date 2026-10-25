@@ -26,25 +26,52 @@ jobs:
           distribution: temurin
           java-version: '21'
       - name: Check frozen historical artifacts, gold and inputs
-        run: python3 src/verify_v6.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci_diagnostics
+          python3 --version | tee outputs/ci_diagnostics/environment.txt
+          java -version 2>&1 | tee -a outputs/ci_diagnostics/environment.txt
+          echo "Commit: ${GITHUB_SHA}" | tee -a outputs/ci_diagnostics/environment.txt
+          echo "Workflow run: ${GITHUB_RUN_ID}; scope: ${{ inputs.scope }}" | tee -a outputs/ci_diagnostics/environment.txt
+          python3 src/verify_v6.py 2>&1 | tee outputs/ci_diagnostics/01-verify-v6.log
       - name: Require external FHIR specialist review for confirmation
         if: ${{ inputs.scope == 'confirmatory' }}
-        run: python3 src/review_gate.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci_diagnostics
+          python3 src/review_gate.py 2>&1 | tee outputs/ci_diagnostics/02-review-gate.log
       - name: Run local regression suite (never scores holdout)
-        run: python3 -m unittest discover -s tests -v
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci_diagnostics
+          python3 -m unittest discover -s tests -v 2>&1 | tee outputs/ci_diagnostics/03-regression-tests.log
       - name: Acquire fixed HL7 validator CLI 7.0.3
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p tools
-          curl -fL --retry 3 --max-time 240 \
-            https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.3/validator_cli.jar \
-            -o tools/validator_cli_7.0.3.jar
-          printf '%s  %s\n' '57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b' tools/validator_cli_7.0.3.jar | sha256sum -c -
+          mkdir -p tools outputs/ci_diagnostics
+          (
+            curl -fL --retry 3 --max-time 240 \
+              https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.3/validator_cli.jar \
+              -o tools/validator_cli_7.0.3.jar
+            sha256sum tools/validator_cli_7.0.3.jar
+            printf '%s  %s\n' '57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b' tools/validator_cli_7.0.3.jar | sha256sum -c -
+          ) 2>&1 | tee outputs/ci_diagnostics/04-validator-download.log
       - name: Execute official HL7 Validator on fixed inputs
-        run: python3 src/run_official_v6.py --scope '${{ inputs.scope }}' --jar tools/validator_cli_7.0.3.jar
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci_diagnostics
+          python3 src/run_official_v6.py --scope '${{ inputs.scope }}' --jar tools/validator_cli_7.0.3.jar 2>&1 | tee outputs/ci_diagnostics/05-official-execution.log
       - name: Measure independent local C overhead (excludes Java)
-        run: python3 src/time_semantic_v6.py --scope '${{ inputs.scope }}'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci_diagnostics
+          python3 src/time_semantic_v6.py --scope '${{ inputs.scope }}' 2>&1 | tee outputs/ci_diagnostics/06-semantic-timing.log
       - name: Upload audit artifacts even on failure
         if: always()
         uses: actions/upload-artifact@v4
@@ -57,3 +84,4 @@ jobs:
             review/decisions.csv
             outputs/official_v6/${{ inputs.scope }}
             outputs/metrics_v6/${{ inputs.scope }}
+            outputs/ci_diagnostics/
