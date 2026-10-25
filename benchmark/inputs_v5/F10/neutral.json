@@ -1,0 +1,34 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-d2365dd49a35d1909da6d206",
+      "resource": {
+        "id": "p-d2365dd49a35d1909da6d206",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-b5e95b7890af12144f9f1105",
+      "resource": {
+        "code": {
+          "text": "Calcitonina"
+        },
+        "effectiveDateTime": "2026-03-20",
+        "id": "o-b5e95b7890af12144f9f1105",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-d2365dd49a35d1909da6d206"
+        },
+        "valueQuantity": {
+          "value": 3.4
+        }
+      }
+    }
+  ],
+  "meta": {
+    "versionId": "synthetic-control-v5"
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

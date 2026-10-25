@@ -1,0 +1,35 @@
+name: iSys - Benchmark V5 corrective rerun FHIR R4
+on:
+  workflow_dispatch:
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify the frozen V4 and new V5 input hashes
+        run: python3 src/verify_v5.py
+      - name: Local regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Execute 42 official V5 corrective validations
+        run: bash scripts_validate_v5.sh
+      - name: Upload results even on error
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isys-benchmark-v5-corrective
+          path: |
+            benchmark/manifest_v4.json
+            benchmark/manifest_v5.json
+            provenance/laudo-v4.md
+            outputs/official_v5/evaluation
+          if-no-files-found: warn

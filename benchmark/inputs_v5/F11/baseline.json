@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-eae862cfb28063d5085463e1",
+      "resource": {
+        "id": "p-eae862cfb28063d5085463e1",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-90478dfde3f8244870308e51",
+      "resource": {
+        "code": {
+          "text": "Mamografia"
+        },
+        "effectiveDateTime": "2026-05",
+        "id": "o-90478dfde3f8244870308e51",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-eae862cfb28063d5085463e1"
+        },
+        "valueString": "sem alterações"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

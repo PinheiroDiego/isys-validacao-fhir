@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-cb461e29ae8dc63225489446",
+      "resource": {
+        "id": "p-cb461e29ae8dc63225489446",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-a762700f179016781763134a",
+      "resource": {
+        "code": {
+          "text": "CEA"
+        },
+        "effectiveDateTime": "2026-03-21",
+        "id": "o-a762700f179016781763134a",
+        "resourceType": "Observation",
+        "status": "not-a-valid-status",
+        "subject": {
+          "reference": "Patient/p-cb461e29ae8dc63225489446"
+        },
+        "valueQuantity": {
+          "value": 8
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

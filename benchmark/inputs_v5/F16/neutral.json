@@ -1,0 +1,35 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-2f9d0a2bc6e1510c559c2522",
+      "resource": {
+        "id": "p-2f9d0a2bc6e1510c559c2522",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-0ebfafaa1155b1af27748469",
+      "resource": {
+        "code": {
+          "text": "Creatinina"
+        },
+        "effectiveDateTime": "2026-03-11",
+        "id": "o-0ebfafaa1155b1af27748469",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-2f9d0a2bc6e1510c559c2522"
+        },
+        "valueQuantity": {
+          "unit": "mg/dL",
+          "value": 0.85
+        }
+      }
+    }
+  ],
+  "meta": {
+    "versionId": "synthetic-control-v5"
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

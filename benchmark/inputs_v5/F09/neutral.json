@@ -1,0 +1,56 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-f5303e4233e6e9fbd6e73f5a",
+      "resource": {
+        "code": {
+          "text": "Glicemia"
+        },
+        "effectiveDateTime": "2026-03-19",
+        "id": "o-f5303e4233e6e9fbd6e73f5a",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-befc936e59ab97f1e5ac4984"
+        },
+        "valueQuantity": {
+          "value": 92
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-9894cbfdade2357950e39b2e",
+      "resource": {
+        "code": {
+          "text": "Ureia"
+        },
+        "effectiveDateTime": "2026-03-19",
+        "id": "o-9894cbfdade2357950e39b2e",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-276c8ace6b8771d1ee06871d"
+        },
+        "valueQuantity": {
+          "value": 25
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-befc936e59ab97f1e5ac4984",
+      "resource": {
+        "id": "p-befc936e59ab97f1e5ac4984",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-276c8ace6b8771d1ee06871d",
+      "resource": {
+        "id": "p-276c8ace6b8771d1ee06871d",
+        "resourceType": "Patient"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}
