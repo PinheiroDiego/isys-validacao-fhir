@@ -1,7 +1,7 @@
 {
   "analysis_unit": "family (cluster) and not derived variant",
-  "benchmark_id": "ISYS-V6-CANDIDATE-2026-10-25",
-  "expert_review_status": "PENDING",
+  "benchmark_id": "ISYS-V6.1-RATIFIED-RELEASE-2026-10-25",
+  "expert_review_status": "SUPPLEMENTAL_RATIFICATION_RECEIVED_G15_G35__G35_WITH_RESERVATIONS",
   "families": [
     {
       "emitted": 1,
@@ -304,17 +304,10 @@
       "split": "confirmatory"
     },
     {
-      "emitted": 0,
+      "emitted": 1,
       "family": "G35",
-      "refused": 1,
-      "rejection_reasons": [
-        {
-          "reasons": [
-            "UNIT_WITHOUT_NUMERIC_VALUE"
-          ],
-          "synthetic_exam": "G35-x1"
-        }
-      ],
+      "refused": 0,
+      "rejection_reasons": [],
       "source_occurrences": 1,
       "split": "confirmatory"
     },
@@ -375,9 +368,9 @@
     "benchmark/inputs/G14/baseline.json": "777fa9a8a1c7676c8199454b89f0a2722718bb88e89cac6c712626fc658e89f9",
     "benchmark/inputs/G14/mutation.json": "7d9d46b115736ec9ead6e5c96f6c46ddf09d0567aec2707fcafd9948e9f7edb2",
     "benchmark/inputs/G14/neutral.json": "12b97a49d72708c6e47b196bb62e749ee30b261c1a7021284833fe82046f32b0",
-    "benchmark/inputs/G15/baseline.json": "3e017d64c5bcea3b717d91a82dde642a69ccec98dc8a58d5d495b0415009f8dd",
+    "benchmark/inputs/G15/baseline.json": "6a93672152f544dd6af6494d468c681959db206b206fbd4a773cf971c8f9f827",
     "benchmark/inputs/G15/mutation.json": "b91670aac647a715d5fd0acc8ab002706f635e4ce6e4b3d556a5c252ec738a42",
-    "benchmark/inputs/G15/neutral.json": "1b6455d6f03a7db4b80a76bb19c0100f5be49988cbf4bf4690e8fd6bb00c8e20",
+    "benchmark/inputs/G15/neutral.json": "73a4a4a4d5cd4dafafec8d6750b54f7baddf4aff7e93882e4fe89318d0d9c21a",
     "benchmark/inputs/G16/baseline.json": "4fa6e7453ae571d1d38989aadc7c66b3fa68f993aa34ce3323ff812e33ea483f",
     "benchmark/inputs/G16/mutation.json": "f0511a45c4c67b2b7c3874585e6399cca302a885528626d95516eee1daf8aeb8",
     "benchmark/inputs/G16/neutral.json": "51c772c5aac4c91ea002eda9f8866b668bc99a30059d9b54f3279d96d14edff4",
@@ -431,15 +424,19 @@
     "benchmark/inputs/G32/neutral.json": "230880feb543fe506ecaaa75f2b7027a23508dda7cf4fd5a48168678d4bc1855",
     "benchmark/inputs/G33/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
     "benchmark/inputs/G34/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
-    "benchmark/inputs/G35/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45",
+    "benchmark/inputs/G35/baseline.json": "be320cdc6f2b5910cbe12976c3e0c1eaacfcc72d11a3dc8cf2c39c04bace8fc6",
+    "benchmark/inputs/G35/mutation.json": "c3e220d6bf6212c5788e06e7a769efae8e993540e6e1da5b4adc0e816cabaf3f",
+    "benchmark/inputs/G35/neutral.json": "4caabbdf4b3c52f4b652451d299ee99778cd9f59263bf79b432fde2e2b9e9bdf",
     "benchmark/inputs/G36/baseline.json": "13413b04c83da41b0ef1af3e117ee6f083302b7d12bfdebe353f97cc1e2e2e45"
   },
-  "gold_sha256": "50634b4472bed0d04ba4a7e3d38cf1192a6d527c1aea6e986a5f32222c214fe3",
+  "gold_sha256": "32cc09a9b1a5d390cb807859ad83d42829e4fdd854c5e2a385020a33c693189d",
   "heldout_no_scoring_before_review": true,
   "historical_archives_sha256": {
     "historical/v5-audit-unaltered.zip": "92129d0b1dd5c2a1a92239d08cdfa7d7ef0d47f92bb72b2ad831ee30f55d52da",
     "historical/v5-official-artifact-unaltered.zip": "bf608b73f7a90a9411901803f5492a458c8a6204cd03e64414d5ebdcfc6f9d71",
-    "historical/v5-source-unaltered.zip": "0b1f98ca4acb10289972b3e8011a1bcf14dbcb80f415c4ef559fd25314650132"
+    "historical/v5-source-unaltered.zip": "0b1f98ca4acb10289972b3e8011a1bcf14dbcb80f415c4ef559fd25314650132",
+    "historical/v6-candidate-unaltered.zip": "6df5fb8558e6000921b5b6b4c0a50bb062a49fa583277e9b3a31189d8a539b8e",
+    "historical/v6.1-candidate-unaltered.zip": "34caf348ea8f8344b3c8508b9355d71c04467e3d4f5f0fc336478b7da1242934"
   },
   "original_ontology_NOT_distributed": true,
   "overlays_sha256": {
@@ -482,10 +479,17 @@
   },
   "privacy": "No clinical records or ontology original included",
   "profile": "http://hl7.org/fhir/StructureDefinition/Bundle",
-  "source_ontology_inner_owx_sha256": "54fde32e281df37b79773ca56128ad2526125bc3174717cbb04871750cfd8558",
+  "review_provenance": {
+    "conformity": "PENDING_OFFICIAL_HL7_R4",
+    "first_review_blinding": "PARTIALLY_UNBLINDED",
+    "nonclinical_metadata_delta": "Only G35 neutral Bundle.id synthetic-control-35 -> batch-35",
+    "normalization": "Raw family ? resolved as G35 in adjudication only",
+    "ratification_csv_sha256": "e855030ed7daf88456ccb1af07dc4ef224f25f1671090c32a5a6dc6072e25934",
+    "source_preserved": "review/evidence/FICHA_RESPONDER_RECEBIDA.csv"
+  },
   "source_ontology_original_sha256": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
   "source_ontology_original_unchanged": true,
-  "status": "PREPARED_NOT_EXPERT_REVIEWED_NOT_OFFICIALLY_VALIDATED",
+  "status": "EXPERT_RATIFIED_WITH_RESERVATIONS_OFFICIAL_HL7_NOT_EXECUTED",
   "terminology": "-tx n/a",
   "validator_cli_sha256": "57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b",
   "validator_cli_version": "7.0.3",
@@ -1303,12 +1307,30 @@
       "variant": "baseline"
     },
     {
-      "expected_class": "expected_refusal",
+      "expected_class": "correct_conversion",
       "family": "G35",
       "id": "G35_baseline",
       "path": "benchmark/inputs/G35/baseline.json",
       "split": "confirmatory",
       "variant": "baseline"
+    },
+    {
+      "expected_class": "semantic_fault",
+      "family": "G35",
+      "id": "G35_mutation",
+      "operation": "change_orphan_unit_note",
+      "path": "benchmark/inputs/G35/mutation.json",
+      "split": "confirmatory",
+      "variant": "mutation"
+    },
+    {
+      "expected_class": "semantic_equivalent_control",
+      "family": "G35",
+      "id": "G35_neutral",
+      "operation": "bundle.id",
+      "path": "benchmark/inputs/G35/neutral.json",
+      "split": "confirmatory",
+      "variant": "neutral"
     },
     {
       "expected_class": "expected_refusal",
@@ -1319,5 +1341,5 @@
       "variant": "baseline"
     }
   ],
-  "version": "candidate-1"
+  "version": "6.1-ratified-release-1"
 }

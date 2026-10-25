@@ -86,8 +86,8 @@ def convert(graph):
             errs.append('AMBIGUOUS_OR_INVALID_DATE')
         if unit and (unit.datatype!=XSD+'string' or not unit.text.strip()):
             errs.append('INVALID_UNIT')
-        if unit and 'valueQuantity' not in vals:
-            errs.append('UNIT_WITHOUT_NUMERIC_VALUE')
+        # An orphan textual unit is evidence, not a numerical result.
+        # Keep it outside value[x] instead of refusing or inventing a value.
         if errs:
             rejected.append({'synthetic_exam':ex.removeprefix(TEST),'reasons':sorted(set(errs))})
             continue
@@ -102,7 +102,14 @@ def convert(graph):
         }
         if dt:obs['effectiveDateTime']=dt.text
         obs.update(vals)
-        if unit:obs['valueQuantity']['unit']=unit.text # RAW display text; deliberately NO UCUM code/system
+        if result is None:
+            obs['dataAbsentReason']={'coding':[{'system':'http://terminology.hl7.org/CodeSystem/data-absent-reason','code':'unknown'}]}
+            if unit:
+                # Keep the source-only unit out of valueQuantity. obs-6 forbids DAR with any value[x].
+                local_exam=ex.removeprefix(TEST)
+                obs['note']=[{'text':f"Origem informa unidade_textual '{unit.text}' sem resultado associado ({local_exam})."}]
+        elif unit and 'valueQuantity' in vals:
+            obs['valueQuantity']['unit']=unit.text # Literal only. No invented UCUM mapping.
         converted.append(obs)
         resource_patients[patient_id]={'resourceType':'Patient','id':patient_id}
         trace.append({
@@ -129,6 +136,7 @@ def convert(graph):
         'notes':['No semantic inference, no official HL7 validator, no terminology profile validation',
                  'Explicit refusals remain in denominator; incomplete exams may be emitted without value or effectiveDateTime',
                  'Only synthetic individuals identified by overlay namespace are processed',
+                 'Absent value has dataAbsentReason unknown; an orphan unit is preserved in note without creating valueQuantity',
                  'No DiagnosticReport or Encounter resource was generated']
     }
     return bundle,trace,rejected,report

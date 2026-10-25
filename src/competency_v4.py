@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import date
 from decimal import Decimal
 from collections import Counter
-import json,calendar,hashlib
+import json,calendar,hashlib,re
 ROOT=Path(__file__).resolve().parents[1]
 TEST='https://example.org/isys/fhir-semantic-test/2026/v1#'
 BASE='http://www.semanticweb.org/marco/ontologies/2018/11/marco'
@@ -72,6 +72,11 @@ def target_rows(f,b):
   if 'valueQuantity' in o:
    typ0='numeric';val=o['valueQuantity'].get('value');unit=o['valueQuantity'].get('unit')
   elif 'valueString' in o:typ0='text';val=o['valueString']
+  elif o.get('note'):
+   for n in o['note']:
+    mt=re.fullmatch(r"Origem informa unidade_textual '([^']+)' sem resultado associado \((G\d{2}-x\d+)\)\.",n.get('text',''))
+    if mt and mt.group(2)==ex:
+     unit=mt.group(1)
   rows.append({'patient':patient,'exam':ex,'name':o.get('code',{}).get('text'),
                'result':normalize_value(val,'decimal') if typ0=='numeric' else normalize_value(val,'string'),
                'date':o.get('effectiveDateTime'),'unit':unit})
@@ -96,7 +101,7 @@ def questions(rows):
   'Q01':clean([(r['patient'],r['exam'],r['name']) for r in rows]),
   'Q02':clean([(r['exam'],r['result']) for r in rows if r['result'] is not None]),
   'Q03':clean([(r['exam'],r['date']) for r in rows if r['date'] is not None]),
-  'Q04':clean([(r['exam'],r['result'],r['unit']) for r in rows if r['result'] is not None]),
+  'Q04':clean([(r['exam'],r['result'],r['unit']) for r in rows if r['result'] is not None or r['unit'] is not None]),
   'Q05':clean([(r['exam'],interval(r['date'])) for r in rows]),
  }
 

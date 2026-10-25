@@ -1,11 +1,17 @@
 {
-  "status": "PENDING",
-  "reviewer_id": "PENDING",
-  "qualification_summary": "PENDING",
-  "review_date": "PENDING",
-  "gold_sha256": "PENDING",
-  "decisions_sha256": "PENDING",
-  "independent_of_authoring": "PENDING",
-  "adjudication_notes": "PENDING",
-  "consent_to_use_pseudonym_in_paper": false
+  "adjudication_notes": "Original 66-variant review approved with reservations, partially unblinded; G15 RATIFICO, G35 RATIFICO_COM_RESSALVAS. G35 neutral Bundle.id corrected only as requested; the semantic gold and mutation unchanged; note free-text comparison necessary. Source family ? interpreted as G35 in audit, raw CSV unchanged. NOT a fully blind review.",
+  "consent_to_use_pseudonym_in_paper": true,
+  "date_kind": "review_material_received; exact signature date not independently known",
+  "decisions_sha256": "cce869d4093437f5a77e4063d3fe4fbb7fcbd988c227f9ec3924a119f4553ba1",
+  "expert_reply_sha256": "e855030ed7daf88456ccb1af07dc4ef224f25f1671090c32a5a6dc6072e25934",
+  "gold_sha256": "32cc09a9b1a5d390cb807859ad83d42829e4fdd854c5e2a385020a33c693189d",
+  "human_signature_present": false,
+  "independent_of_authoring": "EXTERNAL_SPECIALIST_REVIEW_REPORTED_BY_RESEARCHER",
+  "independent_review_qualification_not_independently_verified": true,
+  "official_hl7_execution": "NOT_PERFORMED",
+  "qualification_summary": "Doutora em Ciência da Computação, 8 anos em integração de sistemas de saúde, 5 anos em FHIR R4; experiência Patient, Observation, Condition, Encounter, DiagnosticReport; reported by researcher",
+  "review_date": "2026-10-25",
+  "review_scope": "24 carried unchanged from original V6 candidate; G15/G35 supplemental, one post-review nonsemantic marker fix G35 neutral",
+  "reviewer_id": "FHIR_EXPERT_PSEUDONYM_01",
+  "status": "APPROVED_WITH_RESSALVAS"
 }

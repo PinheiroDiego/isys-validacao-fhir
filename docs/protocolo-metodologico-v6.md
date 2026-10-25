@@ -1,3 +1,15 @@
+# Emenda V6.1 — substitui referências numéricas V6 somente nesta edição
+
+A decisão da especialista foi recebida em 25/10/2026 e registrada como adjudicação da política G35. A V6 original foi congelada; a V6.1, criada após parecer, contém mudanças de construção e do gold de G35. Isto NÃO constitui um segundo estudo cego. A unidade principal é a família; a análise das 72 entradas confirmatórias só ocorrerá após ratificação pontual de G15/G35 e gate documental.
+
+**Contagens V6.1:** 36 famílias; 31 conversíveis e 5 recusas; 98 entradas FHIR (26 desenvolvimento / 72 confirmação). Na partição confirmatória, 23 conversíveis e três recusas, G33/G34/G36. 36/41 ocorrências convertidas, 5/41 recusadas. Nenhuma taxa de conformidade HL7 V6.1 foi medida até o momento.
+
+**Novo controle G35:** a mutação muda a unidade textual órfã de `mg/dL` para `g/L` apenas em `Observation.note`; permanece válida quanto ao desenho estrutural esperado, mas precisa da validação HL7 oficial. G15 passa a explicitar ausência; a mutação de invenção de valor remove a razão de ausência para não violar obs-6.
+
+**Limitação de revisão:** parecer anterior parcialmente não cego; a ratificação G15/G35 não recupera o cegamento. Para confirmação genuinamente cega, planejar novas famílias não expostas e revisão independente prévia em nova versão (V7).
+
+---
+
 # Protocolo V6 — pré-especificação anterior à validação oficial
 
 **Estado:** design candidato e travado por SHA, pendente de revisão externa. **V5 encerrada** como replicação corretiva pós-inspeção, preservada integralmente. Não há execução oficial V6 nem adjudicação por especialista até esta data.
@@ -10,7 +22,7 @@
 
 ## Delineamento, unidade e viés
 
-36 famílias intencionais novas, derivadas de padrões de representação, **não de prontuários**. G01–G10 = desenvolvimento, G11–G36 = confirmação reservada. 30 famílias conversíveis e seis de recusa, 41 ocorrências de exames no total, 96 variantes FHIR. As famílias G11–G36 não são as famílias previamente utilizadas nas versões V4 e V5, embora algumas classes de defeitos se repitam. A mesma equipe preparou o gold e o avaliador; isso é ameaça à independência. A execução só ocorre após revisão de um especialista real em FHIR, com identidade documentada separadamente. A partição não deve ser pontuada para ajuste do algoritmo após o congelamento.
+36 famílias intencionais novas, derivadas de padrões de representação, **não de prontuários**. G01–G10 = desenvolvimento, G11–G36 = confirmação reservada. 31 famílias conversíveis e cinco de recusa, 41 ocorrências de exames no total, 98 variantes FHIR. As famílias G11–G36 não são as famílias previamente utilizadas nas versões V4 e V5, embora algumas classes de defeitos se repitam. A mesma equipe preparou o gold e o avaliador; isso é ameaça à independência. A execução só ocorre após revisão de um especialista real em FHIR, com identidade documentada separadamente. A partição não deve ser pontuada para ajuste do algoritmo após o congelamento.
 
 Uma família equivale a um cluster. Seus baseline, neutral e mutation **não são observações estatísticas independentes**. A estimativa descritiva principal será a diferença pareada da detecção da mutação por família B versus C. Pode-se apresentar bootstrap por família como variabilidade interna **não** intervalo de confiança representativo de população clínica. Sem teste de significância ou cálculo amostral de poder inventado.
 

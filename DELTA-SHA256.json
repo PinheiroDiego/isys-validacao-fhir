@@ -1,0 +1,29 @@
+{
+  "G35_category": "emit; semantic mutation change_orphan_unit_note",
+  "benchmark_gold_v61_sha256": "32cc09a9b1a5d390cb807859ad83d42829e4fdd854c5e2a385020a33c693189d",
+  "changed_fhir_entries": {
+    "benchmark/inputs/G15/baseline.json": "6a93672152f544dd6af6494d468c681959db206b206fbd4a773cf971c8f9f827",
+    "benchmark/inputs/G15/neutral.json": "73a4a4a4d5cd4dafafec8d6750b54f7baddf4aff7e93882e4fe89318d0d9c21a",
+    "benchmark/inputs/G35/baseline.json": "be320cdc6f2b5910cbe12976c3e0c1eaacfcc72d11a3dc8cf2c39c04bace8fc6",
+    "benchmark/inputs/G35/mutation.json": "c3e220d6bf6212c5788e06e7a769efae8e993540e6e1da5b4adc0e816cabaf3f",
+    "benchmark/inputs/G35/neutral.json": "970050c667367bbd5b60978d7ab11fd1ee62fa7b266e774d27ad79da58bf7ac1"
+  },
+  "changed_fhir_entries_count": 5,
+  "delta_review_status": "RATIFIED_WITH_RESSALVAS",
+  "hl7_official_v61": "NOT_EXECUTED",
+  "official_hl7": "NOT_EXECUTED",
+  "post_review_neutral_metadata_change": {
+    "clinical_data_unchanged": true,
+    "from": "synthetic-control-35",
+    "path": "benchmark/inputs/G35/neutral.json",
+    "property": "Bundle.id",
+    "to": "batch-35"
+  },
+  "previous_v6_zip_sha256": "6df5fb8558e6000921b5b6b4c0a50bb062a49fa583277e9b3a31189d8a539b8e",
+  "ratification_received_csv_sha256": "e855030ed7daf88456ccb1af07dc4ef224f25f1671090c32a5a6dc6072e25934",
+  "source_ontology_zip_sha256": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "unchanged_fhir_entries_count": 93,
+  "updated_fhir_inputs_vs_v61_candidate": 1,
+  "v61_candidate_zip_sha256": "34caf348ea8f8344b3c8508b9355d71c04467e3d4f5f0fc336478b7da1242934",
+  "version": "V6.1 ratified release"
+}

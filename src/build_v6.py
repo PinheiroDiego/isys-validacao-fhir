@@ -36,7 +36,13 @@ def mutate(b,op,case):
   oo[0]['resource']['valueQuantity'],oo[1]['resource']['valueQuantity']=copy.deepcopy(oo[1]['resource']['valueQuantity']),copy.deepcopy(oo[0]['resource']['valueQuantity'])
  elif op=='remove_second_occurrence':assert len(oo)==2;b['entry'].remove(oo[1])
  elif op=='reduce_date_precision':r['effectiveDateTime']=r['effectiveDateTime'][:4]
- elif op=='invent_numeric_value':r['valueQuantity']={'value':Decimal('42')}
+ elif op=='invent_numeric_value':
+  r.pop('dataAbsentReason',None) # obs-6: intentional semantic mutation must stay structurally valid
+  r['valueQuantity']={'value':Decimal('42')}
+ elif op=='change_orphan_unit_note':
+  assert 'valueQuantity' not in r and 'dataAbsentReason' in r
+  for n in r['note']:
+   n['text']=n['text'].replace("'mg/dL'","'g/L'")
  elif op=='increase_date_precision':r['effectiveDateTime']=r['effectiveDateTime']+'-11'
  elif op=='shift_day':r['effectiveDateTime']='2026-07-11'
  elif op=='rename_exam':r['code']['text']='Neutrófilos'
@@ -68,13 +74,13 @@ def main():
  ap.add_argument('--rebuild-unreviewed-candidate',action='store_true',help='Only for creating a NEW, explicitly versioned candidate; overwrites V6 files')
  a=ap.parse_args()
  if (ROOT/'benchmark/manifest_v6.json').exists() and not a.rebuild_unreviewed_candidate:
-  raise RuntimeError('Candidate frozen. Never overwrite V6; create a new version if correction is required.')
+  raise RuntimeError('Candidate frozen. Never overwrite V6.1; create a new version if correction is required.')
  original=a.original
  if not original.exists():raise RuntimeError('Original file missing, required only locally for checking scheme')
  original_hash=sha(original)
  declarations=verify_base(original)['declared_uris']
  families=json.loads((ROOT/'benchmark/gold/families.json').read_text(encoding='utf8'))['families']
- assert len(families)==36 and sum(f['expected_decision']=='emit' for f in families)==30
+ assert len(families)==36 and sum(f['expected_decision']=='emit' for f in families)==31
  metrics=[];variants=[]
  for index,f in enumerate(families,1):
   fid=f['id'];overlay=ROOT/'benchmark/fixtures/overlays'/f'{fid}.owx';write_overlay(f,overlay)
@@ -96,14 +102,14 @@ def main():
     dict(id=fid+'_mutation',family=fid,split=f['split'],variant='mutation',operation=f['mutation']['operation'],expected_class=f['mutation']['kind']+'_fault',path=str((root/'mutation.json').relative_to(ROOT))),
     dict(id=fid+'_neutral',family=fid,split=f['split'],variant='neutral',operation=['reorder','meta.versionId','bundle.id'][index%3],expected_class='semantic_equivalent_control',path=str((root/'neutral.json').relative_to(ROOT)))])
   metrics.append({'family':fid,'split':f['split'],'source_occurrences':len(f['exams']),'emitted':len(trace),'refused':len(rejected),'rejection_reasons':rejected})
- assert len(variants)==96,(len(variants))
+ assert len(variants)==98,(len(variants))
  assert len([v for v in variants if v['split']=='development'])==26
- assert len([v for v in variants if v['split']=='confirmatory'])==70
+ assert len([v for v in variants if v['split']=='confirmatory'])==72
  assert original_hash==sha(original),'Original was modified'
  historical={str(p.relative_to(ROOT)):sha(p) for p in (ROOT/'historical').glob('*.zip')}
  manifest={
-  'benchmark_id':'ISYS-V6-CANDIDATE-2026-10-25','status':'PREPARED_NOT_EXPERT_REVIEWED_NOT_OFFICIALLY_VALIDATED',
-  'version':'candidate-1','fhir_version':'4.0.1','fhir_core':'hl7.fhir.r4.core#4.0.1',
+  'benchmark_id':'ISYS-V6.1-ADJUDICATED-CANDIDATE-2026-10-25','status':'EXPERT_ADJUDICATION_RECEIVED_NEW_VARIANTS_AWAIT_RATIFICATION_NOT_OFFICIALLY_VALIDATED',
+  'version':'6.1-adjudicated-candidate-1','fhir_version':'4.0.1','fhir_core':'hl7.fhir.r4.core#4.0.1',
   'validator_cli_version':'7.0.3','validator_cli_sha256':'57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b',
   'profile':'http://hl7.org/fhir/StructureDefinition/Bundle','terminology':'-tx n/a',
   'source_ontology_original_sha256':original_hash,'source_ontology_original_unchanged':True,
@@ -113,10 +119,10 @@ def main():
   'file_sha256':{v['path']:sha(ROOT/v['path']) for v in variants},
   'variants':variants,'families':metrics,
   'analysis_unit':'family (cluster) and not derived variant','heldout_no_scoring_before_review':True,
-  'expert_review_status':'PENDING',
+  'expert_review_status':'EXPERT_G35_POLICY_DECIDED__FINAL_RATIFICATION_PENDING',
   'privacy':'No clinical records or ontology original included',
  }
  (ROOT/'benchmark/manifest_v6.json').write_text(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
- print(json.dumps({'families':len(families),'convertible':30,'refusals':6,'official_inputs_prepared':len(variants),'development_variants':26,'confirmatory_variants':70,'hash_original_unchanged':True,'expected_review':'PENDING'},ensure_ascii=False))
+ print(json.dumps({'families':len(families),'convertible':31,'refusals':5,'official_inputs_prepared':len(variants),'development_variants':26,'confirmatory_variants':72,'hash_original_unchanged':True,'expected_review':'FINAL_DELTA_RATIFICATION_PENDING'},ensure_ascii=False))
 
 if __name__=='__main__':main()

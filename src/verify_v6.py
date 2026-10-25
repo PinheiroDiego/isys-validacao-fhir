@@ -10,19 +10,19 @@ def verify():
  for name,dig in m['file_sha256'].items():assert sha(ROOT/name)==dig,'FHIR input altered '+name
  for name,dig in m['overlays_sha256'].items():assert sha(ROOT/name)==dig,'OWL overlay altered '+name
  fs=json.loads((ROOT/'benchmark/gold/families.json').read_text(encoding='utf8'))['families']
- assert len(fs)==36 and len(m['variants'])==96
+ assert len(fs)==36 and len(m['variants'])==98
  assert len(set(f['id'] for f in fs))==36
  assert {f['split'] for f in fs}=={'development','confirmatory'}
  assert {f['id'] for f in fs}.isdisjoint({f'F{i:02d}' for i in range(1,27)})
  assert len([v for v in m['variants'] if v['split']=='development'])==26
- assert len([v for v in m['variants'] if v['split']=='confirmatory'])==70
- assert 30==sum(f['expected_decision']=='emit' for f in fs)
- assert 6==sum(f['expected_decision']=='reject' for f in fs)
+ assert len([v for v in m['variants'] if v['split']=='confirmatory'])==72
+ assert 31==sum(f['expected_decision']=='emit' for f in fs)
+ assert 5==sum(f['expected_decision']=='reject' for f in fs)
  expected={r['family']:r for r in m['families']}
  for f in fs:
   r=expected[f['id']];assert r['source_occurrences']==len(f['exams'])
   assert (r['emitted'] == len(f['exams'])) if f['expected_decision']=='emit' else (r['refused']==len(f['exams']))
- return {'state':'PASS','families':len(fs),'v5_archives_verified':len(m['historical_archives_sha256']),
+ return {'state':'PASS','families':len(fs),'historical_archives_verified':len(m['historical_archives_sha256']),
   'owl_overlays_verified':len(m['overlays_sha256']),'fhir_inputs_verified':len(m['file_sha256']),
   'gold_hash':m['gold_sha256'],'original_ontology_hash_recorded':m['source_ontology_original_sha256'],
   'ontology_original_bytes_distributed':False}

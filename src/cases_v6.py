@@ -58,7 +58,7 @@ FAMILIES=[
  C(32,'Status vazio',[E('Reticulócitos','1.2','decimal','2026-03-07','%')],'structural','empty_status'),
  C(33,'Recusa: evolução ligada a dois pacientes',[E('Bilirrubina','1.8','decimal')],reasons=['MULTIPLE_PATIENT_LINKS'],patients=['p1','p2'],evolutions=[{'id':'e1','patients':['p1','p2']}]),
  C(34,'Recusa: data impossível de calendário na origem',[E('Vitamina B12','420','integer','2026-02-31')],reasons=['AMBIGUOUS_OR_INVALID_DATE']),
- C(35,'Recusa: unidade informada sem valor numérico',[E('Fósforo',date='2026-05-03',unit='mg/dL')],reasons=['UNIT_WITHOUT_NUMERIC_VALUE']),
+ C(35,'Unidade textual sem valor: conversão parcial com ausência declarada',[E('Fósforo',date='2026-05-03',unit='mg/dL')],'semantic','change_orphan_unit_note'),
  C(36,'Recusa: nome do exame ausente',[E(None,'3','integer','2026-02')],reasons=['MISSING_EXAM_NAME']),
 ]
 assert len(FAMILIES)==36 and len({f['id'] for f in FAMILIES})==36

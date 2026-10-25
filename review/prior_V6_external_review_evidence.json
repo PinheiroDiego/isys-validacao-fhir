@@ -1,0 +1,40 @@
+{
+  "source_xlsx_sha256": "df20cdf23371967bb05712edf8d7e7557df13ff6bb7194763b540bda293e1a68",
+  "variants_reviewed": 66,
+  "refusal_cases_reviewed": 4,
+  "global_conclusion": "APROVO_COM_RESSALVAS",
+  "prior_review_preserved_elsewhere": "User provided the original Excel; not redistributed in code repository",
+  "ratified_families_carried_from_V6": [
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G16",
+    "G17",
+    "G18",
+    "G19",
+    "G20",
+    "G21",
+    "G22",
+    "G23",
+    "G24",
+    "G25",
+    "G26",
+    "G27",
+    "G28",
+    "G29",
+    "G30",
+    "G31",
+    "G32",
+    "G33",
+    "G34",
+    "G36"
+  ],
+  "not_carried_due_to_changed_inputs": [
+    "G15",
+    "G35"
+  ],
+  "limitation": "Partially unblinded initial review; no claim of independent blinded confirmation",
+  "specialist_authorship": "Confirmed by researcher; identity omitted from public package",
+  "supplemental_adjudication": "Alternative A communicated; new representations require specific approval"
+}

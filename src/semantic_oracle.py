@@ -3,7 +3,7 @@ Purpose: compare clinical meaning, not OWL inference, FHIR profile, or clinical 
 Does not import any converter code or its trace file.
 """
 from __future__ import annotations
-import json,hashlib,time
+import json,hashlib,time,re
 from pathlib import Path
 from decimal import Decimal,InvalidOperation
 ROOT=Path(__file__).resolve().parents[1]
@@ -64,6 +64,22 @@ def compare(f,bundle):
   dtype=exp['value_type'];value=exp['value'];actual_type,actual_value,actual_unit=_value_actual(a)
   if value is None:
    if actual_type is not None:mismatches.append({'field':'invented_value','id':oid})
+   absence=a.get('dataAbsentReason',{}).get('coding',[])
+   if not any(c.get('system')=='http://terminology.hl7.org/CodeSystem/data-absent-reason' and c.get('code')=='unknown' for c in absence):
+    mismatches.append({'field':'missing_or_wrong_data_absent_reason','id':oid})
+   notes=a.get('note',[])
+   orphan_unit=[]
+   for note in notes:
+    match=re.fullmatch(r"Origem informa unidade_textual '([^']+)' sem resultado associado \((G\d{2}-x\d+)\)\.",note.get('text',''))
+    if match:orphan_unit.append((match.group(1),match.group(2)))
+   if exp['unit'] is not None:
+    if orphan_unit!=[(exp['unit'],f['id']+'-'+next(x['id'] for x in f['exams'] if deterministic_id(f['id'],x['id'],'o')==oid))]:
+     mismatches.append({'field':'orphan_unit_provenance','id':oid,'expected_unit':exp['unit'],'found':orphan_unit})
+   elif notes:
+    mismatches.append({'field':'unsupported_note_for_missing_value','id':oid})
+   if 'valueQuantity' in a:mismatches.append({'field':'unit_misrepresented_as_result','id':oid})
+  elif a.get('dataAbsentReason') is not None:
+   mismatches.append({'field':'absent_reason_with_present_value','id':oid})
   elif dtype in ('decimal','integer','int'):
    if actual_type!='numeric':mismatches.append({'field':'numeric_value_missing_or_wrong_type','id':oid})
    else:

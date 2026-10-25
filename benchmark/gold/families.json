@@ -1,4 +1,17 @@
 {
+  "adjudication": {
+    "blinding": "Original V6 reviewer partially unblinded; V6.1 is not a new blind evaluation",
+    "confidentiality": "Professional consented to anonymized academic use; original V6 remain unchanged",
+    "decision": "Alternative A",
+    "new_test_cases_review": "Pending final ratification of changed G15/G35 variants",
+    "record": "Expert response provided 2026-10-25 through principal investigator",
+    "rules": [
+      "Missing result -> dataAbsentReason unknown; never not-performed without evidence",
+      "Orphan unit -> Observation.note, not valueQuantity",
+      "G15 and G35 both follow same policy",
+      "Variant set and counts rebuilt in a versioned V6.1"
+    ]
+  },
   "authoring": "AI-assisted design, manually specified independent of converter output",
   "families": [
     {
@@ -1168,16 +1181,17 @@
           "unit": "mg/dL"
         }
       ],
-      "expected_decision": "reject",
-      "expected_rejection_reasons": [
-        "UNIT_WITHOUT_NUMERIC_VALUE"
-      ],
+      "expected_decision": "emit",
+      "expected_rejection_reasons": [],
       "id": "G35",
-      "mutation": null,
+      "mutation": {
+        "kind": "semantic",
+        "operation": "change_orphan_unit_note"
+      },
       "patients": [
         "p1"
       ],
-      "scenario": "Recusa: unidade informada sem valor numérico",
+      "scenario": "Unidade textual sem valor: conversão parcial com ausência declarada",
       "split": "confirmatory"
     },
     {
@@ -1214,6 +1228,6 @@
   ],
   "family_unit": "one synthetically authored scenario and all its variants",
   "holdout": "G11-G36; do not run confirmatory scores before specialist adjudication",
-  "spec": "ISYS-V6-CANDIDATE-GOLD-1",
-  "status": "UNREVIEWED_EXTERNALLY"
+  "spec": "ISYS-V6.1-ADJUDICATED-CANDIDATE-1",
+  "status": "EXPERT_DECISION_G35_RECORDED__NEW_VARIANTS_REQUIRE_RATIFICATION"
 }
