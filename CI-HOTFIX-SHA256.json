@@ -1,0 +1,42 @@
+{
+  "code_and_doc_changes": [
+    {
+      "hotfix_sha256": "60c3f250d8bf5a0e1b7f345f08fa615ff11f3d80113f5c6a2c1663363e77dc4c",
+      "path": "docs/CORRECAO_CI_GIT_EOL.md",
+      "prior_sha256": null
+    },
+    {
+      "hotfix_sha256": "e8544979ed613d530a3d8418fe0e14be562cc46727601714d2a2e5a9707b48dd",
+      "path": "src/review_gate.py",
+      "prior_sha256": "e8e89230dd7ef562a026ce761140609eb2f347afbfd674e2922d90421f0f15fb"
+    },
+    {
+      "hotfix_sha256": "c60f767b77365212764ebcbcb966a7efd89a242d0b52f935594ad5b8a4a958c1",
+      "path": "tests/test_v61_checkout_eol.py",
+      "prior_sha256": null
+    },
+    {
+      "hotfix_sha256": "8a1d762ce480d13fa97e4096dc033d226f85001c24671b73eb0b9d9dc75821a2",
+      "path": "tests/test_v61_ratified.py",
+      "prior_sha256": "7449d9dade662f36b92a2700bba4c23d9866f756cc084466a745834fdb74a4ae"
+    }
+  ],
+  "failed_run_artifact_sha256": "efd5e947ddc9ebb27112ab061fa656d3d24dd4166a848fb46e00ae013cd69050",
+  "fhir_input_files_verified": 98,
+  "frozen_attestation_sha256": "c5b7dfc90f74ff5dbb73eb09702a652dfdff895fae40f36053ed9a3e5bf7319e",
+  "frozen_gold_sha256": "32cc09a9b1a5d390cb807859ad83d42829e4fdd854c5e2a385020a33c693189d",
+  "frozen_manifest_sha256": "bb3d876536b8e20112890a537c4bb5d5e8e1e6ef33ec4241e461eec27b892c00",
+  "frozen_science_files_sha256_verified": 159,
+  "original_ratified_package_sha256": "7ce2fe2a6601958493e6deba15dd3d2fbbaa3ae638d5b1704be1633d4f3cefa4",
+  "original_ratified_release_sha256": "c640f5737fd806c874e22ac68df08af431e57f027156692d29b04c86f17141d0",
+  "owl_overlay_files_verified": 36,
+  "project": "iSys V6.1 ratified",
+  "purpose": "repair Git checkout CRLF-to-LF normalization in attested CSVs only",
+  "raw_csv_attested_sha256_unchanged": {
+    "review/decisions.csv": "cce869d4093437f5a77e4063d3fe4fbb7fcbd988c227f9ec3924a119f4553ba1",
+    "review/evidence/FICHA_RESPONDER_RECEBIDA.csv": "e855030ed7daf88456ccb1af07dc4ef224f25f1671090c32a5a6dc6072e25934"
+  },
+  "remaining_limitations": "partially unblinded specialist review; no HL7 official run completed",
+  "scope": "CI code and regression tests only; no new FHIR measurements",
+  "version": "V6.1-CI-HOTFIX-01"
+}

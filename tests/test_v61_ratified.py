@@ -1,12 +1,14 @@
 """Post-ratification audit controls. Never runs HL7 validator nor scores holdout."""
-import unittest,json,csv,hashlib,zipfile
+import unittest,json,csv,hashlib,zipfile,sys,tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT/'src'))
+from review_gate import attested_csv_matches_checkout
 class TestRatificationRelease(unittest.TestCase):
  def test_received_source_preserved(self):
   f=ROOT/'review/evidence/FICHA_RESPONDER_RECEBIDA.csv'
   metadata=json.loads((ROOT/'review/evidence/ratification_transcription.json').read_text())
-  self.assertEqual(hashlib.sha256(f.read_bytes()).hexdigest(),metadata['raw_csv_sha256'])
+  self.assertTrue(attested_csv_matches_checkout(f,metadata['raw_csv_sha256']))
   self.assertEqual(metadata['normalizations'][0]['original_family'],'?')
  def test_g35_neutral_only_clinical_identity_unchanged(self):
   with zipfile.ZipFile(ROOT/'historical/v6.1-candidate-unaltered.zip') as z:

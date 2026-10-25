@@ -5,17 +5,32 @@ import csv,hashlib,json,sys,argparse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+
+def attested_csv_matches_checkout(path, expected_sha256):
+    """Accept only byte-identical evidence or Git CRLF -> LF normalization.
+
+    The attested SHA-256 remains that of the immutable originally received file.
+    If Git checked out LF bytes, reconstruct only the original CRLF newlines and
+    check its SHA-256. Any other byte change (including content/BOM) still fails.
+    """
+    raw = Path(path).read_bytes()
+    if hashlib.sha256(raw).hexdigest() == expected_sha256:
+        return True
+    if b'\r' in raw or b'\n' not in raw:
+        return False
+    restored = raw.replace(b'\n', b'\r\n')
+    return hashlib.sha256(restored).hexdigest() == expected_sha256
 def check():
  att=json.loads((ROOT/'review/attestation.json').read_text(encoding='utf8'))
  man=json.loads((ROOT/'benchmark/manifest_v6.json').read_text(encoding='utf8'))
  assert att.get('status')=='APPROVED_WITH_RESSALVAS','ratification with documented reservations not complete'
  assert att.get('gold_sha256')==man['gold_sha256'],'gold hash not attested'
- assert att.get('decisions_sha256')==sha(ROOT/'review/decisions.csv'),'review CSV edited after attestation'
+ assert attested_csv_matches_checkout(ROOT/'review/decisions.csv',att.get('decisions_sha256')),'review CSV changed beyond Git newline normalization'
  assert len(str(att.get('reviewer_id','')))>3 and att['reviewer_id']!='PENDING','reviewer id unavailable'
  assert len(str(att.get('qualification_summary','')))>15 and att['qualification_summary']!='PENDING','reviewer expertise not documented'
  assert att.get('independent_of_authoring')=='EXTERNAL_SPECIALIST_REVIEW_REPORTED_BY_RESEARCHER','external reviewer confirmation/provenance absent'
  assert att.get('consent_to_use_pseudonym_in_paper') is True,'anonymized use consent absent'
- assert att.get('expert_reply_sha256')==sha(ROOT/'review/evidence/FICHA_RESPONDER_RECEBIDA.csv'),'received ratification CSV changed'
+ assert attested_csv_matches_checkout(ROOT/'review/evidence/FICHA_RESPONDER_RECEBIDA.csv',att.get('expert_reply_sha256')),'received ratification CSV changed beyond Git newline normalization'
  assert str(att.get('review_date')) not in ('PENDING','None',''), 'review date missing'
  with (ROOT/'review/decisions.csv').open(encoding='utf-8-sig',newline='') as fh:rows=list(csv.DictReader(fh))
  prior=json.loads((ROOT/'review/prior_V6_external_review_evidence.json').read_text(encoding='utf8'))
