@@ -1,0 +1,15 @@
+{
+  "code": {
+    "text": "CEA"
+  },
+  "effectiveDateTime": "2026-03-15",
+  "id": "o-62757162e4d4a3b7f7bcf608",
+  "resourceType": "Observation",
+  "status": "unknown",
+  "subject": {
+    "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+  },
+  "valueQuantity": {
+    "value": 25.20
+  }
+}

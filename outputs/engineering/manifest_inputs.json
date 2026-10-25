@@ -1,0 +1,362 @@
+{
+  "competency": {
+    "comparisons": [
+      {
+        "description": "patient to examination occurrence (multiset)",
+        "exact_normalized_multiset_equivalence": true,
+        "question": "Q01",
+        "scope": "accepted synthetic occurrences",
+        "source_answer_count": 5,
+        "target_answer_count": 5
+      },
+      {
+        "description": "result belonging to examination occurrence",
+        "exact_normalized_multiset_equivalence": true,
+        "question": "Q02",
+        "scope": "accepted synthetic occurrences",
+        "source_answer_count": 4,
+        "target_answer_count": 4
+      },
+      {
+        "description": "date and explicit precision by occurrence",
+        "exact_normalized_multiset_equivalence": true,
+        "question": "Q03",
+        "scope": "accepted synthetic occurrences",
+        "source_answer_count": 4,
+        "target_answer_count": 4
+      },
+      {
+        "description": "explicit results and literal units",
+        "exact_normalized_multiset_equivalence": true,
+        "question": "Q04",
+        "scope": "accepted synthetic occurrences",
+        "source_answer_count": 4,
+        "target_answer_count": 4
+      },
+      {
+        "description": "three-valued membership in March 2026 range",
+        "exact_normalized_multiset_equivalence": true,
+        "question": "Q05",
+        "scope": "accepted synthetic occurrences",
+        "source_answer_count": 5,
+        "target_answer_count": 5
+      },
+      {
+        "description": "Explicit nonrepresented source occurrences and reasons",
+        "out_of_scope_features": [
+          "Evolution as Encounter",
+          "Clinical terminologies",
+          "Inference-generated triples"
+        ],
+        "question": "Q06",
+        "refusal_count": 6,
+        "refusal_reasons": [
+          {
+            "reasons": [
+              "NO_PATIENT_LINK"
+            ],
+            "synthetic_exam": "ex06"
+          },
+          {
+            "reasons": [
+              "MULTIPLE_PATIENT_LINKS"
+            ],
+            "synthetic_exam": "ex07"
+          },
+          {
+            "reasons": [
+              "MISSING_EXAM_NAME"
+            ],
+            "synthetic_exam": "ex08"
+          },
+          {
+            "reasons": [
+              "AMBIGUOUS_OR_INVALID_DATE"
+            ],
+            "synthetic_exam": "ex09"
+          },
+          {
+            "reasons": [
+              "UNSUPPORTED_RESULT_DATATYPE"
+            ],
+            "synthetic_exam": "ex10"
+          },
+          {
+            "reasons": [
+              "MULTIPLE_RESULT"
+            ],
+            "synthetic_exam": "ex11"
+          }
+        ],
+        "scope": "all synthetic occurrences",
+        "unmapped_original_facts": "not evaluated; original individuals deliberately excluded"
+      }
+    ],
+    "scope": "synthetic overlay, not study benchmark"
+  },
+  "core_package": {
+    "id": "hl7.fhir.r4.core",
+    "version": "4.0.1"
+  },
+  "fhir_release": "4.0.1",
+  "input_file_hashes": {
+    "inputs/baseline/Observation-o-62757162e4d4a3b7f7bcf608.json": "ee4fb9d2d23be31e1bb697468d329e53e10653afae5950fd42616debec10ad9d",
+    "inputs/baseline/Observation-o-7d17584dc72151f25e7bb2c6.json": "b868f647939fac5c0e06e63436d05e53df2c743a0c7dae35fc80122770906753",
+    "inputs/baseline/Observation-o-ca60e47bf8c81fb90b877233.json": "1671dfc7bedafccfe605f6c4b8d19ac4400d99ad84a419c0b594c0d7b130cec0",
+    "inputs/baseline/Observation-o-d672677930ef591acd66e76b.json": "cd395f7df566ec144508074106df04fd6e19130e1b979372515c22639a271f0b",
+    "inputs/baseline/Observation-o-e1bf4c369eaf2ec728dc5875.json": "3741caf81a4ef4e704d5030359f62094679e7bb5cd91e3cf0469d414f3535d7d",
+    "inputs/baseline/Patient-p-60dc1096b6b6c187342b0e28.json": "b7447d784ef28f2b0b67f1fb18fb5f6f87afdc6d3ff66f037f51f702f90dc1d4",
+    "inputs/baseline/Patient-p-c69d218d50d24c78d00bdeea.json": "140609d018750bc9c480263a94ac03e2aa60482f35dd2219823c1219c36e902f",
+    "inputs/baseline/bundle.json": "978452d70177f5a52f485872009d8d30c0d6604c0965348635b7dc415698c14f",
+    "inputs/mutations/add_unjustified_value.json": "57a1f55a3f0ee9a7cfc9143770226a01770920191de1879c062720c80ad2d8ab",
+    "inputs/mutations/change_exam_date.json": "69b076893f19447850f034bfc5d130393007ab9597a2888740cefb37bafe7305",
+    "inputs/mutations/change_numeric_value.json": "59f24752e52c6128d0c054ceea086afa7587d07d04b1ebf8d9aa4cd05c2a4e15",
+    "inputs/mutations/drop_result.json": "d275d2c0fd2a69f22eea9e3e7b8ddd5e30153b7d58cac7a9fe1394600b061481",
+    "inputs/mutations/duplicate_observation_entry.json": "80adeda8abb915aa890bf8d2a8ef9c7e43af69ba326d7e9d1c2980e5d5c1aca3",
+    "inputs/mutations/reassign_existing_patient.json": "4e35a4d730bdbef82863d5cfc8e570d2d6f8f6a73aa2795376a36550f1e2bc86",
+    "inputs/mutations/remove_required_status.json": "3f059c2a7ff4143b41a60ace6de5f18bc3b6987126fa0be4e21c142774fdf6b7",
+    "inputs/mutations/swap_result_between_occurrences.json": "c900f52b9274e519714c12e5c68535a473d15c31c825fdf4321e74b465a07c85"
+  },
+  "local_baseline_findings": [],
+  "mapped_observations": 5,
+  "mutations": [
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "change_numeric_value",
+      "input": "inputs/mutations/change_numeric_value.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex01",
+          "problem": "NUMERIC_OR_UNIT_CHANGED"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "swap_result_between_occurrences",
+      "input": "inputs/mutations/swap_result_between_occurrences.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex01",
+          "problem": "NUMERIC_OR_UNIT_CHANGED"
+        },
+        {
+          "case": "ex05",
+          "problem": "NUMERIC_OR_UNIT_CHANGED"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "change_exam_date",
+      "input": "inputs/mutations/change_exam_date.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex01",
+          "problem": "EXAM_DATE_CHANGED"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "reassign_existing_patient",
+      "input": "inputs/mutations/reassign_existing_patient.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex01",
+          "problem": "TARGET_PATIENT_MISMATCH"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "drop_result",
+      "input": "inputs/mutations/drop_result.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex01",
+          "problem": "NUMERIC_OR_UNIT_CHANGED"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "add_unjustified_value",
+      "input": "inputs/mutations/add_unjustified_value.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "ex03",
+          "problem": "UNSUPPORTED_VALUE_OR_ABSENCE_REASON"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "NOT_PREDETERMINED",
+      "id": "duplicate_observation_entry",
+      "input": "inputs/mutations/duplicate_observation_entry.json",
+      "kind": "SEMANTIC",
+      "local_structure_findings": [
+        "DUPLICATE_RESOURCE_IDS"
+      ],
+      "semantic_detected": true,
+      "semantic_oracle_findings": [
+        {
+          "case": "bundle",
+          "problem": "OBSERVATION_OCCURRENCE_COUNT_CHANGED"
+        }
+      ]
+    },
+    {
+      "expected_official_outcome": "SHOULD_FIND_MISSING_REQUIRED_ELEMENT",
+      "id": "remove_required_status",
+      "input": "inputs/mutations/remove_required_status.json",
+      "kind": "FHIR_NEGATIVE_CONTROL",
+      "local_structure_findings": [
+        "INVALID_STATUS"
+      ],
+      "semantic_detected": null,
+      "semantic_oracle_findings": []
+    }
+  ],
+  "ontology_zip_sha256_after": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "ontology_zip_sha256_before": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "oracle_baseline_findings": [],
+  "oracle_sha256": "caf53462ec2d22c1c5f8f85194991a4e0c2335c50dbacc74eabec9e92580ef5a",
+  "original_owl_sha256": "54fde32e281df37b79773ca56128ad2526125bc3174717cbb04871750cfd8558",
+  "overlay_sha256": "8c24ac75949ac0c2ea3dc8ee308a461e4464787289842756632035ed9720b0a1",
+  "profiles": {
+    "Bundle": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "Observation": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "Patient": "http://hl7.org/fhir/StructureDefinition/Patient"
+  },
+  "refusal_reason_counts": {
+    "AMBIGUOUS_OR_INVALID_DATE": 1,
+    "MISSING_EXAM_NAME": 1,
+    "MULTIPLE_PATIENT_LINKS": 1,
+    "MULTIPLE_RESULT": 1,
+    "NO_PATIENT_LINK": 1,
+    "UNSUPPORTED_RESULT_DATATYPE": 1
+  },
+  "refused_observations": 6,
+  "requests": [
+    {
+      "cohort": "baseline",
+      "id": "base_bundle",
+      "path": "inputs/baseline/bundle.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Patient_p-60dc1096b6b6c187342b0e28",
+      "path": "inputs/baseline/Patient-p-60dc1096b6b6c187342b0e28.json",
+      "resourceType": "Patient"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Patient_p-c69d218d50d24c78d00bdeea",
+      "path": "inputs/baseline/Patient-p-c69d218d50d24c78d00bdeea.json",
+      "resourceType": "Patient"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Observation_o-62757162e4d4a3b7f7bcf608",
+      "path": "inputs/baseline/Observation-o-62757162e4d4a3b7f7bcf608.json",
+      "resourceType": "Observation"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Observation_o-7d17584dc72151f25e7bb2c6",
+      "path": "inputs/baseline/Observation-o-7d17584dc72151f25e7bb2c6.json",
+      "resourceType": "Observation"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Observation_o-ca60e47bf8c81fb90b877233",
+      "path": "inputs/baseline/Observation-o-ca60e47bf8c81fb90b877233.json",
+      "resourceType": "Observation"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Observation_o-d672677930ef591acd66e76b",
+      "path": "inputs/baseline/Observation-o-d672677930ef591acd66e76b.json",
+      "resourceType": "Observation"
+    },
+    {
+      "cohort": "baseline",
+      "id": "baseline_Observation_o-e1bf4c369eaf2ec728dc5875",
+      "path": "inputs/baseline/Observation-o-e1bf4c369eaf2ec728dc5875.json",
+      "resourceType": "Observation"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_change_numeric_value",
+      "path": "inputs/mutations/change_numeric_value.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_swap_result_between_occurrences",
+      "path": "inputs/mutations/swap_result_between_occurrences.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_change_exam_date",
+      "path": "inputs/mutations/change_exam_date.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_reassign_existing_patient",
+      "path": "inputs/mutations/reassign_existing_patient.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_drop_result",
+      "path": "inputs/mutations/drop_result.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_add_unjustified_value",
+      "path": "inputs/mutations/add_unjustified_value.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_duplicate_observation_entry",
+      "path": "inputs/mutations/duplicate_observation_entry.json",
+      "resourceType": "Bundle"
+    },
+    {
+      "cohort": "mutation",
+      "id": "mutation_remove_required_status",
+      "path": "inputs/mutations/remove_required_status.json",
+      "resourceType": "Bundle"
+    }
+  ],
+  "source_observation_occurrences": 11,
+  "study_scope": "Synthetic only. No clinical validation or original individuals converted.",
+  "terminology_mode": "Offline (-tx n/a); no claim of external terminology validation",
+  "unique_patients_emitted": 2,
+  "validator_pinned_release": "7.0.3"
+}

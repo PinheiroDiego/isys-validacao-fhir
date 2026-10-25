@@ -1,0 +1,13 @@
+{
+  "code": {
+    "text": "Ultrassom"
+  },
+  "effectiveDateTime": "2026-03",
+  "id": "o-d672677930ef591acd66e76b",
+  "resourceType": "Observation",
+  "status": "unknown",
+  "subject": {
+    "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+  },
+  "valueString": "sem achados"
+}

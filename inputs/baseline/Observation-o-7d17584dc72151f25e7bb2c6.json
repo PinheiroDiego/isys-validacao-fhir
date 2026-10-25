@@ -1,0 +1,15 @@
+{
+  "code": {
+    "text": "Hemograma"
+  },
+  "effectiveDateTime": "2026",
+  "id": "o-7d17584dc72151f25e7bb2c6",
+  "resourceType": "Observation",
+  "status": "unknown",
+  "subject": {
+    "reference": "Patient/p-60dc1096b6b6c187342b0e28"
+  },
+  "valueQuantity": {
+    "value": 8
+  }
+}

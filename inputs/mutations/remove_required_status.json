@@ -1,0 +1,97 @@
+{
+  "entry": [
+    {
+      "resource": {
+        "id": "p-60dc1096b6b6c187342b0e28",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "id": "p-c69d218d50d24c78d00bdeea",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "resource": {
+        "code": {
+          "text": "CEA"
+        },
+        "effectiveDateTime": "2026-03-15",
+        "id": "o-62757162e4d4a3b7f7bcf608",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+        },
+        "valueQuantity": {
+          "value": 25.20
+        }
+      }
+    },
+    {
+      "resource": {
+        "code": {
+          "text": "Hemograma"
+        },
+        "effectiveDateTime": "2026",
+        "id": "o-7d17584dc72151f25e7bb2c6",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-60dc1096b6b6c187342b0e28"
+        },
+        "valueQuantity": {
+          "value": 8
+        }
+      }
+    },
+    {
+      "resource": {
+        "code": {
+          "text": "PSA"
+        },
+        "id": "o-ca60e47bf8c81fb90b877233",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+        }
+      }
+    },
+    {
+      "resource": {
+        "code": {
+          "text": "Ultrassom"
+        },
+        "effectiveDateTime": "2026-03",
+        "id": "o-d672677930ef591acd66e76b",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+        },
+        "valueString": "sem achados"
+      }
+    },
+    {
+      "resource": {
+        "code": {
+          "text": "CEA"
+        },
+        "effectiveDateTime": "2026-03-12",
+        "id": "o-e1bf4c369eaf2ec728dc5875",
+        "resourceType": "Observation",
+        "subject": {
+          "reference": "Patient/p-c69d218d50d24c78d00bdeea"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 25.20
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

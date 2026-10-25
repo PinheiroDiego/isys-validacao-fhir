@@ -1,0 +1,35 @@
+name: iSys - Validacao FHIR R4 fixa
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'inputs/**'
+      - 'scripts/run_official.py'
+      - 'scripts/bootstrap_validator.sh'
+      - '.github/workflows/validar-fhir-r4.yml'
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Baixar e executar validador 7.0.3 (FHIR 4.0.1)
+        run: bash scripts/bootstrap_validator.sh
+      - name: Publicar logs e OperationOutcomes mesmo com falha
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isys-hl7-fhir-r4-validation
+          path: |
+            outputs/official
+            logs
+            outputs/engineering/manifest_inputs.json
+          if-no-files-found: warn
