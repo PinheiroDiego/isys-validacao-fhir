@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-728df307fe8e704725a16c39",
+      "resource": {
+        "id": "p-728df307fe8e704725a16c39",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-6c9882f1c499568b28635ed4",
+      "resource": {
+        "code": {
+          "text": "LDH"
+        },
+        "effectiveDateTime": "2026-04-18",
+        "id": "o-6c9882f1c499568b28635ed4",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-728df307fe8e704725a16c39"
+        },
+        "valueQuantity": {
+          "unit": "U/L",
+          "value": 184
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

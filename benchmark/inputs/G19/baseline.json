@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-d22fd365798c1a6a0ab6c39d",
+      "resource": {
+        "id": "p-d22fd365798c1a6a0ab6c39d",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-7b2deaa8941b4ed914873cdf",
+      "resource": {
+        "code": {
+          "text": "CA 125"
+        },
+        "effectiveDateTime": "2026-02",
+        "id": "o-7b2deaa8941b4ed914873cdf",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-d22fd365798c1a6a0ab6c39d"
+        },
+        "valueQuantity": {
+          "value": 37
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

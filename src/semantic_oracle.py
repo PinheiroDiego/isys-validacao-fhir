@@ -78,7 +78,7 @@ def compare(f,bundle):
 
 def score_variants(split):
  gold=json.loads((ROOT/'benchmark/gold/families.json').read_text(encoding='utf8'))
- manifest=json.loads((ROOT/'benchmark/manifest_v4.json').read_text(encoding='utf8'))
+ manifest=json.loads((ROOT/'benchmark/manifest_v6.json').read_text(encoding='utf8'))
  fs={f['id']:f for f in gold['families']}
  data=[]
  for v in manifest['variants']:

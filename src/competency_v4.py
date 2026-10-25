@@ -116,7 +116,7 @@ if __name__=='__main__':
  import argparse
  p=argparse.ArgumentParser();p.add_argument('--split',choices=['development','evaluation','all'],default='development');arg=p.parse_args()
  fs=json.loads((ROOT/'benchmark/gold/families.json').read_text())['families']
- manifest=json.loads((ROOT/'benchmark/manifest_v4.json').read_text())
+ manifest=json.loads((ROOT/'benchmark/manifest_v6.json').read_text())
  byf={x['id']:x for x in fs}
  rec=[]
  for v in manifest['variants']:

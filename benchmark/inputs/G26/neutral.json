@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-53799a0d3acf3a0e68a7c201",
+      "resource": {
+        "id": "p-53799a0d3acf3a0e68a7c201",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-30fcfdedceed9e001781a7f0",
+      "resource": {
+        "code": {
+          "text": "Plaquetas"
+        },
+        "effectiveDateTime": "2026-04-17",
+        "id": "o-30fcfdedceed9e001781a7f0",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-53799a0d3acf3a0e68a7c201"
+        },
+        "valueQuantity": {
+          "value": 215000
+        }
+      }
+    }
+  ],
+  "id": "synthetic-control-26",
+  "resourceType": "Bundle",
+  "type": "collection"
+}

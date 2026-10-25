@@ -1,0 +1,57 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-6a8f6c5bbddb73d9722779d8",
+      "resource": {
+        "id": "p-6a8f6c5bbddb73d9722779d8",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-84068c3ce7b53db33bb995e3",
+      "resource": {
+        "id": "p-84068c3ce7b53db33bb995e3",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-2917b762b89ec22b96ad16f0",
+      "resource": {
+        "code": {
+          "text": "Glicose"
+        },
+        "effectiveDateTime": "2026-06-19",
+        "id": "o-2917b762b89ec22b96ad16f0",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-6a8f6c5bbddb73d9722779d8"
+        },
+        "valueQuantity": {
+          "value": 89
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-558b518ffa979f5c9632ecf5",
+      "resource": {
+        "code": {
+          "text": "Glicose"
+        },
+        "effectiveDateTime": "2026-06-19",
+        "id": "o-558b518ffa979f5c9632ecf5",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-84068c3ce7b53db33bb995e3"
+        },
+        "valueQuantity": {
+          "value": 111
+        }
+      }
+    }
+  ],
+  "id": "synthetic-control-23",
+  "resourceType": "Bundle",
+  "type": "collection"
+}

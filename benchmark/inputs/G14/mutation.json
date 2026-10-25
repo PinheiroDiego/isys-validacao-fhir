@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-3a20a0116b9d77ca6276cf1d",
+      "resource": {
+        "id": "p-3a20a0116b9d77ca6276cf1d",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-425aa3048bdeddc6be285a57",
+      "resource": {
+        "code": {
+          "text": "Lactato"
+        },
+        "effectiveDateTime": "2026",
+        "id": "o-425aa3048bdeddc6be285a57",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-3a20a0116b9d77ca6276cf1d"
+        },
+        "valueQuantity": {
+          "unit": "mmol/L",
+          "value": 1.4
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

@@ -1,0 +1,34 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-4bb40741521935eae8a25ad4",
+      "resource": {
+        "id": "p-4bb40741521935eae8a25ad4",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-719cdf3300a80e464b127e14",
+      "resource": {
+        "code": {
+          "text": "Ureia"
+        },
+        "effectiveDateTime": "2026-04-16",
+        "id": "o-719cdf3300a80e464b127e14",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-4bb40741521935eae8a25ad4"
+        },
+        "valueQuantity": {
+          "value": 21
+        }
+      }
+    }
+  ],
+  "meta": {
+    "versionId": "control-25"
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-5c148c38f709221b8e0b78ee",
+      "resource": {
+        "code": {
+          "text": "AST"
+        },
+        "effectiveDateTime": "2026-02-12",
+        "id": "o-5c148c38f709221b8e0b78ee",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-756ceec2adcad523cb719c2c"
+        },
+        "valueQuantity": {
+          "value": 48
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-756ceec2adcad523cb719c2c",
+      "resource": {
+        "id": "p-756ceec2adcad523cb719c2c",
+        "resourceType": "Patient"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

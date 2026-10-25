@@ -1,0 +1,11 @@
+{
+  "status": "PENDING",
+  "reviewer_id": "PENDING",
+  "qualification_summary": "PENDING",
+  "review_date": "PENDING",
+  "gold_sha256": "PENDING",
+  "decisions_sha256": "PENDING",
+  "independent_of_authoring": "PENDING",
+  "adjudication_notes": "PENDING",
+  "consent_to_use_pseudonym_in_paper": false
+}

@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-875dc17d6568e559e126c40e",
+      "resource": {
+        "id": "p-875dc17d6568e559e126c40e",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-34ba686722d4bf7007ce1164",
+      "resource": {
+        "code": {
+          "text": "Neutrófilos"
+        },
+        "effectiveDateTime": "2026-03-25",
+        "id": "o-34ba686722d4bf7007ce1164",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-875dc17d6568e559e126c40e"
+        },
+        "valueQuantity": {
+          "unit": "/mm3",
+          "value": 5400
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

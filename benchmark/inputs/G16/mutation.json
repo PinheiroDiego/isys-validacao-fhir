@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-7fbe9f8ac340fb5c59bb3920",
+      "resource": {
+        "id": "p-7fbe9f8ac340fb5c59bb3920",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-9980ce7af419a4c83a5b1574",
+      "resource": {
+        "code": {
+          "text": "Urocultura"
+        },
+        "effectiveDateTime": "2026-05-12",
+        "id": "o-9980ce7af419a4c83a5b1574",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-7fbe9f8ac340fb5c59bb3920"
+        },
+        "valueString": "com crescimento"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

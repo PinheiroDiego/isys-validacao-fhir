@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-9685d8bf3295db7d164a580a",
+      "resource": {
+        "id": "p-9685d8bf3295db7d164a580a",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-e527fae750dc204295dac877",
+      "resource": {
+        "code": {
+          "text": "Hemoglobina glicada"
+        },
+        "effectiveDateTime": "2026-02-20",
+        "id": "o-e527fae750dc204295dac877",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-9685d8bf3295db7d164a580a"
+        },
+        "valueQuantity": {
+          "unit": "%",
+          "value": 6.2
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

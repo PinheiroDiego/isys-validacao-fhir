@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-8684f59e64de357c9f625f24",
+      "resource": {
+        "id": "p-8684f59e64de357c9f625f24",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-747e77cde5709d8ac5544583",
+      "resource": {
+        "code": {
+          "text": "Urina tipo I"
+        },
+        "effectiveDateTime": "2026-06",
+        "id": "o-747e77cde5709d8ac5544583",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-8684f59e64de357c9f625f24"
+        },
+        "valueString": "sem anormalidades"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

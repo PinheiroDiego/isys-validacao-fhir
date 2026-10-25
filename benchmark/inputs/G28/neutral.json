@@ -1,0 +1,34 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-adf6e60bdf2168c12ccd18db",
+      "resource": {
+        "id": "p-adf6e60bdf2168c12ccd18db",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-a13229b9ce13f88cf477b7c5",
+      "resource": {
+        "code": {
+          "text": "Velocidade de hemossedimentação"
+        },
+        "effectiveDateTime": "2026-05-04",
+        "id": "o-a13229b9ce13f88cf477b7c5",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-adf6e60bdf2168c12ccd18db"
+        },
+        "valueQuantity": {
+          "value": 21
+        }
+      }
+    }
+  ],
+  "meta": {
+    "versionId": "control-28"
+  },
+  "resourceType": "Bundle",
+  "type": "collection"
+}

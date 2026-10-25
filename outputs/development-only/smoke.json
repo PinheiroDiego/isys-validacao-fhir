@@ -1,0 +1,174 @@
+{
+  "scope": "development ONLY",
+  "official_HL7_execution": false,
+  "expert_review": "PENDING",
+  "expected_structural_detection": "NOT TESTED",
+  "records": [
+    {
+      "id": "G01_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G01_mutation",
+      "expected_class": "semantic_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q02",
+        "Q04"
+      ]
+    },
+    {
+      "id": "G01_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G02_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G02_mutation",
+      "expected_class": "semantic_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q03",
+        "Q05"
+      ]
+    },
+    {
+      "id": "G02_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G03_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G03_mutation",
+      "expected_class": "semantic_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q04"
+      ]
+    },
+    {
+      "id": "G03_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G04_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G04_mutation",
+      "expected_class": "semantic_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q02",
+        "Q04"
+      ]
+    },
+    {
+      "id": "G04_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G05_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G05_mutation",
+      "expected_class": "structural_fault",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G05_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G06_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G06_mutation",
+      "expected_class": "structural_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q01"
+      ]
+    },
+    {
+      "id": "G06_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G07_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G07_mutation",
+      "expected_class": "structural_fault",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G07_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G08_baseline",
+      "expected_class": "correct_conversion",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    },
+    {
+      "id": "G08_mutation",
+      "expected_class": "semantic_fault",
+      "semantic_comparison_alert": true,
+      "questions_non_equivalent": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05"
+      ]
+    },
+    {
+      "id": "G08_neutral",
+      "expected_class": "semantic_equivalent_control",
+      "semantic_comparison_alert": false,
+      "questions_non_equivalent": []
+    }
+  ],
+  "baselines_no_semantic_alert": 8,
+  "neutrals_no_semantic_alert": 8,
+  "semantic_mutations_alerted": 5
+}

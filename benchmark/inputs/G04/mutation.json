@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-e5d4820bcdd95a80ea54035b",
+      "resource": {
+        "id": "p-e5d4820bcdd95a80ea54035b",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-a21bf7409a07129bb732d6df",
+      "resource": {
+        "code": {
+          "text": "Radiografia de tórax"
+        },
+        "effectiveDateTime": "2026-04",
+        "id": "o-a21bf7409a07129bb732d6df",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-e5d4820bcdd95a80ea54035b"
+        },
+        "valueString": "com achados"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

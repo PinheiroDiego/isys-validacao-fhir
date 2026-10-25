@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-4881d1c38dc64b879b35d485",
+      "resource": {
+        "id": "p-4881d1c38dc64b879b35d485",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-d3597646c9e7d42346b89665",
+      "resource": {
+        "code": {
+          "text": "Creatina quinase"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "id": "o-d3597646c9e7d42346b89665",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-4881d1c38dc64b879b35d485"
+        },
+        "valueQuantity": {
+          "unit": "U/L",
+          "value": 148
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

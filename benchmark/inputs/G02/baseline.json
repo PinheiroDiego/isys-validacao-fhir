@@ -1,0 +1,30 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-c2b1f39d9d3a4802f8acc609",
+      "resource": {
+        "id": "p-c2b1f39d9d3a4802f8acc609",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-415ad750df0954e63785cb96",
+      "resource": {
+        "code": {
+          "text": "Fosfatase alcalina"
+        },
+        "id": "o-415ad750df0954e63785cb96",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c2b1f39d9d3a4802f8acc609"
+        },
+        "valueQuantity": {
+          "value": 95
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

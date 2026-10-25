@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-c15ebab9643870ea1b197aae",
+      "resource": {
+        "id": "p-c15ebab9643870ea1b197aae",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-50817bffe90fb90e5815b4e5",
+      "resource": {
+        "code": {
+          "text": "Reticulócitos"
+        },
+        "effectiveDateTime": "2026-03-07",
+        "id": "o-50817bffe90fb90e5815b4e5",
+        "resourceType": "Observation",
+        "status": "",
+        "subject": {
+          "reference": "Patient/p-c15ebab9643870ea1b197aae"
+        },
+        "valueQuantity": {
+          "unit": "%",
+          "value": 1.2
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

@@ -1,0 +1,56 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-34a7d32d413b1f5be2f12cc5",
+      "resource": {
+        "id": "p-34a7d32d413b1f5be2f12cc5",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-aa07997799dac13369f78d97",
+      "resource": {
+        "id": "p-aa07997799dac13369f78d97",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-77a198b92ee3228a046449b2",
+      "resource": {
+        "code": {
+          "text": "ALT"
+        },
+        "effectiveDateTime": "2026-01-23",
+        "id": "o-77a198b92ee3228a046449b2",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-34a7d32d413b1f5be2f12cc5"
+        },
+        "valueQuantity": {
+          "value": 41
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-e3cc66a0f7c7ea77b9b9955b",
+      "resource": {
+        "code": {
+          "text": "GGT"
+        },
+        "effectiveDateTime": "2026-01-23",
+        "id": "o-e3cc66a0f7c7ea77b9b9955b",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-aa07997799dac13369f78d97"
+        },
+        "valueQuantity": {
+          "value": 33
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

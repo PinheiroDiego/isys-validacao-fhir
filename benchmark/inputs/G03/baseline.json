@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-125ccc74593ca6dd6587ce61",
+      "resource": {
+        "id": "p-125ccc74593ca6dd6587ce61",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-17fba22e74fad67a55a8818e",
+      "resource": {
+        "code": {
+          "text": "Albumina"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "id": "o-17fba22e74fad67a55a8818e",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-125ccc74593ca6dd6587ce61"
+        },
+        "valueQuantity": {
+          "unit": "g/dL",
+          "value": 3.75
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

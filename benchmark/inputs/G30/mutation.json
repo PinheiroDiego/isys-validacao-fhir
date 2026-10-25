@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-c2bb3be57905234704b1ffd9",
+      "resource": {
+        "id": "p-c2bb3be57905234704b1ffd9",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-5b42044f30703f557404ee21",
+      "resource": {
+        "code": {
+          "text": "Cortisol"
+        },
+        "effectiveDateTime": "2026-99-99",
+        "id": "o-5b42044f30703f557404ee21",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-c2bb3be57905234704b1ffd9"
+        },
+        "valueQuantity": {
+          "value": 8.4
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

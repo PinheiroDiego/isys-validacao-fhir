@@ -1,0 +1,272 @@
+{
+  "cluster_median_ms": 0.132477,
+  "cluster_p90_ms": 0.13583,
+  "exclude": "Java validator invocation, Java startup and loading HL7 packages; these are recorded separately in official results",
+  "families": 8,
+  "family_medians_ms": {
+    "G01": 0.13583,
+    "G02": 0.124413,
+    "G03": 0.1352085,
+    "G04": 0.133361,
+    "G05": 0.1281735,
+    "G06": 0.1302065,
+    "G07": 0.131593,
+    "G08": 0.14283
+  },
+  "limits": [
+    "Execution speed depends on hardware, CPU scheduling, caches and Python runtime",
+    "This measures the local check independently, not the end-to-end C pipeline",
+    "Values are descriptive only and repeated iterations do not increase the independent family sample size"
+  ],
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "records": [
+    {
+      "C_incremental_median_ms": 0.13583,
+      "C_incremental_p90_ms": 0.153546,
+      "family": "G01",
+      "id": "G01_baseline",
+      "input_parse_once_ms": 0.037415,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.147112,
+      "C_incremental_p90_ms": 0.161327,
+      "family": "G01",
+      "id": "G01_mutation",
+      "input_parse_once_ms": 0.030275,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.131003,
+      "C_incremental_p90_ms": 0.167316,
+      "family": "G01",
+      "id": "G01_neutral",
+      "input_parse_once_ms": 0.023284,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.123091,
+      "C_incremental_p90_ms": 0.147998,
+      "family": "G02",
+      "id": "G02_baseline",
+      "input_parse_once_ms": 0.021122,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.1284885,
+      "C_incremental_p90_ms": 0.136561,
+      "family": "G02",
+      "id": "G02_mutation",
+      "input_parse_once_ms": 0.017816,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.124413,
+      "C_incremental_p90_ms": 0.150391,
+      "family": "G02",
+      "id": "G02_neutral",
+      "input_parse_once_ms": 0.021141,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.1352085,
+      "C_incremental_p90_ms": 0.167987,
+      "family": "G03",
+      "id": "G03_baseline",
+      "input_parse_once_ms": 0.019198,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.129485,
+      "C_incremental_p90_ms": 0.137743,
+      "family": "G03",
+      "id": "G03_mutation",
+      "input_parse_once_ms": 0.017826,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.147206,
+      "C_incremental_p90_ms": 0.228987,
+      "family": "G03",
+      "id": "G03_neutral",
+      "input_parse_once_ms": 0.056623,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.1306525,
+      "C_incremental_p90_ms": 0.140006,
+      "family": "G04",
+      "id": "G04_baseline",
+      "input_parse_once_ms": 0.021702,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.138534,
+      "C_incremental_p90_ms": 0.150852,
+      "family": "G04",
+      "id": "G04_mutation",
+      "input_parse_once_ms": 0.020661,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.133361,
+      "C_incremental_p90_ms": 0.13628,
+      "family": "G04",
+      "id": "G04_neutral",
+      "input_parse_once_ms": 0.020661,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.1270065,
+      "C_incremental_p90_ms": 0.139375,
+      "family": "G05",
+      "id": "G05_baseline",
+      "input_parse_once_ms": 0.019939,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.1294655,
+      "C_incremental_p90_ms": 0.141228,
+      "family": "G05",
+      "id": "G05_mutation",
+      "input_parse_once_ms": 0.016685,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.1281735,
+      "C_incremental_p90_ms": 0.132635,
+      "family": "G05",
+      "id": "G05_neutral",
+      "input_parse_once_ms": 0.019108,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.129386,
+      "C_incremental_p90_ms": 0.139996,
+      "family": "G06",
+      "id": "G06_baseline",
+      "input_parse_once_ms": 0.019659,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.134548,
+      "C_incremental_p90_ms": 0.156039,
+      "family": "G06",
+      "id": "G06_mutation",
+      "input_parse_once_ms": 0.017626,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.1302065,
+      "C_incremental_p90_ms": 0.154678,
+      "family": "G06",
+      "id": "G06_neutral",
+      "input_parse_once_ms": 0.019259,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.140116,
+      "C_incremental_p90_ms": 0.171833,
+      "family": "G07",
+      "id": "G07_baseline",
+      "input_parse_once_ms": 0.019549,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.130517,
+      "C_incremental_p90_ms": 0.13539,
+      "family": "G07",
+      "id": "G07_mutation",
+      "input_parse_once_ms": 0.018157,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.131593,
+      "C_incremental_p90_ms": 0.136631,
+      "family": "G07",
+      "id": "G07_neutral",
+      "input_parse_once_ms": 0.019298,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    },
+    {
+      "C_incremental_median_ms": 0.1442975,
+      "C_incremental_p90_ms": 0.150471,
+      "family": "G08",
+      "id": "G08_baseline",
+      "input_parse_once_ms": 0.016955,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "baseline"
+    },
+    {
+      "C_incremental_median_ms": 0.14283,
+      "C_incremental_p90_ms": 0.151483,
+      "family": "G08",
+      "id": "G08_mutation",
+      "input_parse_once_ms": 0.018146,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "mutation"
+    },
+    {
+      "C_incremental_median_ms": 0.1347885,
+      "C_incremental_p90_ms": 0.164852,
+      "family": "G08",
+      "id": "G08_neutral",
+      "input_parse_once_ms": 0.019378,
+      "repetitions": 12,
+      "split": "development",
+      "variant": "neutral"
+    }
+  ],
+  "repetitions_per_variant": 12,
+  "scope": "development",
+  "seed": 28106,
+  "timing_kind": "C incremental only, from already parsed FHIR Bundle to semantic/origin-competency decision",
+  "unit": "milliseconds",
+  "variants": 24,
+  "warmup_rounds": 4
+}

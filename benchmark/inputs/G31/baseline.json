@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-588078680831b3c61e823bc5",
+      "resource": {
+        "id": "p-588078680831b3c61e823bc5",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-1f63116070cd496d7d9d0033",
+      "resource": {
+        "code": {
+          "text": "Ácido úrico"
+        },
+        "effectiveDateTime": "2026-05-28",
+        "id": "o-1f63116070cd496d7d9d0033",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-588078680831b3c61e823bc5"
+        },
+        "valueQuantity": {
+          "unit": "mg/dL",
+          "value": 4.8
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

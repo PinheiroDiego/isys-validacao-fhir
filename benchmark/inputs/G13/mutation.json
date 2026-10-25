@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-283b9462b7132928afbe1136",
+      "resource": {
+        "id": "p-283b9462b7132928afbe1136",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-8bcba7024101c9a76a4f3b87",
+      "resource": {
+        "code": {
+          "text": "Troponina"
+        },
+        "effectiveDateTime": "2026-01-15",
+        "id": "o-8bcba7024101c9a76a4f3b87",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-283b9462b7132928afbe1136"
+        },
+        "valueQuantity": {
+          "value": 0.19
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

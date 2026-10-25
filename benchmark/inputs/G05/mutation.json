@@ -1,0 +1,30 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-3983a7086b983e7686fbc34e",
+      "resource": {
+        "id": "p-3983a7086b983e7686fbc34e",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-0886769d1488150a676dc8c4",
+      "resource": {
+        "code": {
+          "text": "Amilase"
+        },
+        "effectiveDateTime": "2026-01-09",
+        "id": "o-0886769d1488150a676dc8c4",
+        "resourceType": "Observation",
+        "subject": {
+          "reference": "Patient/p-3983a7086b983e7686fbc34e"
+        },
+        "valueQuantity": {
+          "value": 76
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

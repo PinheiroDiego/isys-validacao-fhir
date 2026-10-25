@@ -1,0 +1,59 @@
+name: iSys V6 - HL7 Confirmatory Benchmark
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'development smoke (no expert approval) OR confirmatory (review mandatory)'
+        required: true
+        default: development
+        type: choice
+        options:
+          - development
+          - confirmatory
+jobs:
+  official-fhir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Check frozen historical artifacts, gold and inputs
+        run: python3 src/verify_v6.py
+      - name: Require external FHIR specialist review for confirmation
+        if: ${{ inputs.scope == 'confirmatory' }}
+        run: python3 src/review_gate.py
+      - name: Run local regression suite (never scores holdout)
+        run: python3 -m unittest discover -s tests -v
+      - name: Acquire fixed HL7 validator CLI 7.0.3
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tools
+          curl -fL --retry 3 --max-time 240 \
+            https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.3/validator_cli.jar \
+            -o tools/validator_cli_7.0.3.jar
+          printf '%s  %s\n' '57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b' tools/validator_cli_7.0.3.jar | sha256sum -c -
+      - name: Execute official HL7 Validator on fixed inputs
+        run: python3 src/run_official_v6.py --scope '${{ inputs.scope }}' --jar tools/validator_cli_7.0.3.jar
+      - name: Measure independent local C overhead (excludes Java)
+        run: python3 src/time_semantic_v6.py --scope '${{ inputs.scope }}'
+      - name: Upload audit artifacts even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isys-v6-${{ inputs.scope }}-hl7
+          if-no-files-found: warn
+          path: |
+            benchmark/manifest_v6.json
+            review/attestation.json
+            review/decisions.csv
+            outputs/official_v6/${{ inputs.scope }}
+            outputs/metrics_v6/${{ inputs.scope }}

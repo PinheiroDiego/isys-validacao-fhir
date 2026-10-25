@@ -1,0 +1,28 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-b7f6634f73e5a72580d5e9a1",
+      "resource": {
+        "id": "p-b7f6634f73e5a72580d5e9a1",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-46069407d4edb6a0ed7fe0a7",
+      "resource": {
+        "code": {
+          "text": "Proteína total"
+        },
+        "effectiveDateTime": "2026-03-11",
+        "id": "o-46069407d4edb6a0ed7fe0a7",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-b7f6634f73e5a72580d5e9a1"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

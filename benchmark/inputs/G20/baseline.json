@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-366d18a34ecb5c638164b04b",
+      "resource": {
+        "id": "p-366d18a34ecb5c638164b04b",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-9ed4fa26180f7b72e3f3e974",
+      "resource": {
+        "code": {
+          "text": "Procalcitonina"
+        },
+        "effectiveDateTime": "2026-07-10",
+        "id": "o-9ed4fa26180f7b72e3f3e974",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-366d18a34ecb5c638164b04b"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 0.25
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

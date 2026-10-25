@@ -1,0 +1,49 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-83cdee79ab7fdac8742220c3",
+      "resource": {
+        "id": "p-83cdee79ab7fdac8742220c3",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-21407eaffdc75ad96ca302d7",
+      "resource": {
+        "code": {
+          "text": "Transferrina"
+        },
+        "effectiveDateTime": "2026-02-07",
+        "id": "o-21407eaffdc75ad96ca302d7",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-83cdee79ab7fdac8742220c3"
+        },
+        "valueQuantity": {
+          "value": 203
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-ad8240b29b0faf921ade7d30",
+      "resource": {
+        "code": {
+          "text": "Ferro sérico"
+        },
+        "effectiveDateTime": "2026-02-07",
+        "id": "o-ad8240b29b0faf921ade7d30",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-83cdee79ab7fdac8742220c3"
+        },
+        "valueQuantity": {
+          "value": 69
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

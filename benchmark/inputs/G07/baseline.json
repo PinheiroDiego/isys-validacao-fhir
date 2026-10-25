@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-744a45f52fd7fe7b5328c43d",
+      "resource": {
+        "id": "p-744a45f52fd7fe7b5328c43d",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-73e8dadd0f484320697da0e3",
+      "resource": {
+        "code": {
+          "text": "Cálcio total"
+        },
+        "effectiveDateTime": "2026-04-10",
+        "id": "o-73e8dadd0f484320697da0e3",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-744a45f52fd7fe7b5328c43d"
+        },
+        "valueQuantity": {
+          "unit": "mg/dL",
+          "value": 9.1
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

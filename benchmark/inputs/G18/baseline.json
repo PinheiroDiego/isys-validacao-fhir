@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-1fded44cbea86886ed86b3a7",
+      "resource": {
+        "id": "p-1fded44cbea86886ed86b3a7",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-b83e20b85532b164f9cf66b7",
+      "resource": {
+        "code": {
+          "text": "Proteína C reativa"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "id": "o-b83e20b85532b164f9cf66b7",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-1fded44cbea86886ed86b3a7"
+        },
+        "valueQuantity": {
+          "unit": "mg/L",
+          "value": 4.2
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

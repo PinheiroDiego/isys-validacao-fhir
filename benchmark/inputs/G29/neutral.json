@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-52fe05d3fd9e4b5b850fc50a",
+      "resource": {
+        "id": "p-52fe05d3fd9e4b5b850fc50a",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-2b2374533885b562dfa91724",
+      "resource": {
+        "code": {
+          "text": "CK-MB"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "id": "o-2b2374533885b562dfa91724",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-52fe05d3fd9e4b5b850fc50a"
+        },
+        "valueQuantity": {
+          "value": 2.5
+        }
+      }
+    }
+  ],
+  "id": "synthetic-control-29",
+  "resourceType": "Bundle",
+  "type": "collection"
+}
