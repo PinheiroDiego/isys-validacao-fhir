@@ -1,0 +1,55 @@
+name: iSys V7 - HL7 Preregistered Stress Test
+on:
+  workflow_dispatch:
+jobs:
+  official-fhir-v7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Record environment
+        run: |
+          mkdir -p v7/outputs/ci
+          { python3 --version; java -version 2>&1; echo "Commit: $GITHUB_SHA"; echo "Run: $GITHUB_RUN_ID"; } > v7/outputs/ci/environment.txt
+      - name: Verify protocol, frozen V6.1 modules, inputs, private files and frozen review
+        run: python3 v7/src/verify_v7.py --phase reviewed
+      - name: Custody check - protocol < generation < frozen review <= HEAD (R2)
+        run: python3 v7/src/check_custody_v7.py
+      - name: V7 unit tests only (no legacy V4/V5/V6 suites on V7 data)
+        run: python3 -m unittest discover -s v7/tests -v
+      - name: Acquire fixed HL7 validator CLI 7.0.3
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tools
+          curl -fL --retry 3 --max-time 240 \
+            https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.3/validator_cli.jar \
+            -o tools/validator_cli_7.0.3.jar
+          printf '%s  %s\n' '57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b' tools/validator_cli_7.0.3.jar | sha256sum -c -
+      - name: Execute official HL7 Validator on 51 opaque inputs
+        run: python3 v7/src/run_official_v7.py --jar tools/validator_cli_7.0.3.jar
+      - name: Preregistered analysis with frozen V6.1 comparator (separate step)
+        run: python3 v7/src/analyze_v7.py
+      - name: Upload raw evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isys-v7-official
+          if-no-files-found: warn
+          path: |
+            v7/benchmark/manifest_v7.json
+            v7/review/attestation_v7.json
+            v7/outputs/official
+            v7/outputs/analysis_v7.json
+            v7/outputs/ci

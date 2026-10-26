@@ -1,0 +1,2 @@
+# V7 (R1): overlays H01-H11 só entram com git add -f junto do parecer congelado.
+H*.owx

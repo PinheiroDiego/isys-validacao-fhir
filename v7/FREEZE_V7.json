@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-25",
+  "decision": "r1 aprovada com emendas 1-6; H3 transferida para V7.1; emenda A1 (auditoria pré-commit)",
+  "frozen_v61_modules": {
+    "src/analyze_v6.py": "75e807c77d81624ba88638185a0db53213188c41ff31f6391593700809b47346",
+    "src/build_v6.py": "03b4c145c73cfce041888b801a3721c3f903f7c0ec514e292f687c17bd9efecd",
+    "src/competency_v4.py": "3de19be71c80f11b7d6b822eb1fed01aaeee28673aa7614c1b8a2d702d1eda12",
+    "src/overlay_components.py": "52a45d5d020825f71d96db96d66df9f88e65fe73b541e08a333550fa76518bac",
+    "src/semantic_oracle.py": "5327048130d0867fb280d47e1b66e472d7d89303d53a3039c798695abf364d6b",
+    "vendor/isys_converter/schema.py": "97aaa8d60f8ebddbcfc0c36c0b0664e30cb0fc9ca944de976bbcef70f084ec9a",
+    "vendor/isys_converter/transform.py": "47cc34038867ba6d30d04d39216062b306e670cb72d961e51690d6d60ba9ea71"
+  },
+  "protocol_files": {
+    ".github/workflows/isys-v7-hl7.yml": "22e3b721d2cffb1ae9b902abbc5fbeb4e1c50ed542d15a900c361f2e22922a98",
+    "benchmark/fixtures/overlays/.gitattributes": "c292ee5c49adc9648edece685859bc590334bd9451a8b14a3c9c2be30e1d8b7e",
+    "benchmark/fixtures/overlays/.gitignore": "af9275581daa4386e7db01948f9faf0a9ff730bafbbc020fcde4a9667cbb5e1a",
+    "v7/.gitattributes": "c3c98e05a98d1023d73929a36dc049419129cf41254821adee57145f510ac1ff",
+    "v7/.gitignore": "127a326614d5599e6562b5f625fae41adcd655f56fbb6c95ce8603ae552a5ba6",
+    "v7/GUIA_REVISAO_V7.md": "7213229414850830a8094627ddc7014f7fb9bc52087d89fef80cad3210b5fe35",
+    "v7/PREREGISTRO_V7.md": "d572aba458f9ba80baf23f24f01115c94c03112d55b2dbd524d0c1314786e637",
+    "v7/review/attestation_v7.TEMPLATE.json": "172e9dc3fd16fc92d1a117ab31b34106ab8a81616f7cecb0d92bd6df74fa41b8",
+    "v7/src/analyze_v7.py": "e787825a0276d1f4a716517cc5632c98acc8e6a33296d705290b07f3280c4912",
+    "v7/src/build_v7.py": "23b23b2f1a149ccc33c26cb87455813f9d902330db11aebf5746cb6d01c2776a",
+    "v7/src/check_custody_v7.py": "681c4ecbd9997c8269e774d39f501574dd8592e587130b8c55cb72c7a3d569b3",
+    "v7/src/run_official_v7.py": "5034fa0df906affd090b7f4ff16c9098e8895c8c8d52e88fd54aeab0c70ea6c3",
+    "v7/src/v7_operators.py": "6cc446d87c38d098fbb2b86e948b5151d3e8aeeec31c485be0c352eaf65722e7",
+    "v7/src/v7_spec.py": "6b80a9e31946cde911bbe22102f3d62dbb420f3b335a7ef9205fa98a24ac2e49",
+    "v7/src/verify_v7.py": "96e7613a77008769ac52f642c3d3ea369eb8ec980451d47bdd529880f8040985",
+    "v7/tests/test_v7_custody_and_kit.py": "600dcf43797077297f25425512be815373e58a446c722c0e085e0f0713d028ec",
+    "v7/tests/test_v7_operators.py": "6fb4a0ef79f76f1d3bff19e266f3f7163c286c3dfbbfca4cb371f0f944c53af3",
+    "v7/tests/test_v7_pipeline_smoke.py": "1c2c2148258e1d6fc39123cfa5426fbd7ffe29d96296f3ef6fc15e7d9a5a8c7c",
+    "v7/tests/test_v7_review_gate.py": "723e69034b153ae45b46026abd022130520f0ad435d1474095b3d49c96cd4853",
+    "v7/tests/test_v7_spec_constraints.py": "736b5539423fb3225ffbfd90a6977db54fdb4e063c3b2323564e688bd51b8283"
+  },
+  "protocol_id": "ISYS-V7-PREREG-r1+E1-E6+A1",
+  "rule": "Nenhum caso V7 pode ser gerado, validado ou submetido ao comparador antes do commit que contém este arquivo.",
+  "source_ontology_owx_sha256": "54fde32e281df37b79773ca56128ad2526125bc3174717cbb04871750cfd8558",
+  "source_ontology_zip_sha256": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2"
+}

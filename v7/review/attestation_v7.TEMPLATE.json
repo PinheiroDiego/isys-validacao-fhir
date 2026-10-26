@@ -1,0 +1,17 @@
+{
+  "status": "REVIEW_RECEIVED | NOT_PERFORMED",
+  "manifest_v7_sha256": "<SHA-256 de v7/benchmark/manifest_v7.json gerado>",
+  "generation_commit": "<SHA do commit que adicionou v7/benchmark/manifest_v7.json>",
+  "kit_zip_sha256": "<SHA-256 de v7/review_kit_V7.zip efetivamente enviado; deve igualar review_kit_zip_sha256 do manifesto>",
+  "kit_sent_date": "AAAA-MM-DD",
+  "review_received_date": "AAAA-MM-DD",
+  "pairs_csv_sha256": "<SHA-256 de v7/review/FICHA_PARES_V7_RESPOSTA.csv, recebida sem edição>",
+  "refusals_csv_sha256": "<SHA-256 de v7/review/FICHA_RECUSAS_V7_RESPOSTA.csv, recebida sem edição>",
+  "reviewer_id": "FHIR_EXPERT_PSEUDONYM_01",
+  "qualification_summary": "informada pelo pesquisador; não certificada independentemente",
+  "blinding_limits_reported_by_reviewer": "<transcrição literal ou 'nenhum'>",
+  "reviewer_saw_predictions_or_results": false,
+  "human_signature_present": false,
+  "consent_to_use_pseudonym_in_paper": true,
+  "notes": "Parecer congelado antes de qualquer execução do HL7 Validator ou do comparador sobre a V7."
+}

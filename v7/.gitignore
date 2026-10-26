@@ -1,0 +1,6 @@
+# Custódia (R1): material cegável só entra com git add -f junto do parecer congelado.
+private/
+review_kit/
+review_kit_V7.zip
+# Saídas são produzidas apenas pelo workflow oficial.
+outputs/
