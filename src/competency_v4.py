@@ -6,7 +6,7 @@ from __future__ import annotations
 from xml.etree import ElementTree as ET
 from pathlib import Path
 from datetime import date
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from collections import Counter
 import json,calendar,hashlib,re
 ROOT=Path(__file__).resolve().parents[1]
@@ -32,9 +32,21 @@ def parse_overlay(path):
  return relations,data
 
 def normalize_value(val,datatype):
+ """Preserve malformed numeric lexemes as DIFFERENT, not as a valid number.
+
+ A structural negative control may place a nonnumeric string in valueQuantity.value.
+ HL7 must flag that error, but postprocessing must not abort or fabricate a value.
+ The sentinel is deterministic and retained in competency-question differences.
+ """
  if val is None:return None
  if datatype in ('decimal','integer','int'):
-  return ('numeric',str(Decimal(str(val)).normalize()))
+  if isinstance(val,bool):return ('invalid_numeric',repr(val))
+  try:
+   d=Decimal(str(val))
+   if not d.is_finite():return ('invalid_numeric',str(val))
+   return ('numeric',str(d.normalize()))
+  except (InvalidOperation,ValueError,TypeError,OverflowError):
+   return ('invalid_numeric',str(val))
  return ('text',str(val))
 
 def source_rows(f):

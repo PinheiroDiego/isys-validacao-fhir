@@ -82,7 +82,7 @@ def analyze(scope):
   'families_valid':len(per_family),'family_cluster_results':family_pairs,
   'paired_family_descriptive_bootstrap':cluster_descriptives(family_pairs),
   'excluded_due_to_baseline':noninterpretable,'source_refusals_separate':refusals,
-  'official_duration_seconds_total':sum(x['duration_seconds'] for x in eligible),
+  'official_duration_seconds_total':sum(x['official_seconds'] for x in eligible),
   'notes':['No population inference from purposive synthetic samples','One family is the analysis cluster; no independence assigned to variants','B detects official errors/fatals only, not warnings','C checks source value/relationships and competency queries in addition to B','A source refusals excluded from B/C confusion matrix but included in A coverage'],
   'cases':eligible}
  return out
