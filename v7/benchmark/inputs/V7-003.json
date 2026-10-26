@@ -1,0 +1,49 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-0753611192d64d68c1523d9e",
+      "resource": {
+        "id": "p-0753611192d64d68c1523d9e",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-28a44ff45b7a0455f8cf4dc5",
+      "resource": {
+        "code": {
+          "text": "Ferritina"
+        },
+        "effectiveDateTime": "2026-06-16",
+        "id": "o-28a44ff45b7a0455f8cf4dc5",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-0753611192d64d68c1523d9e"
+        },
+        "valueQuantity": {
+          "value": 12.6
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/extra-22b3d4eabf4300c2",
+      "resource": {
+        "code": {
+          "text": "Ferritina"
+        },
+        "effectiveDateTime": "2026-06-16",
+        "id": "extra-22b3d4eabf4300c2",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-0753611192d64d68c1523d9e"
+        },
+        "valueQuantity": {
+          "value": 12.6
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

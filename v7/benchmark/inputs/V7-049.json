@@ -1,0 +1,61 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-379158dc18f16efd7e082b34",
+      "resource": {
+        "id": "p-379158dc18f16efd7e082b34",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-379158dc18f16efd7e082b34)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-60d8482a4f0d7a775d7d6fbc",
+      "resource": {
+        "code": {
+          "text": "Cálcio iônico"
+        },
+        "effectiveDateTime": "2026-04-07",
+        "id": "o-60d8482a4f0d7a775d7d6fbc",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-379158dc18f16efd7e082b34"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Cálcio iônico</p><p>Resultado: 8.8</p><p>Data: 2026-04-07</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 8.8
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-904c94ef51794474393f6e60",
+      "resource": {
+        "code": {
+          "text": "Potássio"
+        },
+        "effectiveDateTime": "2026-05-05",
+        "id": "o-904c94ef51794474393f6e60",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-379158dc18f16efd7e082b34"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Potássio</p><p>Resultado: 6.1</p><p>Data: 2026-05-05</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 6.1
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

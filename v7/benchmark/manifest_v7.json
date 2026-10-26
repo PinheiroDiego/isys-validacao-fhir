@@ -1,0 +1,348 @@
+{
+  "benchmark_id": "ISYS-V7-2026",
+  "blinding_rule": "v7/private, overlays H01–H11, review_kit/ and review_kit_V7.zip are git-ignored and committed (git add -f) only together with the frozen review verdict",
+  "counts": {
+    "convertible_families": 8,
+    "files_for_hl7": 51,
+    "n4_not_applicable": 2,
+    "refusal_families": 3
+  },
+  "environment": {
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "fhir_core": "hl7.fhir.r4.core#4.0.1",
+  "fhir_version": "4.0.1",
+  "freeze_sha256": "ae9b7614ee061ec44e0294cd59d47a541736161916268d54ed0f9b32e6bca03b",
+  "frozen_v61_modules": {
+    "src/analyze_v6.py": "75e807c77d81624ba88638185a0db53213188c41ff31f6391593700809b47346",
+    "src/build_v6.py": "03b4c145c73cfce041888b801a3721c3f903f7c0ec514e292f687c17bd9efecd",
+    "src/competency_v4.py": "3de19be71c80f11b7d6b822eb1fed01aaeee28673aa7614c1b8a2d702d1eda12",
+    "src/overlay_components.py": "52a45d5d020825f71d96db96d66df9f88e65fe73b541e08a333550fa76518bac",
+    "src/semantic_oracle.py": "5327048130d0867fb280d47e1b66e472d7d89303d53a3039c798695abf364d6b",
+    "vendor/isys_converter/schema.py": "97aaa8d60f8ebddbcfc0c36c0b0664e30cb0fc9ca944de976bbcef70f084ec9a",
+    "vendor/isys_converter/transform.py": "47cc34038867ba6d30d04d39216062b306e670cb72d961e51690d6d60ba9ea71"
+  },
+  "inputs": {
+    "V7-001": {
+      "path": "v7/benchmark/inputs/V7-001.json",
+      "sha256": "35452b958eb6ef3a10f6cd1cf1d938757a5d516d5df701843f00e1c753a750c2"
+    },
+    "V7-002": {
+      "path": "v7/benchmark/inputs/V7-002.json",
+      "sha256": "4597cb55af9d35ef6558b0f29e2c1eb9c27ac85e07187fa8d15bec32f76ea226"
+    },
+    "V7-003": {
+      "path": "v7/benchmark/inputs/V7-003.json",
+      "sha256": "dc4f1b4bc7e7798dbcad3c5399a712fd887e3e18b081c0a17ce22aaf13f553be"
+    },
+    "V7-004": {
+      "path": "v7/benchmark/inputs/V7-004.json",
+      "sha256": "b3443993cd608a964ee18354f574101c3e3b5f4c17535c28c7bd349201dabeb0"
+    },
+    "V7-005": {
+      "path": "v7/benchmark/inputs/V7-005.json",
+      "sha256": "0b80d4eeb6da86da012b4f571bb5ea52a836d098ad82a62e8604552ba2945176"
+    },
+    "V7-006": {
+      "path": "v7/benchmark/inputs/V7-006.json",
+      "sha256": "9b259e1137ecf49eb3db362b99ede0ec6ea676eaa4ef8d0ff385f26830b83f2a"
+    },
+    "V7-007": {
+      "path": "v7/benchmark/inputs/V7-007.json",
+      "sha256": "b8092c6d76daded56947c752fe26ef8189ff4dff64e771f773afd851d3f769bf"
+    },
+    "V7-008": {
+      "path": "v7/benchmark/inputs/V7-008.json",
+      "sha256": "6d5ac012a19828beb4aae09c3905d10cd6a25c836cb4a3c274812183d559e44c"
+    },
+    "V7-009": {
+      "path": "v7/benchmark/inputs/V7-009.json",
+      "sha256": "9f3a3164d467df1b62671df79194b6f45fd941e0d2b9457bd23893a5ab2f340d"
+    },
+    "V7-010": {
+      "path": "v7/benchmark/inputs/V7-010.json",
+      "sha256": "fdfadc84a61e8043553a5ad40c7c5e415b1a126fc7b94ce9ca7320fb155a8af9"
+    },
+    "V7-011": {
+      "path": "v7/benchmark/inputs/V7-011.json",
+      "sha256": "665ed024cd60ef990dda93d6701c933087b864cabeb1d622acd28daf8ce26d1a"
+    },
+    "V7-012": {
+      "path": "v7/benchmark/inputs/V7-012.json",
+      "sha256": "566a53eadeaf557abe142a9478f69c5e0be06d91cd4a956dba994e9c085fa426"
+    },
+    "V7-013": {
+      "path": "v7/benchmark/inputs/V7-013.json",
+      "sha256": "9b259e1137ecf49eb3db362b99ede0ec6ea676eaa4ef8d0ff385f26830b83f2a"
+    },
+    "V7-014": {
+      "path": "v7/benchmark/inputs/V7-014.json",
+      "sha256": "2d62a27232933796142d77a9c5bfdcbcd12e2f565eea5e7aba838bc681af0d63"
+    },
+    "V7-015": {
+      "path": "v7/benchmark/inputs/V7-015.json",
+      "sha256": "71dba08009d49fc8e8de01c5c55f84cda750cc057b5f58fae29c1ec5a2a93e1e"
+    },
+    "V7-016": {
+      "path": "v7/benchmark/inputs/V7-016.json",
+      "sha256": "d5c9d1f1dcbcd2e77bc8e179b2bc810613cf27f1169ba18d28c7b3bdd05d8885"
+    },
+    "V7-017": {
+      "path": "v7/benchmark/inputs/V7-017.json",
+      "sha256": "39ac01933c186ae250ee41e9169c1d0d2c0a3596b0092802e710bab1dd584084"
+    },
+    "V7-018": {
+      "path": "v7/benchmark/inputs/V7-018.json",
+      "sha256": "9b259e1137ecf49eb3db362b99ede0ec6ea676eaa4ef8d0ff385f26830b83f2a"
+    },
+    "V7-019": {
+      "path": "v7/benchmark/inputs/V7-019.json",
+      "sha256": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f"
+    },
+    "V7-020": {
+      "path": "v7/benchmark/inputs/V7-020.json",
+      "sha256": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91"
+    },
+    "V7-021": {
+      "path": "v7/benchmark/inputs/V7-021.json",
+      "sha256": "49e48898410ab486bed31a9ffc151a87713f94de3683224db4cb3066161a5fd2"
+    },
+    "V7-022": {
+      "path": "v7/benchmark/inputs/V7-022.json",
+      "sha256": "fe77843792fdbae17292925d248126510ac27c3a065780e1ac41d2d3b863ce6b"
+    },
+    "V7-023": {
+      "path": "v7/benchmark/inputs/V7-023.json",
+      "sha256": "52902f30ea16c1e515a460fcc2b70c2a03f012451fe7a99b5d11320898fb44d2"
+    },
+    "V7-024": {
+      "path": "v7/benchmark/inputs/V7-024.json",
+      "sha256": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8"
+    },
+    "V7-025": {
+      "path": "v7/benchmark/inputs/V7-025.json",
+      "sha256": "9e56a7588e78cc1c1bcd36f9031ad1588331abb6470196f7844fdb248a6a6088"
+    },
+    "V7-026": {
+      "path": "v7/benchmark/inputs/V7-026.json",
+      "sha256": "666139e902eeeb6a55aecf7d83c208b3f6e3b0e93338b38aaffdb69860c0e439"
+    },
+    "V7-027": {
+      "path": "v7/benchmark/inputs/V7-027.json",
+      "sha256": "c9986a4d0747cf93005e429181ccd4acafea3a33c14366452b612a2ab13346bb"
+    },
+    "V7-028": {
+      "path": "v7/benchmark/inputs/V7-028.json",
+      "sha256": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde"
+    },
+    "V7-029": {
+      "path": "v7/benchmark/inputs/V7-029.json",
+      "sha256": "f3e65edd15e271f3172d77b68b44c93c476f8f0c2d31d706b6841ebaaa6464b4"
+    },
+    "V7-030": {
+      "path": "v7/benchmark/inputs/V7-030.json",
+      "sha256": "cd5fbfa549ed210e29ce5a5e0a17710a4ce121867f0cd9991bc3b9ab0b875199"
+    },
+    "V7-031": {
+      "path": "v7/benchmark/inputs/V7-031.json",
+      "sha256": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d"
+    },
+    "V7-032": {
+      "path": "v7/benchmark/inputs/V7-032.json",
+      "sha256": "f760b719b581eec4c907352c7939d52c78b6e85af5a83e6c251424a58df284a8"
+    },
+    "V7-033": {
+      "path": "v7/benchmark/inputs/V7-033.json",
+      "sha256": "20be679780dc47067a5bcec9f36f61252dfda4bfd92caf4800ef1d715252ba9e"
+    },
+    "V7-034": {
+      "path": "v7/benchmark/inputs/V7-034.json",
+      "sha256": "ac00582d526090007599780335fe7f4ef689df91c9770e626089bcb43fc93570"
+    },
+    "V7-035": {
+      "path": "v7/benchmark/inputs/V7-035.json",
+      "sha256": "187230b3300d50e2b3b9c9ea0e556242e996ad8b5a21f90a0fa801d8de3457d2"
+    },
+    "V7-036": {
+      "path": "v7/benchmark/inputs/V7-036.json",
+      "sha256": "3602722e4b32521d23dddcb8820a69856d9f49a5364ced5bdff5b93bf4f5dca4"
+    },
+    "V7-037": {
+      "path": "v7/benchmark/inputs/V7-037.json",
+      "sha256": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385"
+    },
+    "V7-038": {
+      "path": "v7/benchmark/inputs/V7-038.json",
+      "sha256": "b035aab4265ea49c6c78b34c727a32753dc94c8c19b0d8a57b15620ebaca2b9f"
+    },
+    "V7-039": {
+      "path": "v7/benchmark/inputs/V7-039.json",
+      "sha256": "ae7a6e7af0eb0ce9002a342a5d81209691ef66b32b2ef46880b2a72e7e320974"
+    },
+    "V7-040": {
+      "path": "v7/benchmark/inputs/V7-040.json",
+      "sha256": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71"
+    },
+    "V7-041": {
+      "path": "v7/benchmark/inputs/V7-041.json",
+      "sha256": "5b054b0a1595ab48f7a268174423614fdb14a7f95d743bbaede16f4f409fe27c"
+    },
+    "V7-042": {
+      "path": "v7/benchmark/inputs/V7-042.json",
+      "sha256": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f"
+    },
+    "V7-043": {
+      "path": "v7/benchmark/inputs/V7-043.json",
+      "sha256": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8"
+    },
+    "V7-044": {
+      "path": "v7/benchmark/inputs/V7-044.json",
+      "sha256": "f957c3fb2b67e385fb36d1a3755896bdabb36f4dc4189512d79cf060c356fbfe"
+    },
+    "V7-045": {
+      "path": "v7/benchmark/inputs/V7-045.json",
+      "sha256": "c1e52fd99a5c74ade61b10e34629117ac809c598ef17565d1692bef9d658945b"
+    },
+    "V7-046": {
+      "path": "v7/benchmark/inputs/V7-046.json",
+      "sha256": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884"
+    },
+    "V7-047": {
+      "path": "v7/benchmark/inputs/V7-047.json",
+      "sha256": "0eac90cd4c338c45e24a0cd61a47a9861a04a932968ff595f1f1beac9a99eadb"
+    },
+    "V7-048": {
+      "path": "v7/benchmark/inputs/V7-048.json",
+      "sha256": "3a475f5eadabd6f46825c796ba9c1a083e59e58ad6112312b54b49f709cd8cfe"
+    },
+    "V7-049": {
+      "path": "v7/benchmark/inputs/V7-049.json",
+      "sha256": "67d3dfa5515ea4d7ccb19ac1ce709fb843766c0ee49025248c52b824cc99d5ab"
+    },
+    "V7-050": {
+      "path": "v7/benchmark/inputs/V7-050.json",
+      "sha256": "7cd11e0dc2542bb6ca6adb96b55ccd2944fd7c0d7c7da72b62d3b0f461d81e1f"
+    },
+    "V7-051": {
+      "path": "v7/benchmark/inputs/V7-051.json",
+      "sha256": "4a815c8e45ef2885ce947b4ddbac3bcf16a6a87048878c443c96d4077489ca88"
+    }
+  },
+  "original_ontology_NOT_distributed": true,
+  "overlays_sha256": {
+    "benchmark/fixtures/overlays/H01.owx": "179e245ed306bcec527768d9b0b0a1c7484d4194da9fec0cfbaaa2a3bcd95314",
+    "benchmark/fixtures/overlays/H02.owx": "c79f447f169a9f96567741b6abf04f706d873e6c44c5e1547c68c31f4b44b52d",
+    "benchmark/fixtures/overlays/H03.owx": "9f32411c5d3ba6fe9aecdb19ab512812a6bd92351a00180614d44f384ef18342",
+    "benchmark/fixtures/overlays/H04.owx": "36586a8d7f8481f223a5d006e331a296f64a305d2f65eb85bb17d481d33ce50b",
+    "benchmark/fixtures/overlays/H05.owx": "cc79291e4e8f12028349f15720fb78eee71fdf5860f0d456024a7a83a14b8d2d",
+    "benchmark/fixtures/overlays/H06.owx": "e8f105bd2413d80a41928ec5cc6f8515d29013b2b05a0dd31518dddc56d2b97e",
+    "benchmark/fixtures/overlays/H07.owx": "c76225b47e4e4e3e0467d3f5d7f2d00161304126ef484e9aa0d563affc3f65b0",
+    "benchmark/fixtures/overlays/H08.owx": "c8d85b95df0c1cd7aa3677b693a83648ffe468de66a95054a0fcd9135ce8a462",
+    "benchmark/fixtures/overlays/H09.owx": "809417feca6f346f82bd8bd3ea61c109832d55282ce327df389a551a63491e3e",
+    "benchmark/fixtures/overlays/H10.owx": "3c06b7dcc61d7f1c93dfa9140772d4046643bd1159a1c2ece3f3aaf52b25e232",
+    "benchmark/fixtures/overlays/H11.owx": "abe7a2ed06ce99fc9fdca9afa7887a1dc1610f1cb55b0d4b1152c56d9df5a880"
+  },
+  "private_sha256": {
+    "v7/private/gold_v7.json": "4ad4daf2df7beb7cf4e97e3cb9f76911adfa124c4b120f04f765ab9e2c61ccdb",
+    "v7/private/opaque_map.json": "46a77be37e7ff861050b12d91f2fe1563af5b1f03395b018faa83cc142226587",
+    "v7/private/refusal_records.json": "18cd7125af6328f3e67a95f8d18002281745b75ee0fbd64db2018e366f594573",
+    "v7/private/review_key.json": "001f8c605ed217ba63d15622c4e1d3e82f0c295a04c8a16618c8b7e4a5f30689"
+  },
+  "profile": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "protocol_commit": "d4b22541c6f8efa1d7130905c96d50556615a334",
+  "review_kit_sha256": {
+    "v7/review_kit/FICHA_PARES_V7.csv": "a3112aaebbbad809d597b75692ec86215bc3ac38706fba36d0d69b1536d05edf",
+    "v7/review_kit/FICHA_RECUSAS_V7.csv": "d1c1300f8cc6b714ca6a82fdbe4e66608c9f5a7ad09ea0259507f0ac716f5ae7",
+    "v7/review_kit/GUIA_REVISAO_V7.md": "7213229414850830a8094627ddc7014f7fb9bc52087d89fef80cad3210b5fe35",
+    "v7/review_kit/pares/P01_A.json": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f",
+    "v7/review_kit/pares/P01_B.json": "3a475f5eadabd6f46825c796ba9c1a083e59e58ad6112312b54b49f709cd8cfe",
+    "v7/review_kit/pares/P02_A.json": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8",
+    "v7/review_kit/pares/P02_B.json": "c1e52fd99a5c74ade61b10e34629117ac809c598ef17565d1692bef9d658945b",
+    "v7/review_kit/pares/P03_A.json": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91",
+    "v7/review_kit/pares/P03_B.json": "b8092c6d76daded56947c752fe26ef8189ff4dff64e771f773afd851d3f769bf",
+    "v7/review_kit/pares/P04_A.json": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d",
+    "v7/review_kit/pares/P04_B.json": "f760b719b581eec4c907352c7939d52c78b6e85af5a83e6c251424a58df284a8",
+    "v7/review_kit/pares/P05_A.json": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385",
+    "v7/review_kit/pares/P05_B.json": "4597cb55af9d35ef6558b0f29e2c1eb9c27ac85e07187fa8d15bec32f76ea226",
+    "v7/review_kit/pares/P06_A.json": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8",
+    "v7/review_kit/pares/P06_B.json": "dc4f1b4bc7e7798dbcad3c5399a712fd887e3e18b081c0a17ce22aaf13f553be",
+    "v7/review_kit/pares/P07_A.json": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f",
+    "v7/review_kit/pares/P07_B.json": "52902f30ea16c1e515a460fcc2b70c2a03f012451fe7a99b5d11320898fb44d2",
+    "v7/review_kit/pares/P08_A.json": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91",
+    "v7/review_kit/pares/P08_B.json": "c9986a4d0747cf93005e429181ccd4acafea3a33c14366452b612a2ab13346bb",
+    "v7/review_kit/pares/P09_A.json": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde",
+    "v7/review_kit/pares/P09_B.json": "20be679780dc47067a5bcec9f36f61252dfda4bfd92caf4800ef1d715252ba9e",
+    "v7/review_kit/pares/P10_A.json": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71",
+    "v7/review_kit/pares/P10_B.json": "2d62a27232933796142d77a9c5bfdcbcd12e2f565eea5e7aba838bc681af0d63",
+    "v7/review_kit/pares/P11_A.json": "3602722e4b32521d23dddcb8820a69856d9f49a5364ced5bdff5b93bf4f5dca4",
+    "v7/review_kit/pares/P11_B.json": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8",
+    "v7/review_kit/pares/P12_A.json": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde",
+    "v7/review_kit/pares/P12_B.json": "ac00582d526090007599780335fe7f4ef689df91c9770e626089bcb43fc93570",
+    "v7/review_kit/pares/P13_A.json": "9f3a3164d467df1b62671df79194b6f45fd941e0d2b9457bd23893a5ab2f340d",
+    "v7/review_kit/pares/P13_B.json": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71",
+    "v7/review_kit/pares/P14_A.json": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d",
+    "v7/review_kit/pares/P14_B.json": "4a815c8e45ef2885ce947b4ddbac3bcf16a6a87048878c443c96d4077489ca88",
+    "v7/review_kit/pares/P15_A.json": "7cd11e0dc2542bb6ca6adb96b55ccd2944fd7c0d7c7da72b62d3b0f461d81e1f",
+    "v7/review_kit/pares/P15_B.json": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d",
+    "v7/review_kit/pares/P16_A.json": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884",
+    "v7/review_kit/pares/P16_B.json": "71dba08009d49fc8e8de01c5c55f84cda750cc057b5f58fae29c1ec5a2a93e1e",
+    "v7/review_kit/pares/P17_A.json": "39ac01933c186ae250ee41e9169c1d0d2c0a3596b0092802e710bab1dd584084",
+    "v7/review_kit/pares/P17_B.json": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91",
+    "v7/review_kit/pares/P18_A.json": "d5c9d1f1dcbcd2e77bc8e179b2bc810613cf27f1169ba18d28c7b3bdd05d8885",
+    "v7/review_kit/pares/P18_B.json": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71",
+    "v7/review_kit/pares/P19_A.json": "0eac90cd4c338c45e24a0cd61a47a9861a04a932968ff595f1f1beac9a99eadb",
+    "v7/review_kit/pares/P19_B.json": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91",
+    "v7/review_kit/pares/P20_A.json": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385",
+    "v7/review_kit/pares/P20_B.json": "665ed024cd60ef990dda93d6701c933087b864cabeb1d622acd28daf8ce26d1a",
+    "v7/review_kit/pares/P21_A.json": "fe77843792fdbae17292925d248126510ac27c3a065780e1ac41d2d3b863ce6b",
+    "v7/review_kit/pares/P21_B.json": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71",
+    "v7/review_kit/pares/P22_A.json": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884",
+    "v7/review_kit/pares/P22_B.json": "ae7a6e7af0eb0ce9002a342a5d81209691ef66b32b2ef46880b2a72e7e320974",
+    "v7/review_kit/pares/P23_A.json": "566a53eadeaf557abe142a9478f69c5e0be06d91cd4a956dba994e9c085fa426",
+    "v7/review_kit/pares/P23_B.json": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde",
+    "v7/review_kit/pares/P24_A.json": "0b80d4eeb6da86da012b4f571bb5ea52a836d098ad82a62e8604552ba2945176",
+    "v7/review_kit/pares/P24_B.json": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385",
+    "v7/review_kit/pares/P25_A.json": "187230b3300d50e2b3b9c9ea0e556242e996ad8b5a21f90a0fa801d8de3457d2",
+    "v7/review_kit/pares/P25_B.json": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde",
+    "v7/review_kit/pares/P26_A.json": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385",
+    "v7/review_kit/pares/P26_B.json": "fdfadc84a61e8043553a5ad40c7c5e415b1a126fc7b94ce9ca7320fb155a8af9",
+    "v7/review_kit/pares/P27_A.json": "49e48898410ab486bed31a9ffc151a87713f94de3683224db4cb3066161a5fd2",
+    "v7/review_kit/pares/P27_B.json": "4785b12fb628df10f846eb4d810cb7ee5077fe8a076e1da871bb3288527c5385",
+    "v7/review_kit/pares/P28_A.json": "5b054b0a1595ab48f7a268174423614fdb14a7f95d743bbaede16f4f409fe27c",
+    "v7/review_kit/pares/P28_B.json": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d",
+    "v7/review_kit/pares/P29_A.json": "f3e65edd15e271f3172d77b68b44c93c476f8f0c2d31d706b6841ebaaa6464b4",
+    "v7/review_kit/pares/P29_B.json": "6d179fc7b04e5ca737ccabc72fc904f7228f17cd8f1efa02d2f1274590be495d",
+    "v7/review_kit/pares/P30_A.json": "35452b958eb6ef3a10f6cd1cf1d938757a5d516d5df701843f00e1c753a750c2",
+    "v7/review_kit/pares/P30_B.json": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884",
+    "v7/review_kit/pares/P31_A.json": "664f8238f69a6a09d83ceb1568b975bdf22acd1856aa4502d89a5a42e32640c8",
+    "v7/review_kit/pares/P31_B.json": "666139e902eeeb6a55aecf7d83c208b3f6e3b0e93338b38aaffdb69860c0e439",
+    "v7/review_kit/pares/P32_A.json": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884",
+    "v7/review_kit/pares/P32_B.json": "b3443993cd608a964ee18354f574101c3e3b5f4c17535c28c7bd349201dabeb0",
+    "v7/review_kit/pares/P33_A.json": "cd5fbfa549ed210e29ce5a5e0a17710a4ce121867f0cd9991bc3b9ab0b875199",
+    "v7/review_kit/pares/P33_B.json": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f",
+    "v7/review_kit/pares/P34_A.json": "e3203588f1b61d09aa0278232c96007829a5ddb31a9a50dc8a3efce1d5e1f70f",
+    "v7/review_kit/pares/P34_B.json": "f957c3fb2b67e385fb36d1a3755896bdabb36f4dc4189512d79cf060c356fbfe",
+    "v7/review_kit/pares/P35_A.json": "67d3dfa5515ea4d7ccb19ac1ce709fb843766c0ee49025248c52b824cc99d5ab",
+    "v7/review_kit/pares/P35_B.json": "d703c0de55fe61fcf1ce1324f19d7dff104ef2dbfe4fe52d94a5783ad1eb7884",
+    "v7/review_kit/pares/P36_A.json": "a00c4eb295a33b016d66b505dcbf49d693c3760bdbca868a535a9f265dfcec71",
+    "v7/review_kit/pares/P36_B.json": "6d5ac012a19828beb4aae09c3905d10cd6a25c836cb4a3c274812183d559e44c",
+    "v7/review_kit/pares/P37_A.json": "9e56a7588e78cc1c1bcd36f9031ad1588331abb6470196f7844fdb248a6a6088",
+    "v7/review_kit/pares/P37_B.json": "f5ad02a184c781f828bbe03747f5f8ced50963a7789b66aee6896541b547adde",
+    "v7/review_kit/pares/P38_A.json": "6618c8e45287817640f9d66d0f5185bc5649a30de5dfb7475991f6267a32ad91",
+    "v7/review_kit/pares/P38_B.json": "b035aab4265ea49c6c78b34c727a32753dc94c8c19b0d8a57b15620ebaca2b9f",
+    "v7/review_kit/recusas/R1_motivo.json": "af69f8b0a90256f2227a0b1c5977676652afe0e3a559dc40c97825f54c6c7ed4",
+    "v7/review_kit/recusas/R1_origem.owx": "abe7a2ed06ce99fc9fdca9afa7887a1dc1610f1cb55b0d4b1152c56d9df5a880",
+    "v7/review_kit/recusas/R2_motivo.json": "2677bfeba13c5fe8da85c389c2276984a152068040494a50c38bd5a89fee23e2",
+    "v7/review_kit/recusas/R2_origem.owx": "3c06b7dcc61d7f1c93dfa9140772d4046643bd1159a1c2ece3f3aaf52b25e232",
+    "v7/review_kit/recusas/R3_motivo.json": "551a43595754a61ae34bbf31c6c5901a6a499ed87e0e1e4c448c43e2310c9eac",
+    "v7/review_kit/recusas/R3_origem.owx": "809417feca6f346f82bd8bd3ea61c109832d55282ce327df389a551a63491e3e"
+  },
+  "review_kit_zip_sha256": "8d5b04e1c2f85a0bb476c0684aff371b27fd62ab61431bce08a16c801544c199",
+  "seed": "ISYS-V7-2026-10-25-PREREGISTRO",
+  "source_ontology_original_sha256": "1784b46046ecbb38e3fa9e5259ff04aa50138226396040bfd85a89d42ce3d4e2",
+  "status": "GENERATED__REVIEW_PENDING__HL7_NOT_EXECUTED",
+  "terminology": "-tx n/a",
+  "validator_cli_sha256": "57aa43fb40cec5de41def81c927725fd85908eeb71509b7f9313e04d9b8ec79b",
+  "validator_cli_version": "7.0.3"
+}

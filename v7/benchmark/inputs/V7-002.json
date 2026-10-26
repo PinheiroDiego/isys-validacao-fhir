@@ -1,0 +1,56 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/r071e8f428087ce061a3695cfe208541",
+      "resource": {
+        "id": "r071e8f428087ce061a3695cfe208541",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/r276eef71ce0e5851660416c3d172495",
+      "resource": {
+        "id": "r276eef71ce0e5851660416c3d172495",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/r4ed862c3fc0b09391d1df1d17a28e1c",
+      "resource": {
+        "code": {
+          "text": "Sódio"
+        },
+        "effectiveDateTime": "2026-03-24",
+        "id": "r4ed862c3fc0b09391d1df1d17a28e1c",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/r071e8f428087ce061a3695cfe208541"
+        },
+        "valueQuantity": {
+          "value": 4.2
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/rfeca3607a65cd53f3f3feda9b6fe18a",
+      "resource": {
+        "code": {
+          "text": "Ácido úrico"
+        },
+        "effectiveDateTime": "2026-04-07",
+        "id": "rfeca3607a65cd53f3f3feda9b6fe18a",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/r276eef71ce0e5851660416c3d172495"
+        },
+        "valueQuantity": {
+          "value": 12.6
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

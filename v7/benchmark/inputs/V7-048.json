@@ -1,0 +1,39 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-dbfe92cd62f4c4fd95b5758d",
+      "resource": {
+        "id": "p-dbfe92cd62f4c4fd95b5758d",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-dbfe92cd62f4c4fd95b5758d)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-1724ed587561f7d9ab89953f",
+      "resource": {
+        "code": {
+          "text": "Creatinina"
+        },
+        "effectiveDateTime": "2026-02-09",
+        "id": "o-1724ed587561f7d9ab89953f",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-dbfe92cd62f4c4fd95b5758d"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Creatinina</p><p>Resultado: 4.2</p><p>Data: 2026-02-09</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 4.2
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

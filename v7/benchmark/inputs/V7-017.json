@@ -1,0 +1,29 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/r230d4b2e841b14bca484032b2509791",
+      "resource": {
+        "id": "r230d4b2e841b14bca484032b2509791",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/re0181ef6a0a8d69ebd3caae690bff6e",
+      "resource": {
+        "code": {
+          "text": "Pesquisa de células neoplásicas"
+        },
+        "effectiveDateTime": "2026-01-27",
+        "id": "re0181ef6a0a8d69ebd3caae690bff6e",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/r230d4b2e841b14bca484032b2509791"
+        },
+        "valueString": "sem crescimento"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

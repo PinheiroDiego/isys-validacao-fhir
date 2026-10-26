@@ -1,0 +1,39 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-82cb96f9215b380e60487979",
+      "resource": {
+        "id": "p-82cb96f9215b380e60487979",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-82cb96f9215b380e60487979)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-ddc8c1901fa7389d4116f607",
+      "resource": {
+        "code": {
+          "text": "Magnésio"
+        },
+        "effectiveDateTime": "2026-05-19",
+        "id": "o-ddc8c1901fa7389d4116f607",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-82cb96f9215b380e60487979"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Magnésio</p><p>Resultado: 7.3</p><p>Data: 2026-05-19</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 7.3
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

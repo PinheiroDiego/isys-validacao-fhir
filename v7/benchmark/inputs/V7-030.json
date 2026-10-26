@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/r92c46c836719d207e1693345fe1619b",
+      "resource": {
+        "id": "r92c46c836719d207e1693345fe1619b",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/r8fb723b9d543ce93acb0a3d10fcd44a",
+      "resource": {
+        "code": {
+          "text": "Creatinina"
+        },
+        "effectiveDateTime": "2026-02-09",
+        "id": "r8fb723b9d543ce93acb0a3d10fcd44a",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/r92c46c836719d207e1693345fe1619b"
+        },
+        "valueQuantity": {
+          "value": 4.2
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

@@ -1,0 +1,39 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-0753611192d64d68c1523d9e",
+      "resource": {
+        "id": "p-0753611192d64d68c1523d9e",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-0753611192d64d68c1523d9e)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-28a44ff45b7a0455f8cf4dc5",
+      "resource": {
+        "code": {
+          "text": "Ferritina"
+        },
+        "effectiveDateTime": "2026-06-16",
+        "id": "o-28a44ff45b7a0455f8cf4dc5",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-0753611192d64d68c1523d9e"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Ferritina</p><p>Resultado: 12.6</p><p>Data: 2026-06-16</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 12.6
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

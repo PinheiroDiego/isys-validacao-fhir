@@ -1,0 +1,32 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-21ddc62ab0ded40fc959f25a",
+      "resource": {
+        "id": "p-21ddc62ab0ded40fc959f25a",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-579b36efb455411cceca78ca",
+      "resource": {
+        "code": {
+          "text": "Sódio"
+        },
+        "effectiveDateTime": "2026-03-24",
+        "id": "o-579b36efb455411cceca78ca",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "https://example.org/fhir/Patient/p-21ddc62ab0ded40fc959f25a"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 7.3
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

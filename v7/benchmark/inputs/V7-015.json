@@ -1,0 +1,49 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-379158dc18f16efd7e082b34",
+      "resource": {
+        "id": "p-379158dc18f16efd7e082b34",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-60d8482a4f0d7a775d7d6fbc",
+      "resource": {
+        "code": {
+          "text": "Cálcio iônico"
+        },
+        "effectiveDateTime": "2026-04-07",
+        "id": "o-60d8482a4f0d7a775d7d6fbc",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-379158dc18f16efd7e082b34"
+        },
+        "valueQuantity": {
+          "value": 8.8
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-904c94ef51794474393f6e60",
+      "resource": {
+        "code": {
+          "text": "Potássio"
+        },
+        "effectiveDateTime": "2026-05-05",
+        "id": "o-904c94ef51794474393f6e60",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-379158dc18f16efd7e082b34"
+        },
+        "valueQuantity": {
+          "value": 6.1
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

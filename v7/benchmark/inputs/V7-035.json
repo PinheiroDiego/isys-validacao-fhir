@@ -1,0 +1,31 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/r764eddea04eef9248684af5fbc62476",
+      "resource": {
+        "id": "r764eddea04eef9248684af5fbc62476",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/ra150b7695a26bfe12ec915cf1fefac5",
+      "resource": {
+        "code": {
+          "text": "Magnésio"
+        },
+        "effectiveDateTime": "2026-05-19",
+        "id": "ra150b7695a26bfe12ec915cf1fefac5",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/r764eddea04eef9248684af5fbc62476"
+        },
+        "valueQuantity": {
+          "value": 7.3
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

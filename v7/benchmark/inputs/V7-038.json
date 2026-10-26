@@ -1,0 +1,37 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-9e5207398469cafa35438c79",
+      "resource": {
+        "id": "p-9e5207398469cafa35438c79",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-9e5207398469cafa35438c79)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-425278f0760e5cf7534d400a",
+      "resource": {
+        "code": {
+          "text": "Pesquisa de células neoplásicas"
+        },
+        "effectiveDateTime": "2026-01-27",
+        "id": "o-425278f0760e5cf7534d400a",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-9e5207398469cafa35438c79"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Pesquisa de células neoplásicas</p><p>Resultado: sem crescimento</p><p>Data: 2026-01-27</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueString": "sem crescimento"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

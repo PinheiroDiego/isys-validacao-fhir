@@ -1,0 +1,40 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-21ddc62ab0ded40fc959f25a",
+      "resource": {
+        "id": "p-21ddc62ab0ded40fc959f25a",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-21ddc62ab0ded40fc959f25a)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-579b36efb455411cceca78ca",
+      "resource": {
+        "code": {
+          "text": "Sódio"
+        },
+        "effectiveDateTime": "2026-03-24",
+        "id": "o-579b36efb455411cceca78ca",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-21ddc62ab0ded40fc959f25a"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Sódio</p><p>Resultado: 7.3 ng/mL</p><p>Data: 2026-03-24</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "unit": "ng/mL",
+          "value": 7.3
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

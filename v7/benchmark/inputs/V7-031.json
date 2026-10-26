@@ -1,0 +1,36 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-fab5e8a9425d4347440b0ed0",
+      "resource": {
+        "id": "p-fab5e8a9425d4347440b0ed0",
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-63a340b602b8a23e76ff808f",
+      "resource": {
+        "code": {
+          "text": "Proteína total"
+        },
+        "dataAbsentReason": {
+          "coding": [
+            {
+              "code": "unknown",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-07",
+        "id": "o-63a340b602b8a23e76ff808f",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-fab5e8a9425d4347440b0ed0"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}

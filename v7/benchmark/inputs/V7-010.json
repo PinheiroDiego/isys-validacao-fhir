@@ -1,0 +1,72 @@
+{
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-ad26291f6ee37382ca69a173",
+      "resource": {
+        "id": "p-ad26291f6ee37382ca69a173",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-ad26291f6ee37382ca69a173)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/p-f6d12b2f9473fa37df5243eb",
+      "resource": {
+        "id": "p-f6d12b2f9473fa37df5243eb",
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paciente (identificador lógico: p-f6d12b2f9473fa37df5243eb)</p></div>",
+          "status": "generated"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-5b8696b1dfb8a72617fbba77",
+      "resource": {
+        "code": {
+          "text": "Sódio"
+        },
+        "effectiveDateTime": "2026-03-24",
+        "id": "o-5b8696b1dfb8a72617fbba77",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-ad26291f6ee37382ca69a173"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Sódio</p><p>Resultado: 4.2</p><p>Data: 2026-03-24</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 4.2
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/o-a0468e2f00465129e09ad5ad",
+      "resource": {
+        "code": {
+          "text": "Ácido úrico"
+        },
+        "effectiveDateTime": "2026-04-07",
+        "id": "o-a0468e2f00465129e09ad5ad",
+        "resourceType": "Observation",
+        "status": "unknown",
+        "subject": {
+          "reference": "Patient/p-f6d12b2f9473fa37df5243eb"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exame: Ácido úrico</p><p>Resultado: 12.6</p><p>Data: 2026-04-07</p><p>Status: unknown</p></div>",
+          "status": "generated"
+        },
+        "valueQuantity": {
+          "value": 12.6
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "collection"
+}
